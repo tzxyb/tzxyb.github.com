@@ -1,0 +1,234 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title></title>
+<link rel="stylesheet" type="text/css" href="http://css.zuchecdn.com/newversion/index.css?v=201506301600">
+<link rel="stylesheet" type="text/css" href="http://css.zuchecdn.com/newversion/cityport_blue.css?v=201506301600">
+<link rel="stylesheet" type="text/css" href="http://css.zuchecdn.com/newversion/daty.css?v=201506301600">
+<style>
+*{padding:0;margin:0}
+a{text-decoration:none}
+.door{width:860px;height:580px;top:50%;left:50%;background-color:#fff;z-index:1500;position:fixed;margin-top:-290px;margin-left:-430px;font-family:'微软雅黑'}
+.zhezhao{display:none;background-image:url(http://image.zuchecdn.com/newversion/common/zhezhao_bg.png);position:fixed;left:0;top:0;width:100%;height:100%;opacity:.65;z-index:999}
+.door-title{width:100%;height:50px;line-height:50px;font-size:16px;color:#333;text-indent:1em;font-weight:700;background-color:#E4E4E4}
+.close{background:url(images/close.png) left bottom no-repeat;width:16px;height:16px;display:block;right:17px;top:17px;z-index:9999}
+.close,.login{position:absolute}
+.yellow{color:#eeb818}
+.door-intro{margin:20px 20px 10px 20px}
+.door-intro p{font-size:12px;color:#939a9f;line-height:20px}
+.door-intro p b{font-weight:700;color:#000}
+.door-address{margin:10px 20px 10px 20px;padding:0;height:440px;width:820px}
+.door-map{float:right;width:438px;height:438px;margin:0;position:relative;border:1px solid #e4e6e9}
+.door-map .point{position:absolute;left:10px;top:50px;display:block;width:34px;height:50px;background:url(images/icon_map_point.png) no-repeat}
+.door-search{float:left;width:378px;height:438px;border:1px solid #e4e6e9;position: relative;}
+.search-con{width:100%;height:42px;border-bottom:1px solid #e4e6e9;background:#f3f4f7 url(images/input.png) no-repeat 5px center}
+.search-con .btn-srch{float:left;border:none;display:block;outline:0}
+.search-con .btn-search{width:19px;height:19px;margin-left:15px;margin-top:12px;background:url(images/icon_search.png) no-repeat}
+.search-con .btn-text{margin-left:8px;margin-top:6px;background:0 0;width:205px;height:29px;line-height:29px;font-size:14px;color:#eeb818;font-family:'微软雅黑'}
+.search-con .btn-delete{color:none;width:16px;height:16px;margin-top:12px;margin-left:9px;background:url(images/icon_search_close.png) no-repeat}
+.search-con .collect{position:absolute;float:right;display:block;width:84px;height:37px;line-height:32px;top:6px;right:5px;font-size:14px;color:#71767a;}
+.search-con .collect.down-on{background:url(images/icon_down_on.png) no-repeat bottom center;color:#eeb818;}
+.search-con .collect .down{display:block;width:12px;float:right;height:7px;margin-right:10px;margin-top:13px;background:url(images/icon_down.png) no-repeat}
+.search-con .collect.down-on .down{background:url(images/icon_down_i.png) no-repeat;}
+.address-con{position:relative;height:396px;overflow-y:scroll}
+.address-con ul{list-style:none}
+.address-con ul li{padding:10px;border-bottom:1px solid #e4e6e9}
+.address-con ul li .item-con{margin-left:30px;width:310px}
+.address-con ul .current{background:url(images/bg_current.png) repeat-x}
+ul li .loca{float:left;display:block;width:15px;height:20px;background:url(images/icon_pos_b.png) no-repeat}
+ul li.current .loca{background:url(images/icon_pos_r.png) no-repeat}
+.item-con .title{color:#000;font-size:15px}
+.item-con .addr-detail{color:#939a9f;font-size:12px;line-height:20px}
+.item-con .title .star{float:right;display:block;width:17px;height:16px;background:url(images/icon_star_off.png) no-repeat}
+.item-con .title .star-on{background:url(images/icon_star_on.png) no-repeat}
+.item-con .btn-submit{display:none;width:100px;height:32px;line-height:32px;color:#fff;font-size:16px;background:url(images/btn_submit.png) no-repeat;text-align:center;margin-top:10px}
+.current .item-con .btn-submit{display:block}
+
+</style>
+</head>
+<body>
+	<div class="zhezhao" id="zhezhao" style="display:block;"></div>
+    <div class="door" style="">
+    	<div class="door-title" style="">送车上门地址
+    	    <a id="btclose" style="cursor: pointer;" class="close maskclose"></a>
+    	</div>
+    	<div class="door-intro">
+    		<p><b>送车范围：</b>门店至两路，沙坪坝，观音桥，石桥铺，杨家坪，南坪，解放碑沿线，<span class="yellow">送车费：50元</span>，请提前4个工作小时下单。<br>订单金额超过***元，<span class="yellow">立减50元</span>取送车费用；超过****元，<span class="yellow">立减100元</span>取送车费用</p>
+    	</div>
+    	<div class="door-address">
+    		<div class="door-search">
+    		    <div class="search-con">
+    		    	<form action="">
+    		    	    <input type="submit"class="btn-search btn-srch" value="">
+    		    		<input type="text" class="btn-text btn-srch " value="神州租车">
+    		    		<input type="reset" class="btn-delete btn-srch" value="">
+    		    	</form>
+    		    	<a href="javascript:" class="collect" id="collect"> 常用地址<i class="down"></i></a>
+    		    </div>
+    		    <div class="address-con" id="search-part">
+    		    	<ul>
+    		    		<li class="current">
+    		    			<i class="loca"></i>
+    		    			<div class="item-con">
+    		    				<div class="title">
+    		    					神州租车<i class="star"></i>
+    		    				</div>
+    		    				<p class="addr-detail">北京市朝阳区通惠河北路永安里桥下停车场内(建外SOHO西区永安东里16号京能集团大厦红绿灯向西100米)</p>
+    		    				<a href="" class="btn-submit">确认地址</a>
+    		    			</div>
+    		    		</li>
+    		    		<li>
+    		    			<i class="loca"></i>
+    		    			<div class="item-con">
+    		    				<div class="title">
+    		    					神州租车<i class="star"></i>
+    		    				</div>
+    		    				<p class="addr-detail">北京市朝阳区通惠河北路永安里桥下停车场内(建外SOHO西区永安东里16号京能集团大厦红绿灯向西100米)</p>
+    		    				<a href="" class="btn-submit">确认地址</a>
+    		    			</div>
+    		    		</li>
+    		    		<li>
+    		    			<i class="loca"></i>
+    		    			<div class="item-con">
+    		    				<div class="title">
+    		    					神州租车<i class="star"></i>
+    		    				</div>
+    		    				<p class="addr-detail">北京市朝阳区通惠河北路永安里桥下停车场内(建外SOHO西区永安东里16号京能集团大厦红绿灯向西100米)</p>
+    		    				<a href="" class="btn-submit">确认地址</a>
+    		    			</div>
+    		    		</li>
+    		    		<li>
+    		    			<i class="loca"></i>
+    		    			<div class="item-con">
+    		    				<div class="title">
+    		    					神州租车<i class="star"></i>
+    		    				</div>
+    		    				<p class="addr-detail">北京市朝阳区通惠河北路永安里桥下停车场内(建外SOHO西区永安东里16号京能集团大厦红绿灯向西100米)</p>
+    		    				<a href="" class="btn-submit">确认地址</a>
+    		    			</div>
+    		    		</li>
+    		    		<li>
+    		    			<i class="loca"></i>
+    		    			<div class="item-con">
+    		    				<div class="title">
+    		    					神州租车<i class="star"></i>
+    		    				</div>
+    		    				<p class="addr-detail">北京市朝阳区通惠河北路永安里桥下停车场内(建外SOHO西区永安东里16号京能集团大厦红绿灯向西100米)</p>
+    		    				<a href="" class="btn-submit">确认地址</a>
+    		    			</div>
+    		    		</li>
+    		    	</ul>
+    		    </div>
+   		        <div class="address-con" id="collect-part" style="display:none">
+    		    	<ul>
+    		    		<li>
+    		    			<i class="loca"></i>
+    		    			<div class="item-con">
+    		    				<div class="title">
+    		    					神州租车<i class="star star-on"></i>
+    		    				</div>
+    		    				<p class="addr-detail">北京市朝阳区通惠河北路永安里桥下停车场内(建外SOHO西区永安东里16号京能集团大厦红绿灯向西100米)</p>
+    		    				<a href="" class="btn-submit">确认地址</a>
+    		    			</div>
+    		    		</li>
+    		    		<li>
+    		    			<i class="loca"></i>
+    		    			<div class="item-con">
+    		    				<div class="title">
+    		    					神州租车<i class="star star-on"></i>
+    		    				</div>
+    		    				<p class="addr-detail">北京市朝阳区通惠河北路永安里桥下停车场内(建外SOHO西区永安东里16号京能集团大厦红绿灯向西100米)</p>
+    		    				<a href="" class="btn-submit">确认地址</a>
+    		    			</div>
+    		    		</li>
+    		    		<li>
+    		    			<i class="loca"></i>
+    		    			<div class="item-con">
+    		    				<div class="title">
+    		    					神州租车<i class="star star-on"></i>
+    		    				</div>
+    		    				<p class="addr-detail">北京市朝阳区通惠河北路永安里桥下停车场内(建外SOHO西区永安东里16号京能集团大厦红绿灯向西100米)</p>
+    		    				<a href="" class="btn-submit">确认地址</a>
+    		    			</div>
+    		    		</li>
+    		    		<li>
+    		    			<i class="loca"></i>
+    		    			<div class="item-con">
+    		    				<div class="title">
+    		    					神州租车<i class="star star-on"></i>
+    		    				</div>
+    		    				<p class="addr-detail">北京市朝阳区通惠河北路永安里桥下停车场内(建外SOHO西区永安东里16号京能集团大厦红绿灯向西100米)</p>
+    		    				<a href="" class="btn-submit">确认地址</a>
+    		    			</div>
+    		    		</li>
+    		    		<li>
+    		    			<i class="loca"></i>
+    		    			<div class="item-con">
+    		    				<div class="title">
+    		    					神州租车<i class="star star-on"></i>
+    		    				</div>
+    		    				<p class="addr-detail">北京市朝阳区通惠河北路永安里桥下停车场内(建外SOHO西区永安东里16号京能集团大厦红绿灯向西100米)</p>
+    		    				<a href="" class="btn-submit">确认地址</a>
+    		    			</div>
+    		    		</li>
+    		    	</ul>
+    		    </div>
+    		</div>
+    		<div class="door-map">
+    		    <img src="images/map.jpg" alt="">
+    		    <i class="point"></i>
+    		</div>
+    	</div>
+    </div>
+
+    <script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js">
+    </script>
+    <script type="text/javascript">
+	$(function(){
+	     $('#search-part .loca').click(function(){
+	     	$(this).toggleClass('loca-on');
+	     })
+	     $('.star').click(function(){
+	     	$(this).toggleClass('star-on');
+	     })
+	     $('.address-con ul li').click(function(){
+	     	$('.address-con ul li').removeClass('current');
+	     	$(this).addClass('current')
+	     })
+		$(".btn-text").focus(function(){
+			$('#search-part').hide();
+			$('#collect-part').hide();
+			$("#collect").removeClass('down-on');
+			var txt_value = $(this).val();
+			if(txt_value == this.defaultValue){
+				$(this).val("");
+			}
+		}).blur(function(){
+			var txt_value = $(this).val();
+			if(!txt_value){
+				$(this).val(this.defaultValue);
+			}
+		}).keydown(function(){
+			var txt_value = $(this).val();
+			if(txt_value == this.defaultValue){
+			}
+			else{
+			}
+		});
+		$("#collect").click(function(){
+			$(this).addClass('down-on');
+			$('#search-part').hide();
+			$('#collect-part').show()
+		})
+		$('#btclose').click(function(){
+			$('#zhezhao').hide();
+			$('.door').hide()
+		})
+
+    })
+
+    </script>
+</body>
+</html>
