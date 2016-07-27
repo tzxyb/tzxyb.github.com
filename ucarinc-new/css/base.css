@@ -1,0 +1,119 @@
+@charset "utf-8";
+/*reset*/
+html, body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td, em, button {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font: 12px/1.5 "microsoft yahei", arial, Simsun, sans-serif;
+    color: #333;
+    background-color: #fff;
+}
+img, fieldset {
+    border: none;
+    vertical-align: middle;
+}
+input, textarea {
+    font: 12px/1.5 "microsoft yahei", arial, Simsun, sans-serif;
+}
+table {
+    border-collapse: collapse;
+}
+a {
+    color: #3983e5;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+h1, h2, h3, h4, h5 {
+    font-family: "Times New Roman", Simsun;
+}
+ul, ol {
+    list-style: none;
+}
+input[type="button"], input[type="submit"] {
+    -webkit-appearance: none;
+}
+input[type="text"] {
+    border-radius: 0;
+}
+object{border:none;}
+.clearfix:after {
+    content: '\0020';
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+.clearfix {
+    *zoom: 1;
+}
+.l {
+    float: left;
+}
+.r {
+    float: right;
+}
+.hide {
+    display: none;
+}
+.hide-text {
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.iefix-bg {
+    position: absolute;
+    height: 33px;
+    bottom: 0;
+    width: 100%;
+    background: #000 \9;
+    filter: alpha(opacity=40) \9;
+    opacity: 0.4 \9;
+    z-index: 1 \9;
+}
+/*IE6/7/8 alpha bugfix */
+:root .iefix-bg {
+    display: none \9;
+}
+.newcontainer,
+.page-container {
+    margin: 0 auto;
+    width: 1200px;
+}
+.container {
+    margin: 0 auto;
+}
+.container {
+    width: 1200px;
+}
+#main {
+    min-height: 750px;
+    padding: 20px 0;
+}
+.waper {
+    width: 1200px;
+    margin: 0 auto;
+}
+.shadow {
+    -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.text-ellipsis {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+#header{width:100%; height: 100px; background-color: #00CCFF;}
+.footer{width:100%; height: 100px; background-color: #666666;}
+#slidebox{width: 600px;position: relative; height: 100px;}
+.slidetab{overflow: hidden;}
+.slidetab a{display: block;float: left;width: 200px; height:95px; line-height:95px; text-align: center; background-color:#fff;border-bottom:5px solid #000;}
+#slidebox #slidemodule{width:200px;height: 5px;line-height: 5px;font-size: 1px; background-color:#f07b3d;position:absolute;bottom:0px;left:0px; z-index: 10;}
+
+
+
+
+
