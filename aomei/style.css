@@ -1,0 +1,92 @@
+body,html{margin:0;padding:0;height:100%;}
+body{background:#fddf48 url(http://mktimage.10101111cdn.com/wap/2015/aomei/bg.jpg);background-size:100%;color:#404040;font-size:10px;}
+a{-webkit-tap-highlight-color:transparent;}
+.img{display:block;width:100%;}
+.mrt15{margin-top:1.5rem;}
+.page{display:none;z-index:1;}
+.pages{position:absolute;width:100%;}
+.page .head{position:relative;margin:.5rem auto;width:90%;height:auto;text-align:center;}
+.page .head img{display:inline-block;vertical-align:top;}
+.page .turn{position: relative;margin:0 auto;width:90%;height:auto;text-align:center;}
+.page .btn-4,.page .btn-5,.page .btn-6{position:relative;display:block;width:100%;height:auto;}
+.page .btn-4 i.cur,.page .btn-5 i.cur,.page .btn-6 i.cur{position:absolute;top:0;right:1.5rem;z-index:999;display:block;width:2.2rem;height:2.2rem;background:url(http://mktimage.10101111cdn.com/wap/2015/aomei/icon_cur.png) no-repeat;background-size:cover;}
+.alert-con{position:fixed;top:0;left:0;z-index:9999;width:100%;height:100%;background:rgba(0,0,0,.8);display:none}
+.alert-share,.alert-get,.alert-know,.alert-7{display:none;position:fixed;top:0;left:0;z-index:100000;width:100%;height:auto;}
+.alert-get,.alert-know,.alert-7{top:20%;}
+.page-8 .head{top:3rem;}
+.page-8 .turn{top:3.5rem;}
+.page-8 .head .pic-video{display:none}
+.turn .btn{display:block;width:100%;height:auto;}
+.turn .half{float:left;display:inline-block;width:49%;height:auto;}
+.input-tel{position:absolute;bottom:.7rem;left:35%;width:50%;height:1.7rem;outline:0;border:none;background:0 0;font-size:1.2rem;line-height:1.7rem;}
+.page-1 .turn{top:1rem;}
+.alert-know .turn{position:absolute;bottom:2rem}
+.alert-get .turn,.alert-7 .turn{position:absolute;bottom:1.5rem}
+.page-9 .head{top:2rem}
+.page-9 .turn{top:2rem}
+
+.page-2 .head .btns{position: absolute;width:100%;height:auto;top:14.5rem;}
+.page-2 .head .btns .btn-radio{
+    display: inline-block;
+    width:3rem;
+    height:2.9rem;
+    background:url(http://mktimage.10101111cdn.com/wap/2015/aomei/icon_2_radio.png) no-repeat;
+    background-size:cover;
+    position: absolute;
+    outline:none;
+    -webkit-tap-highlight-color:transparent;
+}
+.page-2 .head .btns .btn-radio.checked{
+    background:url(http://mktimage.10101111cdn.com/wap/2015/aomei/icon_2_checked.png) no-repeat;
+    background-size:cover;
+}
+.page-2 .head .btns .btn-radio:first-child{
+    left:6.8rem;
+}
+.page-2 .head .btns .btn-radio:nth-of-type(2){
+    left:11rem;
+}
+.page-2 .head .btns .btn-radio:last-child{
+    right:2.8rem;
+}
+
+@media screen and (device-width:414px) and (device-height:736px){
+.page-1 .head,
+.page-2 .head,
+.page-3 .head{top:1.5rem;}
+.page-1 .turn,
+.page-2 .turn,
+.page-3 .turn{top:2rem;}
+
+.page-2 .head .btns{position: absolute;width:100%;height:auto;top:16.5rem;}
+.page-2 .head .btns .btn-radio:first-child{
+  left:7.5rem;
+}
+.page-2 .head .btns .btn-radio:nth-of-type(2){
+    left:12rem;
+}
+.page-2 .head .btns .btn-radio:last-child{
+    right:3.2rem;
+}
+}
+@media screen and (device-width:375px) and (device-height:667px){
+.page-1 .head,
+.page-2 .head,
+.page-3 .head{top:1rem;}
+.page-1 .turn,
+.page-2 .turn,
+.page-3 .turn{top:1.5rem;}
+}
+@media screen and (max-width:320px){
+	.input-tel{position:absolute;bottom:.4rem;left:34%;width:50%;height:1.6rem;outline:0;border:none;background:0 0;font-size:1.2rem;line-height:1.6rem;}
+   .page-2 .head .btns{position: absolute;width:100%;height:auto;top:12rem;}
+   .page-2 .head .btns .btn-radio:first-child{
+      left:5.5rem;
+    }
+    .page-2 .head .btns .btn-radio:nth-of-type(2){
+        left:9rem;
+    }
+    .page-2 .head .btns .btn-radio:last-child{
+        right:2rem;
+    } 
+}

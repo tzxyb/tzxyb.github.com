@@ -1,0 +1,83 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0">
+<meta name="format-detection" content="telephone=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="description" content="">
+<meta name="keywords" content="">
+<!-- 其他  -->
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Expires" content="0" />
+<title></title>
+<link type="text/css" rel="stylesheet" href="http://mktcss.10101111cdn.com/wap/2015/aomei/style.css"/>
+<link type="text/css" rel="stylesheet" href="http://mktcss.10101111cdn.com/wap/2015/ysyyy/dialog_1215.css?v=20150701"/>
+<script type="text/javascript" src="js/jquery/jquery-2.1.3.min.js"></script>
+<script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script type="text/javascript" src="js/weixin.js?v=2015"></script>
+<script type="text/javascript" src="js/core.js?v=2015"></script>
+<input type="hidden" id="openId" name="openId">
+<script type="text/javascript">
+	var openId = ucar.uitls.getUrlParam("openId");
+	if(!openId){
+		openId = ucar.uitls.getStorage("openId");
+	}
+	if(openId){
+		$("#openId").val(openId);
+		 ucar.uitls.setStorage("openId",openId);
+	}
+	var origin = "wxhbaomei";
+	//if(isWeixin()){
+		getWeixinShareData();
+	//}
+</script>
+
+</head>
+<body>
+    <div class="pages">
+        <!-- section 9 -->
+        <section class="page page-9">
+            <div class="head">
+                <img src="img/pic_9_1.png" alt="" class="img mrt15"/>
+                <img src="img/pic_9_2.png" alt="" class="img mrt15"/>
+                <img src="img/bg_tel.png" alt="" class="img mrt15"/>
+                <input type="tel" name="mobile" id="mobile" class="input-tel" maxlength="11" />
+            </div>
+            <div class="turn mrt15">
+                <a href="javascript:" class="btn btn-9"><img src="img/btn_9.png" alt="" class="img"></a>
+            </div>
+        </section>
+        <!-- 弹出框 -->
+        <div class="alert-con"></div>
+        <div class="alert-share">
+            <img src="img/alert_bo.png" alt="" class="img"/>
+        </div>
+        <div class="alert-get">
+            <img src="img/alert_get.png" alt="" class="img"/>
+            <div class="turn">	
+	            <a href="javascript:" class="half btn-dld xiazai"><img src="img/btn_get_1.png" class="img"/></a>
+	            <a href="javascript:" class="half btn-share"><img src="img/btn_get_2.png" class="img"/></a>
+            </div>
+        </div>
+        <div class="alert-know">
+            <img src="img/alert_know.png" alt="" class="img"/>
+            <div class="turn">
+                <a href="javascript:" class="btn btn-know"><img src="img/btn_know.png" class="img"/></a>
+            </div>
+        </div>
+
+    </div>
+	<script src="js/mobile_validate.js"></script>
+	<script src="http://mktjs.10101111cdn.com/wap/2015/aomei/aomei.js"></script>
+    <script src="http://mktjs.10101111cdn.com/wap/2015/aomei/index.js"></script>
+	<script type="text/javascript" src="http://mktjs.10101111cdn.com/wap/2015/download/app_launcher.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			 $('.page-9').delay(500).show(0);
+		});
+	</script>
+</body>
+</html>
