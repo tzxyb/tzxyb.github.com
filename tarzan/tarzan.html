@@ -1,0 +1,75 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="pragma" content="no-cache">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">	
+		<meta name="format-detection" content="telephone=no">
+		<meta http-equiv="X-UA-Compatible" content="edge">
+		<title></title>
+		<script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
+	    <link rel="stylesheet" type="text/css" href="style.css">
+		<script type="text/javascript" src="js/jweixin-1.0.0.js"></script>
+		<script type="text/javascript" src="js/weixin.js?v=2015"></script>
+		<script type="text/javascript" src="js/core_1215.js"></script>
+
+	</head>
+	<body>
+		<div class="tarzan">
+			<div class="videobox">
+				<img alt="" id="p-box" src="img/pic1.jpg">
+				<img class="p-img" src="img/playerBtn.png" >
+				<video width="100%" id="couponvideo" poster="img/pic1.jpg" preload="auto" x-webkit-airplay="true" webkit-playsinline="true" style="display:none;"><source src="img/tarzan.mp4" type="video/mp4" class="source" /></video>
+			</div>
+
+			<div class="imgs">
+				<img src="img/pic2.jpg" alt="" />
+				<img src="img/pic3.jpg" alt="" />
+				<img src="img/pic4.jpg" alt="" />
+			</div>
+			<div class="ulcon">
+				<img src="img/pic5.jpg" class="bgulcon pic-12"/>
+				<ul class="ustab inputcon">
+					<li>
+						<h2>赶紧参与抽奖吧</h2>
+					</li>
+			        <li>	
+			       		<input type="tel" name="mobile" id="mobile" placeholder="请输入手机号" class="t_val" maxlength="11">
+			        </li>
+			        <li>
+			       		<a href="javascript:;" class="btn-go">Ready Go!</a>
+			        </li>
+				</ul>
+			</div>
+		</div>
+		<div class="shadow">
+			<div class="resultcon" >
+				<img src="img/btn_close.png" class="btn-close"/>
+				<p id="message">很遗憾，您没有中奖。<br>看IMAX 3D《泰山归来》预告片，<br>感受不一样的视听盛宴！</p>
+			</div>
+		</div>
+	</body>
+	<script src="js/mobile_validate.js"></script>
+	<script type="text/javascript" src="js/tkdata.js"></script>
+	<script src="js/get.js"></script>
+	<script>
+	$(function(){
+		//点击播放事件
+		$('#couponvideo').hide();
+		$('.p-img').off().on('click',function(){
+			var $that = $(this);
+			$that.hide();
+			$("#p-box").hide();
+			$('#couponvideo').show();
+			document.getElementById("couponvideo").play();
+		});
+		document.getElementById("couponvideo").addEventListener('ended',function(){
+			$('#couponvideo').hide();
+			$('.p-img, #p-box').show();	
+		});
+	})
+
+	</script>
+</html>
