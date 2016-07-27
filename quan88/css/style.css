@@ -1,0 +1,53 @@
+@charset:'utf-8';
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, input, button {background: none repeat scroll 0 0 transparent; border: 0 none;font-size: 100%;margin: 0;outline: 0 none;padding: 0;vertical-align: baseline;background: transparent;}
+h1, h2, h3, h4, h5, h6 {font-size: 100%;font-weight: normal;}
+ul, ol {list-style: none outside none;}
+html,body{width:100%; height:100%;font-size:10px}
+body{background-color:#cc131a;font:10px "Microsoft Yahei",Tahoma,Geneva,sans-serif;}
+ul, li{list-style:none;margin:0;padding:0;}
+.clearfix:after{clear:both;content:".";display:block;font-size:0;height:0;line-height:0;visibility:hidden}
+.clearfix{zoom:1}
+img,input{-webkit-tap-highlight-color:transparent;outline:0;border:none}
+a{color:#c23e42;text-decoration:none;cursor:pointer;outline:none;border:none;padding:0px;font-size:0px;-webkit-tap-highlight-color:transparent;outline:0;}
+a:hover {text-decoration:none;outline:none;}
+a:focus {outline:none;-moz-outline:none;}
+input::input-placeholder { text-align: center }
+.quan88,.shadow{width: 100%;max-width:414px;margin:0 auto;}
+.quan88{height:100%;background:#a30506 url(http://mktimage.10101111cdn.com/wap/2016/quan88/bg_quan88.jpg) no-repeat;background-size:100% 100%}
+.quan88 .title{display:block;height:30%;margin:0 auto;padding-top:5%;}
+
+.quan88 img{vertical-align: top;display:block;margin:0 auto}
+.quan88 .inputcon{height:64%;margin:0 auto;}
+.quan88 li{position:relative;}
+.quan88 li.telcon{height:45%;margin:0 auto}
+.quan88 li.btncon{height:38%;margin:0 auto}
+.quan88 li img{display:block;height:100%;}
+.quan88 .inputcon li{list-style:none;position:relative;width:100%;left:0;position:relative;margin-bottom:1rem;}
+.inputcon li .v-tel{position:absolute;bottom:12%;font-family:"Microsoft Yahei";letter-spacing:2px;width:100%;text-align: center;left:0;text-align:-webkit-center;margin:0 auto;display:block;height:1.5rem;line-height:1.5rem;padding:1rem 0;color:#489bda;font-size:1.5rem;box-sizing:border-box;text-shadow:0 0 1px #489bda,0 0 1px #489bda,0 0 1px #489bda;z-index:9;}
+
+.shadow {position:fixed;width:100%;height:100%;top:0;left:0;z-index:99;background:rgba(14,17,19,.7);display:none}
+.shadow .pic-share{width:100%;position:absolute;z-index:999;display:none;}
+.shadow .result{position:absolute;width:100%;top:30%;left:0;display:none;}
+.shadow .result img{width:100%;display:block}
+.shadow .result .btn-close{position:absolute;display:block;width:14%;height:14%;right:10%;top:0;-webkit-tap-highlight-color:transparent;color:#489bda;font-size:3rem;}
+.shadow .result .inner{position:absolute;top:13%;left:0;width:100%;}
+.shadow .result .inner .btn{display:block;width:56%;height:2.4rem;line-height:2.4rem;border-radius:1.2rem;background:#489bda;color:#000;font-size:1.1rem;text-align:center;margin:.6rem auto;}
+.shadow .result .inner h2,
+.shadow .result .inner p{color:#fff;line-height:1.5rem;font-size:.9rem;text-align:center}
+.shadow .result .inner h2{font-size:1.1rem;line-height:2rem;}
+#phone{color:#fff}
+@media screen and (max-width:414px){
+	html{font-size:100%}
+}
+@media screen and (max-width:375px){
+	html{font-size:96%}
+}
+@media screen and (max-width:320px){
+	html{font-size:80%}
+}
+@media screen and (max-height:533px){
+	html{font-size:70%}
+
+}
+
+

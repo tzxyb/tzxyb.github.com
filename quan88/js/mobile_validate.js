@@ -1,0 +1,2 @@
+/*! Copyright©2008-2016 10101111.com All Rights Reserved.2016-07-18 */
+function mobileValidate(mobile){if(null===mobile||""===mobile)return!1;var reg=/^0?(13[0-9]|14[57]|15[012356789]|17[012356789]|18[0-9])[0-9]{8}$/;return reg.test(mobile)?!0:!1}function emailValidate(email){if(null===email||""===email)return!1;var reg=/^(\w)+(\.\w+)*@(\w)+((\.\w+)+)$/;return reg.test(email)?!0:!1}function strValidate(str){if(null===str||""===str)return!1;var reg=/[@#\$%\^&\*]+/;return reg.test(str)?!1:!0}
