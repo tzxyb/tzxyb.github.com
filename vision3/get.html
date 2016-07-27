@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="zh-cn" class="no-js">
+<head>
+	<meta http-equiv="Content-Type">
+	<meta content="text/html; charset=utf-8">
+	<meta charset="utf-8">
+	<title> </title>		
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="format-detection" content="telephone=no">
+	<meta name="format-detection" content="email=no">
+	<link rel="stylesheet" type="text/css" href="css/index.css" />
+	<link type="text/css" rel="stylesheet" href="css/dialog.css"/>
+	<script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
+	<script type="text/javascript" src="js/jweixin-1.0.0.js"></script>
+	<script type="text/javascript" src="js/weixin.js"></script>
+</head>
+	<body>
+		<div class="container">
+			<img src="img/pic_1.png" class="top"/>
+			<img src="img/pic_2.png" class="top"/>
+			<div class="inputs_con">
+			    <ul class="inputcon">
+			        <li>	
+			        	<img src="img/bg_tel.gif" class="bg-tel"/>
+			       		<input type="tel" name="mobile" id="mobile2" class="mobile" placeholder="请输入手机号" maxlength="11"/>
+			        </li>
+			        <li>
+			       		<img src="img/btn_go.gif" class="btn-get"/>
+			        </li>
+				</ul>
+			</div>
+		</div>
+
+ 		<div class="alert-con" id="alert-con">
+			<div class="succeed">
+				<img src="img/bg_alcon.png" class="bg-alcon"/>
+				<a class="btn-close" href="javascript:;"></a>
+				<div class="inner">
+					<img src="img/t_ok.png" class="alert-title"/>
+					<img src="img/quan_6.png" class="quan"/>
+					<p>专车券已经放入您<span class="phone-num"></span>账户中</p>
+					<img src="img/btn_dld.png" class="btn-dld"/>
+					<img src="img/btn_share.png" class="btn-share"/>
+				</div>
+			</div> 
+		</div>
+	
+		
+		<div class="alert-share">
+			<img src="img/pic_share.png" class="img"/>
+		</div>
+		<script src="js/mobile_validate.js"></script>
+		<script type="text/javascript" src="js/app_launcher.js"></script>
+		<script src="js/get.js"></script>
+		<script>
+		$(".btn-dld").click(function(){
+			var tdpg = ucar.uitls.getUrlParam("tdpg");
+			var tdaz = ucar.uitls.getUrlParam("tdaz");
+			var m = window.location.search;
+			if(tdaz || tdpg){
+				window.location.href="http://mktm.10101111.com/html5/2015/app/mobileapp.html"+m;
+			}else{
+				window.location.href="http://mktm.10101111.com/html5/2015/app/mobileapp.html";
+			}
+		});
+		</script>
+	</body>
+</html>
