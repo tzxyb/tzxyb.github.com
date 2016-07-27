@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>神州 最美孕妈</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1, maximum-scale=1, user-scalable=no">
+  <meta name="format-detection" content="telephone=no,email=no">
+  <meta name="full-screen" content="yes">
+  <link rel="stylesheet" href="css/style.css">
+    <script type="text/javascript">
+	  document.getElementsByTagName("html")[0].style.fontSize = 32 * parseInt(document.documentElement.clientHeight) / 1029 + "px";
+	  //alert(document.getElementsByTagName("html")[0].style.fontSize);
+    </script>   
+</head>
+<body>
+    <div class="sharePage">
+      <div class="page">
+        <div class="pa bianma">NO.06575</div>
+        <img src="" class="pa yunmaPic">
+        <img src="images/btn_mevote.jpg" class="pa btn_mevote">
+        <img src="images/btn_mecj.jpg" class="pa btn_mecj">
+        <img src="images/btn_home.jpg" class="pa btn_home">
+        <hr class="pa line_verRule">
+        <div class="pa shareRule">
+            <img src="images/hdgz.png" class="pa hdgz">
+            <img src="images/arrowUp.png" class="pa arrowUpRule">
+            <div class="pa text_rule">
+              <img src="images/rule1.png">
+            </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="ceng">
+     <div class="page">
+      <div class="pa ma">
+         <div class="pa maText">扫码二维码关注公众号<br>回复<span>“06575”</span></div>
+         <img src="images/ma.jpg">
+      </div>
+     </div>
+    </div>
+    
+    <script src="js/jquery.min.js"></script>
+    <script>
+	 $(function(){
+		$bili=640/1029;
+		$height = $(window).height();
+		$width = $height*$bili;
+		var $h = $height +"px";
+		$(".page").css({"width":$width,"height":$h});
+		
+		$(".sharePage, .bianma, .yunmaPic").fadeIn();
+		$(".yunmaPic").attr({"src":"images/pic_big.jpg"});
+		
+		$(".btn_mevote").click(function(){  /*我要投票*/
+			$(".ceng, .ma").show();
+		});
+		
+		$(".ma").on("click", function(){   /*扫码二维码关注公众号*/
+			$(".ceng, .ma").hide();
+		});
+		
+		$(".btn_mecj, .btn_home").click(function(){  /*我要参加、首页*/
+			window.location.href = "index.html";
+		});
+	  
+	 });
+    </script>
+</body>
+</html>

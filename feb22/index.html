@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=0.5, maximum-scale=0.5, user-scalable=no">
+    <!--build:css({.tmp,src}) css/all.min.css -->
+    <link rel="stylesheet" href="css/normalize.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <!--endbuild -->
+    <script src="js/vendor/jquery.js"></script>
+    <script src="js/vendor/create/preloadjs-0.6.2.min.js"></script>
+    <script src="js/vendor/create/soundjs-0.6.1.min.js"></script>
+    <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+    <!--<script src="//wximg.gtimg.com/wxp/libs/wxmoment/0.0.4/wxmoment.min.js"></script>-->
+</head>
+
+<body>
+    <section id="Jm_loding" class="m1loding">
+        <section class="J_l2m l2m">
+            <!--<img class="sm-1" src="images/sm_1_1.png" alt="">-->
+            <!--<img class="sm-2" src="images/sm_1_2.png" alt="">-->
+            <p class="sm-3"> <img src="images/sm_1_3.png" alt=""></p>
+            <img class="sm-4" src="images/sm_1_4.png" alt="">
+            <p class="absolute sm-5"><img src="images/sm_1_5.png" alt=""></p>
+            <table>
+                <tr>
+                    <td class="J_hours">5</td>
+                    <td class="J_d"><img src="images/sm_1_6.png" alt=""></td>
+                    <td class="J_minutes">00</td>
+                </tr>
+            </table>
+            <p class="J_info txt-1">
+                <!--Monday,July 29-->
+            </p>
+        </section>
+        <section class="Jm_l4m l4m">
+            <div class="J_frame frame-1"></div>
+        </section>
+    </section>
+    <div id="main-container">
+    </div>
+    <audio id="bgm" src="images/mic3.mp3" loop preload></audio>
+    <audio id="Alarm3" src="images/Alarm3.mp3" loop preload></audio>
+    <script src="js/vendor/TweenMax.min.js"></script>
+    <!--build:js({.tmp,src}) js/lib/all.min.js -->
+    <script src="js/lib/mt.dataExcuses.js"></script>
+    <script src="js/lib/tween.js"></script>
+    <script src="js/lib/mt.page.js"></script>
+    <script src="js/lib/load.js"></script>
+    <script src="js/lib/main.js"></script>
+    <!--endbuild -->
+    <script>
+        $(function () {
+            load();
+        });
+    </script>
+</body>
+
+</html>

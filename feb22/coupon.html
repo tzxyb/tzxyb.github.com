@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=0.5, maximum-scale=0.5, user-scalable=no">
+    <!--build:css({.tmp,src}) css/all.min.css -->
+    <link rel="stylesheet" href="css/normalize.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <!--endbuild -->
+    <script src="js/vendor/jquery.js"></script>
+    <script src="js/vendor/create/preloadjs-0.6.2.min.js"></script>
+    <script src="js/vendor/create/soundjs-0.6.1.min.js"></script>
+    <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+</head>
+<body>
+    <section id="Jm_page_l7m" class="Jman_l7m absolute l7m">
+        <img class="absolute sm-1" src="images/l7m_sm_1.jpg" alt="">
+        <img class="absolute sm-2" src="images/l6m_sm_3.png" alt="">
+        <div class="Jan_inputbox absolute inputbox">
+            <input type="tel" value="输入手机号，即刻领取优惠券" maxlength="11">
+        </div>
+        <button class="Jan_btn absolute btn-1" type="button"><img src="images/btn_2_3.png" alt="马上领券"></button>
+    </section>
+    <section id="Jm_page_l8m" class="Jman_l8m absolute l8m">
+        <div class="Jan_phonebox absolute phonebox">
+            <img src="images/l8m_sm_1.png" alt="">
+            <p>
+                10元优惠券，已存入
+                <br>
+                <span class="J_phone"></span>的手机中了！
+            </p>
+        </div>
+        <button type="button" class="J_btn_1 Jan_btn_1 absolute btn-1"><img src="images/btn_2_2.png" alt="拯救大忙人"></button>
+        <button type="button" class="J_btn_2 Jan_btn_2 absolute btn-2"><img src="images/btn_2_4.png" alt=""></button>
+    </section>
+    <section id="Jm_page_l9m" class="absolute l9m">
+        <img src="images/l9m_sm_1.png" alt="">
+    </section>
+    <section id="Jm_page_l10m" class="absolute l10m">
+        <img src="images/l10m_bg.png" alt="">
+    </section>
+    <audio id="bgm" src="images/mic3.mp3" loop preload autoplay></audio>
+    <script src="js/vendor/TweenMax.min.js"></script>
+    <!--build:js({.tmp,src}) js/lib/all.min.js -->
+    <script src="js/lib/tween.js"></script>
+    <script src="js/lib/mt.page.js"></script>
+    <script src="js/lib/load.js"></script>
+    <script src="js/lib/main.js"></script>
+    <!--endbuild -->
+    <script>
+        $(function () {
+            mtPage.l7m();
+        })
+    </script>
+</body>
+</html>
