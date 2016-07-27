@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<link href="http://m.zuche.com" rel="dns-prefetch">
+<title></title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-title" content="">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta name="format-detection" content="telephone=no">
+<meta name="baidu-tc-cerfication" content="">
+<link href="../css/base.css" type="text/css" rel="stylesheet" />
+<link href="../css/order.css" type="text/css" rel="stylesheet" />
+</head>
+
+<body class="bgwhite">
+<header id="headerview">
+	<div class="ucar-header">
+		<div class="ucar-h-left">
+			<div class="heariconw getback">
+				<i class="getbackimg"></i>
+			</div>
+		</div>
+		<h1 class="header_title">价格组成</h1>
+		<div class="ucar-h-right">
+			<div class="heariconw"></div>
+		</div>
+	</div>
+</header>
+<div id="main" class="hotel-page-height100">
+	<div class="v_show">
+		<div class="v_content" style="min-height:377px">
+			<div class="v_content_list">
+				<dl>
+					<dd>
+						<ul class="ucarpriceinfor bgf3f3f3" style="border-bottom:1px solid #ececec;">
+							<li class="img"><img src="../images/ucar_gwc.jpg" style="width:60%;"></li>
+							<li class="f16 black34">公务轿车</li>
+							<li class="u_p_i"><i class="current"></i><i></i><i></i></li>
+						</ul>
+						<ul class="ucarpriceinfor pt10">
+							<li>费用仅提供参考，可能因交通、天气或其他因素而不同</li>
+							<li class="f14">套餐价<span class="black34">（<em>50</em>公里+<em>4</em>小时）￥<em>400</em></span></li>
+							<li class="black34">+</li>
+							<li class="f14">超时长费<span class="black34">（<em>N</em> * ￥<em>0.5</em>/分钟）</span></li>
+							<li class="black34">+</li>
+							<li class="f14">超里程费<span class="black34">（<em>N</em> * ￥<em>2.9</em>/公里）</span></li>
+							<li class="black34">=</li>
+							<li class="black34">套餐价 &#12288;<span class="f24 red">¥<em>614</em></span></li>
+						</ul>
+					</dd>
+					<dd>
+						<ul class="ucarpriceinfor bgf3f3f3" style="border-bottom:1px solid #ececec;">
+							<li class="img"><img src="../images/ucar_swc.jpg" style="width:60%;"></li>
+							<li class="f16 black34">商务7座</li>
+							<li class="u_p_i"><i></i><i class="current"></i><i></i></li>
+						</ul>
+						<ul class="ucarpriceinfor pt10">
+							<li>费用仅提供参考，可能因交通、天气或其他因素而不同</li>
+							<li class="f14">套餐价<span class="black34">（<em>50</em>公里+<em>4</em>小时）￥<em>400</em></span></li>
+							<li class="black34">+</li>
+							<li class="f14">超时长费<span class="black34">（<em>N</em> * ￥<em>0.5</em>/分钟）</span></li>
+							<li class="black34">+</li>
+							<li class="f14">超里程费<span class="black34">（<em>N</em> * ￥<em>2.9</em>/公里）</span></li>
+							<li class="black34">=</li>
+							<li class="black34">套餐价 &#12288;<span class="f24 red">¥<em>614</em></span></li>
+						</ul>
+					</dd>
+					<dd>
+						<ul class="ucarpriceinfor bgf3f3f3" style="border-bottom:1px solid #ececec;">
+							<li class="img"><img src="../images/ucar_hhc.jpg" style="width:60%;"></li>
+							<li class="f16 black34">豪华轿车</li>
+							<li class="u_p_i"><i></i><i></i><i class="current"></i></li>
+						</ul>
+						<ul class="ucarpriceinfor pt10">
+							<li>费用仅提供参考，可能因交通、天气或其他因素而不同</li>
+							<li class="f14">套餐价<span class="black34">（<em>50</em>公里+<em>4</em>小时）￥<em>400</em></span></li>
+							<li class="black34">+</li>
+							<li class="f14">超时长费<span class="black34">（<em>N</em> * ￥<em>0.5</em>/分钟）</span></li>
+							<li class="black34">+</li>
+							<li class="f14">超里程费<span class="black34">（<em>N</em> * ￥<em>2.9</em>/公里）</span></li>
+							<li class="black34">=</li>
+							<li class="black34">套餐价 &#12288;<span class="f24 red">¥<em>614</em></span></li>
+						</ul>
+					</dd>
+				</dl>
+			</div>
+		</div>
+		<a href="javascript:void(0)" class="prev"></a>
+		<a href="javascript:void(0)" class="next"></a>
+	</div>
+	<div class="sm">
+		说明：路桥费、停车费等，按服务中司机实际的垫付费用收取，不在以上报价范围。
+	</div>
+</div>
+<script src="../js/jquery/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="../js/common.js"></script>
+<script type="text/javascript">
+$(function(){
+	var pwidth = $(window).width();
+	$('.v_content,.ucarpriceinfor').width(pwidth);
+    var page = 1;
+    var i = 1; //每版放4个图片
+    //向后 按钮
+    $("a.next").click(function(){    //绑定click事件
+	     var $parent = $(this).parents("div.v_show");//根据当前点击元素获取到父元素
+		 var $v_show = $parent.find("div.v_content_list"); //寻找到“视频内容展示区域”
+		 var $v_content = $parent.find("div.v_content"); //寻找到“视频内容展示区域”外围的DIV元素
+		 var v_width = $v_content.width() ;
+		 var len = $v_show.find("dd").length;
+		 var page_count = Math.ceil(len / i) ;   //只要不是整数，就往大的方向取最小的整数
+		 if( !$v_show.is(":animated") ){    //判断“视频内容展示区域”是否正在处于动画
+			  if( page == page_count ){  //已经到最后一个版面了,如果再向后，必须跳转到第一个版面。
+				$v_show.animate({ left : '0px'}, "slow"); //通过改变left值，跳转到第一个版面
+				page = 1;
+				}else{
+				$v_show.animate({ left : '-='+v_width }, "slow");  //通过改变left值，达到每次换一个版面
+				page++;
+			 }
+		 }
+   });
+    //往前 按钮
+    $("a.prev").click(function(){
+	     var $parent = $(this).parents("div.v_show");//根据当前点击元素获取到父元素
+		 var $v_show = $parent.find("div.v_content_list"); //寻找到“视频内容展示区域”
+		 var $v_content = $parent.find("div.v_content"); //寻找到“视频内容展示区域”外围的DIV元素
+		 var v_width = $v_content.width();
+		 var len = $v_show.find("dd").length;
+		 var page_count = Math.ceil(len / i) ;   //只要不是整数，就往大的方向取最小的整数
+		 if( !$v_show.is(":animated") ){    //判断“视频内容展示区域”是否正在处于动画
+		 	 if( page == 1 ){  //已经到第一个版面了,如果再向前，必须跳转到最后一个版面。
+				$v_show.animate({ left : '-='+v_width*(page_count-1) }, "slow");
+				page = page_count;
+			}else{
+				$v_show.animate({ left : '+='+v_width }, "slow");
+				page--;
+			}
+		}
+    });
+});
+
+</script>
+</body>
+</html>

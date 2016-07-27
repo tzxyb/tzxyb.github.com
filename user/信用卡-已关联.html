@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<link href="http://m.zuche.com" rel="dns-prefetch">
+<title></title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-title" content="">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta name="format-detection" content="telephone=no">
+<meta name="baidu-tc-cerfication" content="">
+<link href="../css/base.css" type="text/css" rel="stylesheet" />
+<link href="../css/user.css" type="text/css" rel="stylesheet" />
+</head>
+
+<body>
+<header id="headerview">
+	<div class="ucar-header">
+		<div class="ucar-h-left">
+			<div class="heariconw getback">
+				<i class="getbackimg"></i>
+			</div>
+		</div>
+		<h1 class="header_title">绑定信用卡</h1>
+		<div class="ucar-h-right">
+			<div class="heariconw">
+                 <a href="" class="orange" id="alertbtn">解除关联</a>
+			</div>
+		</div>
+	</div>
+</header>
+<div id="main" class="hotel-page-height100">
+    <div class="ucar-r-box">
+    	<ul class="mt10">
+           <li class="height55">
+             <i class="bankcmb"></i><span>中国招商银行</span>
+             <div class="fr f16">**** 6056</div>  
+           </li>
+    	</ul>
+    	<p class="gray999 f12 tcenter">验证信用卡有效扣除的1元，将存入您的账户余额</p>
+    </div>
+</div>
+<div class="alertbox">
+	<div class="alertcontainer">
+        <p class="tcenter">您有一个行程正在进行，无法解绑信用卡</p>
+        <button class="orange_button linkitem">确认</button>
+	</div>
+</div>
+<script src="../js/jquery/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="../js/common.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+   $('a#alertbtn').click(function(event){
+   	   event.preventDefault();
+   	   $('.alertbox').show();
+   })
+   $('.alertbox').click(function(event){
+   	  if($(event.target).is('.linkitem')){
+   	  	$(this).hide()
+   	  }
+   })	
+})
+
+</script>
+</body>
+</html>

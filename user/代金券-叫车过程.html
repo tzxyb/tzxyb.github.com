@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<link href="http://m.zuche.com" rel="dns-prefetch">
+<title></title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-title" content="">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta name="format-detection" content="telephone=no">
+<meta name="baidu-tc-cerfication" content="">
+<link href="../css/base.css" type="text/css" rel="stylesheet" />
+<link href="../css/user.css" type="text/css" rel="stylesheet" />
+</head>
+
+<body>
+<header id="headerview">
+	<div class="ucar-header">
+		<div class="ucar-h-left">
+			<div class="heariconw getback">
+				<i class="getbackimg"></i>
+			</div>
+		</div>
+		<h1 class="header_title">代金券</h1>
+		<div class="ucar-h-right">
+			<div class="heariconw">
+                 <a href="代金券-说明.html" class="detail"><i class="detailimg"></i></a>
+                 <a href="" class="detail-on">不使用</a>
+			</div>
+		</div>
+	</div>
+</header>
+<div id="main" class="hotel-page-height100">
+    <div class="ucar-r-box">
+    	<ul class="ucar-dj radiogroup">
+    		<li>
+    			<div class="brd-l"></div>
+                <div class="b-money">￥ <span>20</span></div>
+                <div class="dj-list">
+                    <h3>接送机专用券</h3>
+                    <p>1.适用于商务型、豪华型</p>
+                    <p>2.限北京、上海、天津地区使用</p>
+                    <p>3.限接机送机使用</p>
+                    <p class="deadtime">有效期至：2015-06-06</p>
+                </div>
+                <div class="radiobox">
+                    <i class="radioicon"></i>
+                    <input type="radio" class="dj-radio"/>
+                </div>
+                <div class="brd-r"></div>
+    		</li>
+    		<li>
+    			<div class="brd-l"></div>
+                <div class="b-money">￥ <span>20</span></div>
+                <div class="dj-list">
+                    <h3>通用券</h3>
+                    <p>1.适用于商务型、豪华型</p>
+                    <p>2.限北京、上海、天津地区使用</p>
+                    <p class="deadtime red">有效期至：2015-05-06</p>
+                </div>
+                <div  class="radiobox">
+                	<i class="radioicon"></i>
+                	<input type="radio" class="dj-radio"/>
+                </div>
+                <div class="brd-r"></div>
+    		</li>
+    		<li class="passed">
+    			<div class="brd-l"></div>
+                <div class="b-money">￥ <span>20</span></div>
+                <div class="dj-list">
+                    <h3>通用券</h3>
+                    <p>1.适用于商务型、豪华型</p>
+                    <p class="deadtime">已过期</p>
+                </div>
+                <div class="radiobox">
+                	<i class="radioicon"></i>
+                	<input type="radio" class="dj-radio"/>
+                </div>
+                <div class="brd-r"></div>
+    		</li>
+    	</ul>
+    </div>
+</div>
+<script src="../js/jquery/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="../js/common.js"></script>
+<script type="text/javascript">
+   $(function(){
+   	 $('.ucar-r-box ul.ucar-dj li').click(function(){
+           $('.ucar-dj li .radiobox').show();
+           $('.ucar-h-right .detail').hide();
+           $('.ucar-h-right .detail-on').show();
+   	 })
+   })
+</script>
+</body>
+</html>

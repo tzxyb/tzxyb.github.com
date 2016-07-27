@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<link href="http://m.zuche.com" rel="dns-prefetch">
+<title></title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-title" content="">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta name="format-detection" content="telephone=no">
+<meta name="baidu-tc-cerfication" content="">
+<link href="../css/base.css" type="text/css" rel="stylesheet" />
+<link href="../css/order.css" type="text/css" rel="stylesheet" />
+</head>
+
+<body>
+<header id="headerview">
+	<div class="ucar-header">
+		<div class="ucar-h-left">
+			<div class="heariconw getback">
+				<i class="getbackimg"></i>
+			</div>
+		</div>
+		<h1 class="header_title">选择城市</h1>
+	</div>
+</header>
+<div id="main" class="hotel-page-height100">
+	<div class="ucar_city_letter">
+		<ul>
+			<li class="hot">热门</li>
+			<li class="b">B</li>
+			<li class="c">C</li>
+			<li class="s">S</li>
+		</ul>
+	</div>
+	<div class="pt10">
+		<dl class="ucar_citybox">
+			<dt class="currentposition">北京<span>（当前城市）</span></dt>
+			<dt id="hot_content" class="header">热门城市</dt>
+			<dd>北京</dd>
+			<dd>上海</dd>
+			<dd>杭州</dd>
+			<dd>杭州</dd>
+			<dd>杭州</dd>
+			<dd>杭州</dd>
+			<dt id="b_content" class="header">B</dt>
+			<dd>北京</dd>
+			<dd>北京</dd>
+			<dd>北京</dd>
+			<dd>北京</dd>
+			<dd>北京</dd>
+			<dt id="c_content" class="header">C</dt>
+			<dd>长春</dd>
+			<dd>长春</dd>
+			<dd>长春</dd>
+			<dd>长春</dd>
+			<dd>长春</dd>
+			<dt id="s_content" class="header">S</dt>
+			<dd>上海</dd>
+			<dd>申科斯</dd>
+			<dd>上海</dd>
+			<dd>申科斯</dd>
+			<dd>上海</dd>
+			<dd>申科斯</dd>
+			<dd>上海</dd>
+			<dd>申科斯</dd>
+			<dd>上海</dd>
+			<dd>申科斯</dd>
+		</dl>
+	</div>
+</div>
+<script src="../js/jquery/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="../js/common.js"></script>
+<script type="text/javascript">
+$(function(){
+	$('.ucar_city_letter li').click(function(){
+		var cl = $(this).attr('class');
+		$('html,body').animate({scrollTop: $('#'+cl+'_content').offset().top + "px"}, 500);
+	})
+})
+</script>
+</body>
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<link href="http://m.zuche.com" rel="dns-prefetch">
+<title></title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-title" content="">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta name="format-detection" content="telephone=no">
+<meta name="baidu-tc-cerfication" content="">
+<link href="../css/base.css" type="text/css" rel="stylesheet" />
+<link href="../css/order.css" type="text/css" rel="stylesheet" />
+</head>
+
+<body>
+<header id="headerview">
+	<div class="ucar-header">
+		<div class="ucar-h-left">
+			<div class="heariconw getback">
+				<i class="getbackimg"></i>
+			</div>
+		</div>
+		<h1 class="header_title">立即叫车</h1>
+		<div class="ucar-h-right">
+			<div class="heariconw"></div>
+		</div>
+	</div>
+</header>
+<div id="main" class="order-page-height100">
+	<div class="ucar_u_l_list">
+		<ul class="pt10">
+			<li class="right_sale" onclick="location='选择乘车人.html'">
+				<div class="re_iconbox">
+					<i class="usericon"></i>
+				</div>
+				<p class="box">
+					<span class="vm">白老师</span>
+					<span class="vm">18611565426</span>
+				</p>
+			</li>
+			<li class="mbottom"></li>
+			<li class="right_sale" onclick="location='上车地点.html'">
+				<div class="re_iconbox">
+					<i class="upsiteicon"></i>
+				</div>
+				<p class="box">
+					<span class="vm">佳境天城</span>
+				</p>
+			</li>
+			<li class="right_sale" onclick="location='上车地点.html'">
+				<div class="re_iconbox">
+					<i class="offsiteicon"></i>
+				</div>
+				<p class="box">
+					<span class="vm gray999">输入下车地点为您预估费用<!--选择地址后删除class‘gray999’--></span>
+				</p>
+			</li>
+		</ul>
+		<ul class="pt10">
+			<li class="radiogroup clearfix">
+				<label class="radiobox">
+					<span class="gw_carimg"></span>
+					<input name="motorists" type="radio" class="radioipt" id="" value="公务轿车">
+					<i class="radioicon"></i> 
+					<p>公务轿车</p>
+				</label>
+				<label class="radiobox r_cur">
+					<span class="sw_carimg"></span>
+					<input name="motorists" type="radio" class="radioipt" id="" value="商务7座" checked>
+					<i class="radioicon"></i> 
+					<p>商务7座</p>
+				</label>
+				<label class="radiobox">
+					<span class="hh_carimg"></span>
+					<input name="motorists" type="radio" class="radioipt" id="" value="豪华轿车">
+					<i class="radioicon"></i> 
+					<p>豪华轿车</p>
+				</label>
+			</li>
+		</ul>
+		<ul>
+			<li class="right_sale">
+				<div class="re_iconbox">
+					<i class="ticketicon"></i>
+				</div>
+				<p class="box">代金券</p>
+				<div class="right"><span class="red">-20</span></div>
+			</li>
+		</ul>
+		<div class="f12 pt10">
+			<p class="ac">￥<span>19.5</span>+￥<span>0.65</span>/分钟+￥<span>3.7</span>/公里</p>
+			<p class="ac gray999">7:00-9:00高峰时段,为确保用车需求,期间<br>费用为正常的<span class="red">1.3</span>倍</p>
+			<p class="ac red">当前价格为正常的0.8倍，比打车还便宜</p>
+			<p class="ac">为确保车辆供给，本次服务费收取将不低于￥50</p>
+			<p class="ac gray999">帕萨特、凯美瑞、君越或类似5座车型</p>
+		</div>
+		<div class="h55 pt10"></div>
+	</div>
+</div>
+<div class="footsubmit">
+	<div class="fixed">
+		<div class="p0_10 clearfix">
+			<div class="fl p-re right_sale percent-w55">预估价&#12288;<span class="red_price">¥<em>1203</em></span></div>
+			<div class="fr percent-w45">
+				<button class="orange_button" onclick="location='派单中.html'">提交</button>
+			</div>
+		</div>
+	</div>
+</div>
+<script src="../js/jquery/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="../js/common.js"></script>
+<script type="text/javascript">
+$(function(){
+	$(".radiogroup .radiobox").click(function(){
+		$(this).addClass('r_cur').siblings().removeClass('r_cur');
+	});
+})
+</script>
+</body>
+</html>

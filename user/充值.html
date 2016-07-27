@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<link href="http://m.zuche.com" rel="dns-prefetch">
+<title></title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-title" content="">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta name="format-detection" content="telephone=no">
+<meta name="baidu-tc-cerfication" content="">
+<link href="../css/base.css" type="text/css" rel="stylesheet" />
+<link href="../css/user.css" type="text/css" rel="stylesheet" />
+</head>
+
+<body>
+<header id="headerview">
+	<div class="ucar-header">
+		<div class="ucar-h-left">
+			<div class="heariconw getback">
+				<i class="getbackimg"></i>
+			</div>
+		</div>
+		<h1 class="header_title">充值</h1>
+		<div class="ucar-h-right">
+			<div class="heariconw"><a class="orange" href="充值-替他人充值.html">替他人充</a></div>
+		</div>
+	</div>
+</header>
+<div id="main" class="hotel-page-height100">
+    <div class="ucar-r-box">
+        <ul>
+			<li class="right_sale tcenter">
+				<a href="充值-余额明细.html">
+					可用余额<span class="red f20">￥80</span>
+				</a>
+			</li>       
+		</ul>
+		<div class="ucar-cmoney">
+			<div class="cmoney-tit">
+				<a class="cmoney-t select" href="javascript:void(0)">在线充值</a>
+				<a class="cmoney-t" href="javascript:void(0)">充值卡充值</a>
+			</div>
+			<div class="cmoney-item select-i">
+	            <input class="btn-gray whitd" type="text" placeholder="可输入充值金额"/>
+	            <p class="c100 red">充值满100返100，多充多送！</p>
+	            <div class="radiogroup">
+	                <label class="radiobox r_cur">
+	                    100元
+	                    <input type="radio" value="100元" name="num"/>
+	                </label>
+	                <label class="radiobox">
+	                    300元
+	                    <input type="radio" value="300元" name="num"/>
+	                </label>
+	                <label class="radiobox">
+	                    500元
+	                    <input type="radio" value="500元" name="num"/>
+	                </label>
+	                <label class="radiobox">
+	                    1000元
+	                    <input type="radio" value="1000元" name="num"/>
+	                </label>  
+	                <label class="radiobox">
+	                    3000元
+	                    <input type="radio" value="3000元" name="num"/>
+	                </label>
+	                <label class="radiobox">
+	                    其它
+	                    <input type="radio" value="其它" name="num"/>
+	                </label>                    	
+	            </div>
+	        </div>
+			<div class="cmoney-item">
+                <input class="btn-gray whitd" type="text" placeholder="请输入充值卡密码"/>
+			</div>
+		</div>
+
+		<div class="btn-con pos-a">
+           <input type="submit" value="提交" class="btn-bigorange pos_a"/>
+		</div>
+    </div>
+</div>
+<script src="../js/jquery/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="../js/common.js"></script>
+<script type="text/javascript">
+    $(function(){
+    	$('.ucar-cmoney .cmoney-tit a').click(function(){
+    		$('.ucar-cmoney .cmoney-tit a').removeClass('select')
+    		$('.ucar-cmoney .cmoney-item').removeClass('select-i');
+    		$(this).addClass('select');
+    		var $index_i = $(this).index();
+    		$('.ucar-cmoney .cmoney-item').eq($index_i).addClass('select-i')       
+    	})
+    })
+</script>
+</body>
+</html>

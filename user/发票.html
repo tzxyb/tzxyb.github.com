@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<link href="http://m.zuche.com" rel="dns-prefetch">
+<title></title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-title" content="">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta name="format-detection" content="telephone=no">
+<meta name="baidu-tc-cerfication" content="">
+<link href="../css/base.css" type="text/css" rel="stylesheet" />
+<link href="../css/user.css" type="text/css" rel="stylesheet" />
+</head>
+
+<body>
+<header id="headerview">
+	<div class="ucar-header">
+		<div class="ucar-h-left">
+			<div class="heariconw getback">
+				<i class="getbackimg"></i>
+			</div>
+		</div>
+		<h1 class="header_title">发票</h1>
+		<div class="ucar-h-right">
+			<div class="heariconw">
+                 <a class="orange" href="发票-开票记录.html">开票记录</a>
+			</div>
+		</div>
+	</div>
+</header>
+<div id="main" class="hotel-page-height100">
+    <div class="ucar-r-box">
+		<div class="ucar-cmoney">
+			<div class="cmoney-tit">
+				<a class="cmoney-t select" href="javascript:void(0)">按金额开票</a>
+				<a class="cmoney-t" href="javascript:void(0)">按行程开票</a>
+			</div>
+			<div class="cmoney-item  ucar-fp-ul select-i">
+				<ul><li class="tcenter">可开票额度 <span class="red f20">￥15</span></li></ul>
+	            <ul class="fp-list">
+	            	<li>
+	            		开票金额<input class="no-brd" type="text" placeholder="请输入开票金额"/>
+	            	</li>
+	            	<li>
+	            		发票抬头<input class="no-brd" type="text" placeholder="请输入公司名称或个人"/>
+	            	</li>
+	            	<li>
+	            		发票内容<input class="no-brd" type="text" placeholder="叫车服务"/>
+	            	</li>	
+	            </ul>
+	            <ul class="fp-list">
+	            	<li>
+	            		收件人<input class="no-brd" type="text" placeholder="请输入请输入收件人姓名"/>
+	            	</li>
+	            	<li>
+	            		联系电话<input class="no-brd" type="text" placeholder="18611565426"/>
+	            	</li>
+	            	<li>
+	            		邮寄地址<input class="no-brd" type="text" placeholder="请输入详细地址"/>
+	            	</li>	
+	            </ul>
+	            <p class="c100 red">金额200元以上免快递费</p>
+
+				<div class="btn-con">
+		           <input type="submit" value="提交" class="btn-bigorange"/>
+				</div>
+
+	        </div>
+			<div class="cmoney-item ucar-fp-ul radiogroup">
+	            <ul class="radiobox r_cur">
+	                <li>可开票金额：<span class="red">￥150</span></li>
+	                <li class="height100">
+	                     <div class="fl mr5">
+	                        <i class="clockimg"></i><span>2015-03-13 17:14</span><br/>
+	                        <i class="upaddr"></i> <span>马连洼拜望家园</span><br/>
+	                        <i class="downaddr"></i> <span>佳境天城</span><br/>
+	                        <i class="userimg"></i> <span>白老师 18616161616（本人）</span>
+	                     </div>
+	                     <i class="radioicon"></i>
+	                     <input type="checkbox" />
+	                </li>
+	            </ul>
+	            <ul class="radiobox">
+	            	<li>可开票金额：<span class="red">￥123</span></li>
+	                <li class="height100">
+	                     <div class="fl mr5">
+	                        <i class="clockimg"></i><span>2015-03-13 17:14</span><br/>
+	                        <i class="upaddr"></i> <span>马连洼拜望家园</span><br/>
+	                        <i class="downaddr"></i> <span>佳境天城</span><br/>
+	                        <i class="userimg"></i> <span>白老师 18616161616（本人）</span>
+	                     </div>
+	                     <i class="radioicon"></i>
+	                     <input type="checkbox" />
+	                </li>
+	            </ul>
+	            <p class="c100">金额200元以上免快递费</p>
+	            <ul>
+	            	<li class="height55">
+                    已选金额<span class="red f20">￥150</span>
+                    <div class="fr percent-w50">
+                       <a class="orange_button" href="发票-行程提交.html">下一步</a>
+                    </div>	            		
+	            	</li>
+	            </ul>
+			</div>
+
+        </div>
+    </div>
+<script src="../js/jquery/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="../js/common.js"></script>
+<script type="text/javascript">
+    $(function(){
+    	$('.ucar-cmoney .cmoney-tit a').click(function(){
+    		$('.ucar-cmoney .cmoney-tit a').removeClass('select')
+    		$('.ucar-cmoney .cmoney-item').removeClass('select-i');
+    		$(this).addClass('select');
+    		var $index_i = $(this).index();
+    		$('.ucar-cmoney .cmoney-item').eq($index_i).addClass('select-i')
+
+			$(".radiogroup .radiobox").click(function(){
+				$(this).toggleClass('r_cur')
+			});     
+    	})
+
+    })
+</script>
+</body>
+</html>
