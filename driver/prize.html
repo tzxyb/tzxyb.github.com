@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-title" content="神州专车">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <title></title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="http://mktjs.10101111cdn.com/common/jquery/jquery-1.9.1.min.js"></script>
+</head>
+	<body>
+		<div class="container">
+			<section class="top">
+				<div class="top-one">
+					<h2><span class="name">xxx</span>师傅您辛苦了</h2>
+					<p class="top-w">
+						神州司机节是我们为您推出的专属节日！您每天只要完成定量的指标任务，即可获得一次抽奖机会。欢迎参与，礼品多多！
+					</p>
+					<a href="intro.html" class="btn-intro">活动规则</a>
+				</div>
+
+				<div class="luckydraw">
+					<div class="drawbg">
+						<div class="pointer"><img  src="images/draw_start.png"></div>
+						<div class="rotate"><img  id="rotate" src="images/pic_rotate.png" alt="" /></div>
+					</div>
+					<p>今日您还有<span class="red"><b class="times">X</b>次抽奖机会</span></p>
+				</div>
+			</section>
+			
+			<section class="luckynames">
+		        <h2>幸运名单</h2>
+		        <div id="result">
+		            <ul class="namelist">
+		            </ul>
+		        </div>
+			</section>
+
+		</div>
+	</body>
+
+	    <script src="awardRotate.js"></script>
+    <script>
+
+        $(function (){
+            var rotateTimeOut = function (){
+                $('#rotate').rotate({
+                    angle:0,
+                    animateTo:2160,
+                    duration:4000,
+                    callback:function (){
+                        alert('网络超时，请检查您的网络设置！');
+                    }
+                });
+            };
+            var bRotate = false;
+
+            var rotateFn = function (awards, angles, txt){
+                bRotate = !bRotate;
+                $('#rotate').stopRotate();
+                $('#rotate').rotate({
+                    angle:0,
+                    animateTo:angles+1800,
+                    duration:8000,
+                    callback:function (){
+                        alert(txt);
+                        bRotate = !bRotate;
+                    }
+                })
+            };
+
+            $('.pointer').click(function (){
+
+                if(bRotate)return;
+                var item = rnd(0,7);
+
+                switch (item) {
+                    case 0:
+                        rotateFn(0, 0, '泰国游');
+                        break;
+                    case 1:
+                        rotateFn(1, 40, '订单时长奖');
+                        break;
+                    case 2:
+                        rotateFn(2, 80, '订单里程奖');
+                        break;
+                    case 3:
+                        rotateFn(3, 120, '单日量奖');
+                        break;
+                    case 4:
+                        rotateFn(4, 160, '营业额100元');
+                        break;
+                  	case 5:
+                        rotateFn(4, 200, '抽奖令牌');
+                        break;
+                    case 6:
+                        rotateFn(4, 240, '免罚金牌');
+                        break;
+                     case 7:
+                        rotateFn(4, 280, '免罚令牌');
+                        break;
+                }
+
+                console.log(item);
+            });
+	        function rnd(n, m){
+	            return Math.floor(Math.random()*(m-n+1)+n)
+	        }
+	            
+            /*滚动*/
+        var startArray=new Array("132","138","177","186","135","139","185","136","150","158");
+    	var jiangpinArray=new Array("泰国游","订单时长奖","单日量奖","抽奖令牌","免罚金牌","免罚令牌","订单里程奖","营业额100元","抽奖令牌","免罚金牌");
+    	var endArray=new Array("1","2","3","4","5","6","7","8","9","0");
+    	for ( var i = 0; i < 100; i++) {
+    		var k = parseInt(10*Math.random());
+    		var t = parseInt(10*Math.random());
+    		var f = parseInt(10*Math.random());
+    		var v = parseInt(10*Math.random());
+    		var startStr = startArray[k];
+    		var endStr = endArray[k]+''+endArray[t]+endArray[f]+endArray[v];
+    		var newStr=startStr+"****"+endStr;
+    		$(".namelist").append('<li><div class="p_phone">'+newStr+'</div><div class="p_time"></div><div class="p_ticket">'+jiangpinArray[k]+'</div><div class="prize"></div></li>');
+    	} 
+        //中奖名单滚动
+        var $this = $("#result");
+        var scrollTimer;
+        $this.hover(function() {
+            clearInterval(scrollTimer);
+        },
+        function() {
+            scrollTimer = setInterval(function() {
+                scrollNews($this);
+            },
+            2000);
+        }).trigger("mouseleave");
+
+        function scrollNews(obj) {
+            var $self = obj.find("ul");
+            var lineHeight = $self.find("li:first").height();
+            $self.animate({
+                "marginTop": -lineHeight + "px"
+            },
+            600,
+            function() {
+                $self.css({
+                    marginTop: 0
+                }).find("li:first").appendTo($self);
+            })
+        }
+        });
+
+    </script>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="yes" name="apple-touch-fullscreen">
+    <meta content="telephone=no,email=no" name="format-detection">
+    <meta content="fullscreen=yes,preventMove=no" name="ML-Config">
+    <title>神州租车—中国最大租车公司!天天超低价!!!</title>
+    <meta name="description" content="神州租车-全国70大城市,90大机场高铁,万辆新车,不限里程,价格超低,手续便捷,服务尽心,24小时服务,携手贝克汉姆共启云战略.Tel:400-616-6666">
+    <meta name="keywords" content="租车，租车网，租车公司，汽车租赁，H_lYMbU-rQ0RUInbjlkbxqyQBhQ">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no,minimal-ui">
+    <meta name="apple-mobile-web-app-title" content="神州租车">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta content="telephone=no" name="format-detection">
+    <meta name="baidu-tc-cerfication" content="55c603db1cd78c7f7ab7686162824f23">
+    <script src="js/jquery/jquery-1.7.1.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/zcbase.css">
+    <link rel="stylesheet" type="text/css" href="css/zccommon.css">
+</head>
+<body>
+<header class="zc_header_bd">
+    <div class="getback" style="white-space:normal" data-url="/html5/newversion/member/index.html">
+        <span class="getbackimg">&nbsp;</span>
+    </div>
+    <h1 class="header_title" id="page_title">登录</h1>
+</header>
+<div class="hotel-page-pt50 zc_common">
+	<ul>
+		<li>
+			<label class="user">账&nbsp;&nbsp;&nbsp;户</label>
+			<form action="">
+				<input type="reset" class="reset">
+				<input id="userId" name="userId" type="tel" class="phoneipt" placeholder="请输入手机号" maxlength="11">
+			</form>
+		</li>
+		<li class="brb"><label class="password">密&nbsp;&nbsp;&nbsp;码</label><label class="secret"></label><input id="password" name="password" type="password" class="passwordipt" placeholder="请输入密码"></li>
+		<li id="yzmLi" class="brdt brb">
+			<label class="yzm">验证码 </label>
+			<input id="xyzm" name="xyzm" type="tel" placeholder="" class="phoneyzm" maxlength="4">
+			<label class="yzmpic"><img id="kaptchaImage" src="images/yzm.png"></label>
+		</li>		
+		<li class="bgnone mt20"><button type="button" id="login" class="loginbtn">登录</button></li>
+		<li class="bgnone mt20">
+			<div class="fl"><a href="javascript:void(0);" id="registUser" class="pink">免费注册</a></div>
+			<div class="fr"><a href="javascript:void(0);" id="findPassword">忘记密码?</a></div>
+		</li>
+	</ul>
+</div>
+<script>
+	$(function(){
+		$('.secret').click(function(){
+			$('#password').attr('type','number');
+			$(this).toggleClass('blind');
+		})
+
+	})
+</script>
+</body>
+</html>

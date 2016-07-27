@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-title" content="神州专车">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <title></title>
+    <script src="http://mktjs.10101111cdn.com/common/jquery/jquery-1.9.1.min.js"></script>
+    <link rel="stylesheet" href="style.css" />
+</head>
+	<body>
+		<div class="luckycon">
+			<img src="images/logo_lucky.png" alt=""class="img"/>
+			<img src="images/pic_1_lucky.png" alt=""class="img" />
+			<ul class="inputcon">
+				<li>
+					<input type="tel" name="mobile" id="mobile" placeholder="输入手机号" class="t_val" maxlength="11"/>
+				</li>
+				<li>
+					<input type="text"  class="" placeholder="输入您的ID"/>
+				</li>
+				<li>
+					<input type="password"  class="" placeholder="密码"/>
+				</li>
+				<li>
+					<a href="javascript:;" class="btn-go">快来参加</a>
+				</li>
+			</ul>
+		</div>
+	</body>
+	<script type="text/javascript">
+		$(function(){
+			var $height =$(window).height();
+			$('.luckycon').height($height);
+			
+			$(".t_val").focus(function(){
+				var txt_value = $(this).val();
+				if(txt_value == this.defaultValue){
+					$(this).val("");
+				}
+			}).blur(function(){
+				var txt_value = $(this).val();
+				if(!txt_value){
+					$(this).val(this.defaultValue);
+				}
+			}).keydown(function(){
+				var txt_value = $(this).val();
+			});
+		})
+	</script>
+</html>

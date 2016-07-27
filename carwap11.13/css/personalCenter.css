@@ -1,0 +1,46 @@
+.zc_myorder_list .p{padding:20px 15px;}
+.zc_myorder_list .list_bd{padding-bottom:5px;margin-bottom: 15px;}
+.zc_myorder_list .list_bd dl{padding:0px 15px 15px 15px;background-color: #fff;}
+.zc_myorder_list .list_bd dl dt,.list_bd dl dd{position: relative;overflow: hidden;border-bottom: 1px solid #dadadf;}
+.zc_myorder_list .list_bd dl dt{height:50px;line-height:50px;color: #60606c; font-size: 16px;}
+.zc_myorder_list .list_bd dl dt .button_bd{position: absolute;top:10px;right:0px;height: 30px;line-height: 30px;}
+.zc_myorder_list .list_bd dl dt .state{color:#feab00;font-size: 15px;}
+.zc_myorder_list .list_bd dl dt .graystate{color:#93939e;font-size: 15px;}
+.zc_myorder_list .list_bd dl dd{padding:10px 0px 10px 0px;min-height:30px;}
+.zc_myorder_list .list_bd dl dd.car{padding:10px 10px 10px 120px;}
+.zc_myorder_list .list_bd .po_img{width:110px;height:40px;position: absolute;left: 0px;top:15px;}
+.zc_myorder_list .list_bd dl dd h2{font-size:15px;}
+.zc_myorder_list .list_bd .carinfor{color:#60606c;font-size:12px;}
+.zc_myorder_list .list_bd .time{min-height: 74px;}
+.zc_myorder_list .list_bd .time .fl{text-align:center;padding:6px 0;}
+.zc_myorder_list .list_bd .time .w30{width: 30%;}
+.zc_myorder_list .list_bd .time img{width: 90%;}
+.list_bd .time .number{border:1px solid #fabe00;border-radius: 50%; background: #fff;height: 50px;width: 50px;color:#fabe00;margin:0 auto; font-size: 24px; line-height: 30px;}
+.list_bd .time .number p.tian{font-size: 12px;color: #626262; line-height: 14px;}
+.list_bd .time .w40{width: 40%;margin-top:8px;background: url("../images/common/myorder_listbg.png") no-repeat center center;background-size:90% auto;}
+.list_bd .time p.title{font-size: 15px;color: #93939e;}
+.list_bd .time p.dd{color:#424242;font-size:24px;line-height:28px;}
+.list_bd .time p.day{color:#60606c;font-size:15px;}
+.p5_0{padding:6px 0;}
+.zc_myorder_list .address label,.zc_myorder_list .address p{display: block; line-height:30px;}
+.zc_myorder_list .address label{position: absolute;left:0px;top:10px;color: #60606c; font-size: 15px;padding-right:10px;border-right: 1px solid #dadadf;}
+.zc_myorder_list .address p{color: #2f2f39; font-size:18px;padding:0 10px 0 81px;}
+.zc_myorder_list .zc_mapicon{position: absolute;right: 0px;top:14px;}
+.zc_order_filtrate{width:100%;position:fixed;top:51px;left: 0px;background: #fff;z-index: 20;}
+.zc_order_filtrate ul{padding-left: 15px;}
+.zc_order_filtrate li{line-height: 50px;border-bottom: 1px solid #d0d0d0;font-size: 15px;color: #60606c;position: relative}
+.zc_order_filtrate .pitchon{position: absolute;top:18px;right:15px; display: none;}
+.zc_order_filtrate li.cur .pitchon{display: block;}
+@media screen and (max-width: 320px){
+    .zc_myorder_list .list_bd dl dt{font-size:14px;}
+    .zc_myorder_list .list_bd dl dt .state{font-size:13px;}
+    .zc_myorder_list .list_bd dl dt .graystate{font-size:13px;}
+    .zc_myorder_list .list_bd .time{min-height:65px;}
+    .list_bd .time p.title{font-size:13px;color: #93939e;}
+    .list_bd .time p.dd{color:#424242;font-size:20px;line-height: 26px;}
+    .zc_myorder_list .list_bd .time .fl{padding:0px;}
+    .list_bd .time p.day{color:#60606c;font-size:13px;}
+    .list_bd .time .number{height:40px;width:40px; font-size:20px; line-height:24px;}
+    .zc_myorder_list .address label{font-size:13px;}
+    .zc_myorder_list .address p{font-size:14px;padding:0 10px 0 71px;}
+}

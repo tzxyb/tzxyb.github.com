@@ -1,0 +1,97 @@
+@charset "utf-8";
+/* rent.html */
+.zc_header_bd .circtip,.grayarrowr,.grayarrowd,.grayarrowu,.qcbicon,.hcbicon,.wxtan{background:url(../images/common/bicon.png) no-repeat;background-size:200px 200px;}
+.zc_header_bd .circtip{background-position:-91px -26px;width:18px;height:18px;position:absolute;top:16px;right:16px;}
+.grayarrowr{background-position:7px 2px;}
+.grayarrowd{background-position:-98px 0px;}
+.grayarrowu{background-position:-120px -28px;}
+.qcbicon{background-position:-15px 5px;}
+.hcbicon{background-position:-43px 5px;}
+.wxtan{background-position:-74px 0px;}
+.mt10{margin-top:10px;}
+.rentpage .wxts{height:44px;background-color:#fdfce7;position:relative;}
+.rentpage .wxts .wxtan{width:18px;height:18px;position:absolute;left:13px;top:13px;}
+.rentpage .wxts p{font-size:15px;color:#60606c;line-height:44px;padding-left:40px;}
+.rentpage .wxts .grayarrowd,.rentpage .wxts .grayarrowu{width:15px;height:15px;position:absolute;right:14px;top:14px;}
+.rentpage .wxtstip{display:none;width:100%;color:#60606c;background:#fff;position:absolute;z-index:88;top:95px;left:0;padding-left:13px;border-bottom:1px solid #dadadf;}
+.rentpage .wxtstip h1{font-size:15px;padding-top:10px;font-weight:normal;}
+.rentpage .wxtstip h2{font-size:12px;padding-bottom:10px;font-weight:normal;}
+.rentpage .wxtstip .tiplist{overflow:hidden;margin-bottom:8px;}
+.rentpage .wxtstip .tiplist dt{width:34px;height:15px;font-size:12px;line-height:15px;border-radius:3px;background-color:#ef9e9d;color:#fff;text-align:center;float:left;margin-top:4px;}
+.rentpage .wxtstip .tiplist dd{margin-left:12px;line-height:21px;float:left;width:80%;margin-bottom:4px;}
+.rentpage .wxtstip .tiplist dd span{color:#93939e;}
+.rentpage .wxtstip .tiplist dd i{font-style:normal;color:#fabe00;}
+.rentpage .ordertabul{border-bottom:1px solid #dadadf;height:50px;background-color:#fff;}
+.rentpage .ordertabul li{width:33%;height:50px;line-height:50px;float:left;border-right:1px solid #dadadf;text-align:center;font-size:16px;}
+.rentpage .ordertabul li.brrnone{border-right:none;}
+.rentpage .ordertabul li.current{border-bottom:2px solid #feab00;color:#feab00;height:49px;}
+.rentpage ul.dzul{position:relative;background-color:#fff;overflow:hidden;border-top:1px solid #dadadf;padding-left:30px;}
+.rentpage ul.dzul .dzicon{position:absolute;width:24px;height:24px;top:13px;left:3px;}
+.rentpage ul li.dzcheng{height:30px;line-height:30px;margin:10px 0;}
+.rentpage ul li.dztext{width:24%;float:left;color:#60606c;font-size:15px;border-right:1px solid #dadadf;}
+.rentpage ul li.dztext.selsmsc,.rentpage ul li.dztext.selsmqc{color:#fabe00;display:none;}
+.rentpage ul li.dzcity{width:45%;float:left;color:#2f2f39;font-size:16px;padding-left:12px;position:relative;}
+.rentpage ul li.dzcity.selsmsc,.rentpage ul li.dzcity.selsmqc{display:none;}
+.rentpage ul li.dzcity.selsmsc input,.rentpage ul li.dzcity.selsmqc input{color:#c8c8ce;}
+.rentpage ul.dzul li.rightbtn{background-color:#f9f9f9;border-left:1px solid #dadadf;height:50px;line-height:50px;margin:0;float:right;width:75px;}
+.rentpage ul.dzul li.rightbtn i{position:relative;font-size:14px;line-height:14px;margin:5px 0;text-align:center;display:block;font-style:normal;}
+.rentpage ul li .grayarrowr{position:absolute;right:10px;width:20px;height:20px;top:4px;}
+.rentpage .ordersmsc,.rentpage .ordersmqc{display:inline-block;margin:0 auto;width:43px;background-color:#fff;height:22px;-moz-border-radius:20px;-webkit-border-radius:20px;border-radius:20px;border:0;border:2px solid #e5e5e5;position:relative;vertical-align:middle;left:13px;top:-15px;}
+.rentpage .ordersmsc span,.rentpage .ordersmqc span{position:absolute;top:-1px;left:1px;display:inline-block;width:22px;height:22px;border:1px solid #efefef;-webkit-border-radius:22px;-moz-border-radius:22px;border-radius:22px;background:#fff;-webkit-box-shadow:#979797 0 2px 5px;-moz-box-shadow:#979797 0 2px 5px;box-shadow:#979797 0 2px 5px}
+.rentpage .scbox{height:25px;border:1px solid #e5e5e5;background-color:#ffc200}
+.rentpage .scbox span.sccur{top:1px;left:20px;border:0;-webkit-box-shadow:none;-moz-box-shadow:none;box-shadow:none}
+.rentpage .dzulbox{background-color:#fff;}
+.rentpage .dzulbox .dzulin li.dzcity{width:70%;}
+.rentpage .brbotda{border-bottom:1px solid #dadadf;}
+.rentpage .dzulin{margin-left:30px;border-top:1px solid #dadadf;height:50px;}
+.rentpage .dztime{min-height: 74px;padding:15px 20px;background-color:#fff;}
+.rentpage .dztime .fl{text-align:center;padding:6px 0;}
+.rentpage .dztime .w30{width: 30%;}
+.rentpage .dztime img{width: 90%;}
+.rentpage .dztime .number{border:1px solid #fabe00;border-radius: 50%; background: #fff;height: 50px;width: 50px;color:#fabe00;margin:0 auto; font-size: 24px; line-height: 30px;}
+.rentpage .dztime .number p.tian{font-size: 12px;color: #626262; line-height: 14px;}
+.rentpage .dztime .w40{width:40%;margin-top:8px;background: url("../images/common/myorder_listbg.png") no-repeat center center;background-size:90% auto;}
+.rentpage .dztime p.title{font-size: 15px;color: #93939e;}
+.rentpage .dztime p.dd{color:#424242;font-size:24px;line-height:28px;}
+.rentpage .dztime p.day{color:#60606c;font-size:15px;}
+.rentpage .fixbot{color:#fff;background-color:#fabe00;text-align:center;position:fixed;bottom:0;width:100%;}
+.rentpage .btn-ordernow{display:inline-block;height:45px;line-height:45px;color:#fff;background-color:#fabe00;text-align:center;font-size:17px;}
+.rentpage .oratxt{color:#fabe00;}
+/* rent_list.html */
+.hour-icon,.air-icon,.rail-icon{background:url(../images/common/bicon.png) no-repeat;background-size:200px 200px;}
+.hour-icon{background-position:-119px 2px;}
+.air-icon{background-position:-141px 2px;}
+.rail-icon{background-position:-164px 2px;}
+.rentpage .rentstore li{padding:0 20px;border-bottom:1px solid #dadadf;min-height:88px;}
+.rentpage .rentstore li dl dt{font-size:15px;line-height:38px;height:38px;color:#2f2f39;position:relative;}
+.rentpage .rentstore li dl dd{font-size:14px;line-height:22px;color:#93939e;}
+.rentpage .rentstore li dl dd.jsj{color:#60606c;line-height:30px;}
+.rentpage .rentstore li dl dt span:nth-of-type(1){margin-left:5px;}
+.rentpage .rentstore li dl dt span{display:inline-block;width:20px;height:20px;vertical-align:middle;}
+/* select_city.html */
+.tocity ul li.search,.zc_select_city .load_success,.zc_select_city .load_failed,.zc_select_city .loading{background:url(../images/common/sc_icon.png) no-repeat;background-size:20px 240px}
+.zc_select_city .load_success{background-position:9px 21px}
+.zc_select_city .load_failed{background-position:177px -96px}
+.zc_select_city .loading{background-position:9px -55px}
+.tocity ul li.search{background-position:-3px -39px}
+body{background-color:#fff}
+.zc_select_city {width:95%;margin-right:20px;}
+p.sc_title,.zc_select_city .city_list li.sc_title{height:20px;line-height:20px;background-color:#f7f7f8;color:#8d8d96;font-size:14px;padding:0 0px;padding-left: 10px;}
+.zc_select_city .load_state{line-height:60px;font-size:16px}
+.zc_select_city ul li{line-height:45px;padding-left:10px;color:#8d8d96;font-size:16px}
+.zc_select_city .load_failed {color:#60606c}
+.zc_select_city .loading {color:#93939e}
+.zc_select_city .citybox{margin:0 auto;width:98%;height:60px;padding-left:5px}
+.zc_select_city .citybox li{float:left;width:28%;line-height:40px;text-align:center;border:1px solid #dadadf;border-radius:2px;margin:10px 5px;font-size:16px;padding:0}
+.zc_select_city .city_list li{border-bottom: 1px solid #dadadf;margin-left: 10px;}
+.zc_select_city .city_list li.sc_title{border:0px;margin-left:0px;}
+.zc_select_city .city_list li.nobrb{border-bottom: 0px;}
+.tocity{width:15px;position:fixed;right:5px;top:70px}
+.tocity ul li{font-size:10px;width:20px;color:#8d8d96;line-height:12px;padding:3px 0;text-align:center}
+.tocity ul li.cur{color:#f2c64a}
+.clear{clear:both}
+.p0_40{padding: 0 40px;}
+.p0_10{padding:0 10px;}
+
+
+

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-title" content="神州专车">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <title></title>
+     <script src="http://mktjs.10101111cdn.com/common/jquery/jquery-1.9.1.min.js"></script>
+	<style>
+		*{margin:0;padding:0}
+		body {width: 100%;font-family:"微软雅黑";}
+		html{font-size:10px;}
+		img{width:100%;}
+		.container{width:100%;background:#fff5dc;max-width:414px;margin:0 auto;position:relative}
+		.container .top,.container .prizeset{width:100%;height:auto;position:relative;top:0}
+		.container .top .logo{position:absolute;z-index:9;top:0}
+		.container .top .luckydraw{position:absolute;width:100%;top:16rem;}
+		.container .top .luckydraw .drawbg{width:292px;height:292px;margin:0 auto;background:url(images/bg_draw.png) no-repeat;background-size:100% 100%}
+		.drawbg .pointer{width:84px;height:109px;position:absolute;left:50%;top:50%;margin-left:-45px;margin-top:-68px;z-index:1;transform:rotate(0);-ms-transform:rotate(0)}
+		.drawbg .rotate{}
+		.container .hr{width:100%;height:2rem;background:url(images/hr.jpg) no-repeat;background-position:center;background-size:100%;}
+		.btn-leave{position:relative;left:25%;width:50%;margin:0 auto;}
+		.bot{text-align:center;width:100%;}
+		.bot .intro-btn{line-height: 3rem;font-weight:bold;font-size:1.5rem;color:#D73334;text-decoration: none;border-bottom:1px solid #D73334;}
+		.slideup{display:none;width:100%;height:auto;position:fixed;bottom:0;}
+		.slideup .intro-p{width:94%;box-sizing:border-box;background:#d73334;padding:1rem;color:#fff;font-size:1.2rem;line-height:1.8rem;margin-left:3%;}
+		@media only screen and (max-device-width :320px) {
+			.container .top .luckydraw .drawbg{width:220px;height:220px}
+			.drawbg .pointer{width:63px;height:80px;margin-left:-32px;margin-top:-50px}
+			.drawbg .rotate{}
+		}
+
+	</style>
+    <script src="awardRotate.js"></script>
+    <script>
+        $(function (){
+            var rotateTimeOut = function (){
+                $('#rotate').rotate({
+                    angle:0,
+                    animateTo:2160,
+                    duration:4000,
+                    callback:function (){
+                        alert('网络超时，请检查您的网络设置！');
+                    }
+                });
+            };
+            var bRotate = false;
+
+            var rotateFn = function (awards, angles, txt){
+                bRotate = !bRotate;
+                $('#rotate').stopRotate();
+                $('#rotate').rotate({
+                    angle:0,
+                    animateTo:angles+1800,
+                    duration:8000,
+                    callback:function (){
+                        alert(txt);
+                        bRotate = !bRotate;
+                    }
+                })
+            };
+
+            $('.pointer').click(function (){
+
+                if(bRotate)return;
+                var item = rnd(0,4);
+
+                switch (item) {
+                    case 0:
+                        rotateFn(0, 0, '特等奖');
+                        break;
+                    case 1:
+                        rotateFn(1, 72, '一等奖');
+                        break;
+                    case 2:
+                        rotateFn(2, 144, '未中奖');
+                        break;
+                    case 3:
+                        rotateFn(3, 216, '三等奖');
+                        break;
+                    case 4:
+                        rotateFn(4, 288, '二等奖');
+                        break;
+                  
+                }
+
+                console.log(item);
+            });
+        });
+        function rnd(n, m){
+            return Math.floor(Math.random()*(m-n+1)+n)
+        }
+    </script>
+</head>
+	<body>
+		<div class="container">
+			<section class="top">
+				<img src="images/bg_top.jpg" alt="" class="bg-top"/>
+				<img src="images/logo_cyts.png" alt="" class="logo"/>
+				<div class="luckydraw">
+					<div class="drawbg">
+						<div class="pointer"><img  src="images/draw_start.png"></div>
+						<div class="rotate"><img  id="rotate" src="images/pic_rotate.png" alt="" /></div>
+					</div>
+				</div>
+				<div class="hr"></div>
+			</section>
+			
+			<section class="prizeset">
+				<img src="images/pic_prize.png" alt="" />
+				<div class="hr"></div>
+				<img src="images/pic_prize2.png" alt="" />
+				<div class="hr"></div>
+			</section>
+			<img src="images/btn_leave.png" alt=""class="btn-leave" />
+			<div class="bot">
+				<a href="javascript:void(0);" class="intro-btn">活动规则</a>
+			</div>
+			
+			<div class="slideup" id="up">
+				<p class="intro-p">神州专车为回馈用户，与中青旅强强联手，推出独家抢票活动！4月20日—4月29日期间，每天每个神州专车用户乘坐神州专车时，请打开微信“摇一摇”，参与大转盘活动，即有机会免费赢取价值499元的迪士尼乐园门票兑换券哦！每个神州专车用户每天仅限参与一次。5张迪士尼乐园门票将会在活动结束后的5个工作日内，用短信的形式发送至中奖用户。其余奖品将会及时通过短信下发，请注意查收。</p>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript">
+		$(function(){
+			$(".intro-btn").bind('click', function() {
+				$('.slideup').slideDown().bind('click', function() {
+					$('.slideup').slideUp()
+				})
+			});
+			$(".btn-leave").click(function(){
+				window.location.href="http://a2309.oadz.com/link/C/2309/35320/DwXEP0k00qUeSHSlHuVhi7fRLiE_/p025/0/http://m.aoyou.com/s/hd/b.html?id=698";
+			});
+		})
+	</script>
+</html>

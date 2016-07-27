@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="description" content=" ">
+<meta name="keywords" content=" ">
+
+<link href="css/zc_global.css" rel="stylesheet" type="text/css">
+<title></title>
+</head>
+
+<body>
+<div> <h3>价格</h3><span class="price"><del>¥9999</del><dfn>¥</dfn>6499<i class="price_info">起</i></span> </div>
+<br>
+<div><h3>模仿placeholder</h3><input type="text" value="请输入手机号" class="t_val" autocomplete="off" ></div>
+<br>
+<div class="cfind">
+	<h3>模仿select</h3>
+	<dl class="zc_selectjs zc_select fl">
+		<dt><input type="text" value="下拉2" ></dt>
+		<dd>
+			<ul>
+				<li><a href="javascript:;">12131</a></li>
+				<li><a href="javascript:;">下拉2</a></li>
+				<li><a href="javascript:;">下拉3</a></li>
+				<li><a href="javascript:;">下拉4</a></li>
+				<li><a href="javascript:;">下拉5</a></li>
+				<li><a href="javascript:;">下拉6</a></li>
+			</ul>
+            <ul></ul>
+		</dd>
+	</dl>
+	
+	<dl class="zc_selectjs zc_select fl">
+		<dt><input type="text" value="下拉" ></dt>
+		<dd>
+			<ul>
+				<li><a href="javascript:;">下拉1</a></li>
+				<li><a href="javascript:;">下拉2</a></li>
+				<li><a href="javascript:;">下拉3</a></li>
+				<li><a href="javascript:;">下拉4</a></li>
+				<li><a href="javascript:;">下拉5</a></li>
+				<li><a href="javascript:;">下拉6</a></li>
+				<li><a href="javascript:;">下拉1</a></li>
+				<li><a href="javascript:;">下拉2</a></li>
+				<li><a href="javascript:;">下拉3</a></li>
+				<li><a href="javascript:;">下拉4</a></li>
+				<li><a href="javascript:;">下拉5</a></li>
+				<li><a href="javascript:;">下拉6</a></li>
+				<li><a href="javascript:;">下拉1</a></li>
+				<li><a href="javascript:;">下拉2</a></li>
+				<li><a href="javascript:;">下拉3</a></li>
+				<li><a href="javascript:;">下拉4</a></li>
+				<li><a href="javascript:;">下拉5</a></li>
+				<li><a href="javascript:;">下拉6</a></li>
+			</ul>
+		</dd>
+	</dl>
+	<div class="clear"></div>
+</div>
+<br>
+<div>
+	<h3 onClick="disp_prompt()">遮罩层</h3>
+    <div id="pc_newdepartment" class="popup_block">
+        <div style="width: 400px;height: 200px;">
+            哈哈
+        </div>
+    </div>
+    <h4 onclick="disp_confirm()">我是alert</h4>
+</div>
+<br>
+<div>
+	<h3>鼠标悬停</h3>
+	<div>
+		<span class="a_hoverdelay">
+			<a href="javascript:;">来摸摸我</a>
+			<div class="a_hover_box">
+				<div style="width:200px; height:50px; background-color:#0FF;border:1px solid #C69;">这里可以添加任何东东</div>
+			</div>
+		</span>
+	</div>
+	<br><br>
+	<div>
+		<span class="a_hoverdelay">
+			<a href="javascript:;">再次来一次</a>
+			<div class="a_hover_box">
+				<div style="width:200px; height:50px; background-color:#F6C; opacity:; border:1px solid #C69;">一样的名字不一样的内容。</div>
+			</div>
+		</span>
+	</div>
+</div>
+<br><br>
+<!--<div>
+    <h3>城市控件</h3>
+    <div><input type="text"></div>
+</div>
+<div>
+    <h3>时间控件</h3>
+    <div><input type="text" value="2015"></div>
+</div>-->
+<div>
+    <h3>tab标签</h3>
+    <div class="">
+        <ul class="tabs">
+            <li class="cur">新闻</li>
+            <li>公告</li>
+            <li>消息</li>
+        </ul>
+        <div class="tabcontents cur">新闻新闻新闻新闻新闻新闻新闻新闻</div>
+        <div class="tabcontents">公告公告公告公告公告公告公告公告公告</div>
+        <div class="tabcontents">消息消息消息消息消息消息消息消息消息</div>
+    </div>
+</div>
+<br><br><br><br><br>
+<div class="">
+	<label class="i_label">邮箱:</label>
+	<input type="text" class="i_text" id="txtLoginID" name="txtLoginID" >
+</div>
+<script type="text/javascript" src="js/jquery/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="js/jquery/jquery.hoverdelay.js"></script>
+<script type="text/javascript" src="js/jquery.emailmatch.js"></script>
+<script type="text/javascript" src="js/common_effect.js"></script>
+<script type="text/javascript" src="js/szmasklayer.js"></script>
+<script type="text/javascript">
+    function disp_prompt(){
+        zcshowmask.showMsg("pc_newdepartment");
+    }
+    function disp_confirm(){
+        Alert.showConfirmMsg("删除提示","您确定要删除吗？",function(){alert(1)},"确定");
+    }
+	$(function(){
+		$("#txtLoginID").emailMatch();
+	});
+
+</script>
+</body>
+</html>
