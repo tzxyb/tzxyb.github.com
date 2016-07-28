@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<link href="http://m.zuche.com" rel="dns-prefetch">
+<title></title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-title" content="">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta name="format-detection" content="telephone=no">
+<meta name="baidu-tc-cerfication" content="">
+<link href="../css/base.css" type="text/css" rel="stylesheet" />
+<link href="../css/myyz.css" type="text/css" rel="stylesheet" />
+<link href="../css/jquery.nouislider.min.css" type="text/css" rel="stylesheet" />
+</head>
+
+<body>
+<header id="headerview">
+	<div class="p-header">
+		<div class="p-h-left">
+			<div class="heariconw getback"> <span class="getbackimg">&nbsp;</span> </div>
+		</div>
+		<h1 class="header_title">历史收支明细</h1>
+		<div class="p-h-right"> <a href="javascript:void(0);" id="showtext" onClick="showdiv('contentid','showtext')" class="h-rightfont">最近一周</a>
+			<div class="yzq_select_list" id="contentid" style="display:none;">
+				<div class="p-re"> <i></i> <a href="javascript:void(0);">近一周</a> <a href="javascript:void(0);">近一月</a> </div>
+			</div>
+		</div>
+	</div>
+</header>
+<div id="main" class="hotel-page-height100">
+	<div class="yzq_history_sz">
+		<ol>
+			<li>收入：<em>900</em>元</li>
+			<li>支出：<em>900</em>元</li>
+			<li class="yzq_ls_screen" id="showtext2" onClick="showdiv('contentid2','showtext2')">更多筛选条件<i class="triangle-down"></i></li>
+		</ol>
+		<dl style=" display:none;" id="contentid2" class="yzq_select_dlbox">
+			<dt>请选择筛选方式</dt>
+			<dd class="radiogroup"> 资金流向：
+				<label class="radiobox r_cur">
+					<input name="motorists" type="radio" class="radioipt" id="" value="收入" checked>
+					<i class="n_s_c"></i> <i class="checkedicon blue"></i> 收入 </label>
+				<label class="radiobox">
+					<input name="motorists" type="radio" class="radioipt" id="" value="支出">
+					<i class="n_s_c"></i> <i class="checkedicon blue"></i> 支出 </label>
+			</dd>
+			<dd class="radiogroup"> &#12288;&#12288;类型：
+				<label class="radiobox r_cur">
+					<input name="motorists" type="radio" class="radioipt" id="" value="充值" checked>
+					<i class="n_s_c"></i> <i class="checkedicon blue"></i> 充值 </label>
+				<label class="radiobox">
+					<input name="motorists" type="radio" class="radioipt" id="" value="租车费">
+					<i class="n_s_c"></i> <i class="checkedicon blue"></i> 租车费 </label>
+				<label class="radiobox">
+					<input name="motorists" type="radio" class="radioipt" id="" value="提现">
+					<i class="n_s_c"></i> <i class="checkedicon blue"></i> 提现 </label>
+			</dd>
+			<dd>
+				<div class="fl">
+					&#12288;&#12288;金额：<span class="example" id="s1">20 - 60</span>
+				</div>
+				<div class="fl mt20 ml5">
+					<div class="noUiSlider horizontal"></div>
+				</div>
+				<div class="clear"></div>
+			</dd>
+			<dd> 起止日期：
+				<input name="" type="text" class="day" placeholder="2015.1.7">
+				至
+				<input name="" type="text" class="day" placeholder="2015.1.7">
+			</dd>
+			<dd style="border:none;">
+				<div class="percent-w50 mauto pt10 pb10">
+					<button class="orange_button" id="">筛 选</button>
+				</div>
+			</dd>
+		</dl>
+		<table width="100%" cellpadding="0" cellspacing="0">
+			<tr>
+				<th>交易时间 </th>
+				<th>类型</th>
+				<th><span class="greenincome">收入</span>/<span class="orpayment">支出</span></th>
+				<th>余额</th>
+				<th>支付方式</th>
+			</tr>
+			<tr>
+				<td>2014-2-14<br>
+					11:00:03</td>
+				<td>充值</td>
+				<td><span class="orpayment">100</span></td>
+				<td>100</td>
+				<td>支付宝</td>
+			</tr>
+			<tr>
+				<td>2014-2-14<br>
+					11:00:03</td>
+				<td>充值</td>
+				<td><span class="orpayment">100</span></td>
+				<td>100</td>
+				<td>支付宝</td>
+			</tr>
+			<tr>
+				<td>2014-2-14<br>
+					11:00:03</td>
+				<td>充值</td>
+				<td><span class="greenincome">-100</span></td>
+				<td>100</td>
+				<td>支付宝</td>
+			</tr>
+			<tr>
+				<td>2014-2-14<br>
+					11:00:03</td>
+				<td>充值</td>
+				<td><span class="orpayment">100</span></td>
+				<td>100</td>
+				<td>支付宝</td>
+			</tr>
+		</table>
+	</div>
+</div>
+<script type="text/javascript" src="../js/jquery/jquery-1.7.1.min.js"></script> 
+<script type="text/javascript" src="../js/common.js"></script> 
+<script type="text/javascript" src="../js/jquery/jquery.nouislider.all.min.js"></script> 
+<script type="text/javascript">
+$(function(){
+	$(".noUiSlider").noUiSlider({
+		range: [0, 100],
+		start: [30, 60],
+		step: 10,
+		slide: function() {
+			var values = $(this).val();
+			$("#s1").text(values[0] + " - " + values[1]);
+		}
+	});
+	$(".radiogroup .radiobox").click(function(){
+		//$(this).find("input[type=radio]").attr("checked", 'checked');
+		$(this).addClass('r_cur').siblings().removeClass('r_cur');
+	});
+})
+function showdiv(targetid,objN){
+      var target=document.getElementById(targetid);
+      var clicktext=document.getElementById(objN)
+            if (target.style.display=="block"){
+                target.style.display="none";
+            } else {
+                target.style.display="block";
+            }
+}
+</script>
+</body>
+</html>

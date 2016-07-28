@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<link href="http://m.zuche.com" rel="dns-prefetch">
+<title></title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-title" content="">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta name="format-detection" content="telephone=no">
+<meta name="baidu-tc-cerfication" content="">
+<link href="../css/base.css" type="text/css" rel="stylesheet" />
+<link href="../css/myyz.css" type="text/css" rel="stylesheet" />
+</head>
+
+<body>
+<header id="headerview">
+	<div class="p-header">
+		<div class="p-h-left">
+			<div class="heariconw getback">
+				<span class="getbackimg">&nbsp;</span>
+			</div>
+		</div>
+		<h1 class="header_title">车主认证</h1>
+	</div>
+</header>
+<div id="main" class="hotel-page-height100 yzpl-r-box yzp_car_authentication">
+	<p>请填写爱车基本信息</p>
+	<ul>
+		<li class="">
+			<label class="s_infotitle right_sale p-re">京A</label>
+			<span><input name="" type="text" placeholder="请输入车牌号" style="border:none;"></span>
+		</li>
+	</ul>
+	<ul>
+		<li class="right_sale">
+			<a href="车辆认证-选择城市.html" class="w-box">
+				<label class="s_info">车辆出租城市</label>
+				<span class="select">请选择</span>
+			</a>
+		</li>
+		<li class="right_sale">
+			<a href="车辆认证-选择品牌.html" class="w-box">
+				<label class="s_info">品牌型号</label>
+				<span class="select">请选择</span>
+			</a>
+		</li>
+		<li class="right_sale">
+			<a href="车辆认证-选择变速箱.html" class="w-box">
+			<label class="s_info">变速箱</label>
+				<span class="select">请选择</span>
+			</a>
+		</li>
+		<li class="right_sale">
+			<a href="车辆认证-选择排量.html" class="w-box">
+			<label class="s_info">排量</label>
+				<span class="select">请选择</span>
+			</a>
+		</li>
+		<li class="right_sale">
+			<a href="车辆认证-选择注册时间.html" class="w-box">
+			<label class="s_info">车辆注册时间</label>
+				<span class="select">请选择</span>
+			</a>
+		</li>
+		<li class="right_sale">
+			<a href="车辆认证-选择行驶里程数.html" class="w-box">
+			<label class="s_info">行驶里程数(万公里)</label>
+				<span class="select">请选择</span>
+			</a>
+		</li>
+		<li class="right_sale">
+			<label class="s_info">车辆购置价(万元)</label>
+			<span class="select"><input name="" type="tel" class="r_f" value="" placeholder="请选择" ></span>
+		</li>
+	</ul>
+	<div class="yzy_signszgxtk">
+		<label class="yzp_checkbox" id="signcheck">
+			<i class="checkedicon dnone"></i>
+			<i class="checkedicon red dblock"></i>
+			我同意<a href="">《神州共享租客服务协议》</a>
+		</label>
+	</div>
+	<div class="percent-w40 mauto"><button class="orange_button" onclick="car_authentication()">提交信息</button></div>
+	<div class="h50"></div>
+</div>
+<script type="text/javascript" src="../js/jquery/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="../js/common.js"></script>
+<script>
+$(function() {
+	$('.yzp_checkbox').click(function() {
+		if ($(this).hasClass('c_cur')) {
+			$(this).removeClass('c_cur');
+		} else {
+			$(this).addClass('c_cur');
+		}
+	});
+
+})
+function car_authentication() {
+	if ($('#signcheck').hasClass('c_cur')) {
+		 window.location.href="我的易租-1.html";
+	} else {
+		alert("请阅神州共享租客服务协议并且同意")
+	}
+}
+</script>
+</body>
+</html>

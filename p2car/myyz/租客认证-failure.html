@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<link href="http://m.zuche.com" rel="dns-prefetch">
+<title></title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-title" content="">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta name="format-detection" content="telephone=no">
+<meta name="baidu-tc-cerfication" content="">
+<link href="../css/base.css" type="text/css" rel="stylesheet" />
+<link href="../css/myyz.css" type="text/css" rel="stylesheet" />
+</head>
+
+<body>
+<header id="headerview">
+	<div class="p-header">
+		<div class="p-h-left">
+			<div class="heariconw getback">
+				<span class="getbackimg">&nbsp;</span>
+			</div>
+		</div>
+		<h1 class="header_title">租客认证</h1>
+	</div>
+</header>
+<div class="mb10">
+	<div class="yzp_uploading">
+		<h2>
+			<a href="javascript:void(0)" class="cur"><i class="gt-s-i blue"></i>租客待认证</a>
+			<a href="javascript:void(0)" onclick=""><i class="gt-s-i"></i>车主待认证</a>
+		</h2>
+		<div class="yzp_failureaudit">审核不通过原因：拍照不清晰、信息有遮挡、反光无法看清文字。</div>
+		<dl>
+			<dt>第一步：身份证资料</dt>
+			<dd class="yzp_sfzid">
+				<img src="../images/sfzexample.gif" class="img">
+				<div class="uplogdbox">
+					<p>
+						<i class="uploadingimg"></i><br>重新上传
+						<input name="" type="file">
+					</p>
+				</div>
+			</dd>
+			<dt>第二步：驾驶证资料</dt>
+			<dd class="yzp_drivinglicence">
+				<img src="../images/jzexample.png" class="img">
+				<div class="uplogdbox">
+					<p>
+						<i class="uploadingimg"></i><br>重新上传
+						<input name="" type="file">
+					</p>
+				</div>
+			</dd>
+		</dl>
+		<div class="yzy_signszgxtk">
+			<label class="yzp_checkbox" id="signcheck">
+				<i class="checkedicon dnone"></i>
+				<i class="checkedicon red dblock"></i>
+				我同意<a href="">《神州共享租客服务协议》</a>
+			</label>
+		</div>
+		<div class="percent-w40 mauto"><button class="orange_button" onclick="display_alert()">提交</button></div>
+	</div>
+</div>
+<footer class="foothome">
+	<div class="fixed">
+		<a href=""><i></i>我要租车</a>
+		<a href=""><i></i>爱车出租</a>
+		<a href=""><i></i>租赁订单</a>
+		<a href=""><i></i>个人中心</a>
+	</div>
+</footer>
+<script type="text/javascript" src="../js/jquery/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="../js/common.js"></script>
+<script>
+$(function() {
+	$('.yzp_checkbox').click(function() {
+		if ($(this).hasClass('c_cur')) {
+			$(this).removeClass('c_cur');
+		} else {
+			$(this).addClass('c_cur');
+		}
+	});
+
+})
+function display_alert() {
+	if ($('#signcheck').hasClass('c_cur')) {
+		 window.location.href="我的易租-1.html";
+	} else {
+		alert("请阅神州共享租客服务协议并且同意")
+	}
+}
+</script>
+</body>
+</html>

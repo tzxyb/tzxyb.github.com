@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="zh-cn" class="no-js">
+	<head>
+		<meta http-equiv="Content-Type">
+		<meta content="text/html; charset=utf-8">
+		<meta charset="utf-8">
+		<title>蒙牛</title>		
+		<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+		<meta name="format-detection" content="telephone=no">
+		<meta name="format-detection" content="email=no">
+		<link rel="stylesheet" type="text/css" href="css/index.css" />
+		<link rel="stylesheet" type="text/css" href="css/animations.css" />
+	</head>
+	<body>
+		<div>
+			<div class="page page-1-1 page-current">
+				<div class="wrap">
+					<img class="img_1 pt-page-moveFromTop" src="img/t1.png" />
+					<img class="img_2 pt-page-moveFromTop" src="img/word_1.png" />
+					<img class="img_3 pt-page-moveFromTop" src="img/pic_1.jpg" />
+					<img class="img_5 pt-page-moveFromTop" src="img/arrow.png"/>
+				</div>
+			</div>
+			<div class="page page-2-1 hide">
+				<div class="wrap">
+					<img class="img_1 hide pt-page-moveFromTop" src="img/t2.png" />
+					<img class="img_2 hide pt-page-moveFromBottom" src="img/pic_2.jpg" />
+					<img class="img_5 hide pt-page-moveFromTop" src="img/arrow.png"/>
+				</div>
+			</div>
+			<div class="page page-3-1 hide">
+				<div class="wrap">
+					<img class="img_1 hide pt-page-moveFromTop" src="img/t3.png" />
+					<img class="img_2 hide pt-page-moveFromTop" src="img/word_3.png" />
+					<img class="img_3 hide pt-page-moveFromTop" src="img/pic_3.jpg" />
+					<img class="img_5 hide pt-page-moveFromTop" src="img/arrow.png"/>
+				</div>
+			</div>
+			<div class="page page-4-1 hide">
+				<div class="wrap">
+					<img class="img_1 hide pt-page-moveFromTop" src="img/t4.png" />
+					<img class="img_2 hide pt-page-moveFromTop" src="img/word_4.png" />
+					<img class="img_3 hide pt-page-moveFromTop" src="img/pic_4.png" />
+					<img class="img_5 hide pt-page-moveFromTop" src="img/arrow.png"/>
+				</div>
+			</div>
+			<div class="page page-5-1 hide">
+				<div class="wrap">
+					<img class="img_1 hide pt-page-moveFromTop" src="img/t5.png" />
+					<img class="img_2 hide pt-page-moveFromTop" src="img/word_5.png" />
+					<img class="img_3 hide pt-page-moveFromTop" src="img/pic_5.png" />
+					<img class="img_5 hide pt-page-moveFromTop" src="img/arrow.png"/>
+				</div>
+			</div>
+			
+			<div class="page page-6-1 hide">
+				<div class="wrap">
+				    <img class="img_1 hide pt-page-moveFromTop" src="img/pic_6_title.png" alt="">
+					<img class="img_2 hide pt-page-moveFromTop" src="img/pic_6.png" />
+					<img class="img_3 hide pt-page-moveFromTop" src="img/t6.png" />
+					<img class="img_4 hide pt-page-moveFromTop" src="img/word_6.png" />
+					<img class="img_5 hide pt-page-moveFromTop" src="img/arrow.png"/>
+				</div>
+			</div>
+			
+			<div class="page page-7-1 hide">
+				<div class="wrap">
+					<img class="img_1 hide pt-page-moveFromTop" src="img/t7.png" />
+					<img class="img_2 hide pt-page-moveFromTop" src="img/word_7.png" />
+					<img class="img_5 hide pt-page-moveFromTop" src="img/arrow.png"/>
+				</div>
+			</div>
+			<div class="page page-8-1 hide">
+				<div class="wrap">
+					<div class="input">
+						<form action="">
+							<input type="text" class="btn-yao" placeholder="" onclick="alertshow()">
+						</form>
+					</div>
+					<div class="alert" id="alert">
+						<a href="javascript:" class="btn-close" onclick="alertnone()"></a>
+						<a href="javascript:" class="btn-dld"></a>
+					</div>
+					<a href="javascript:"><img class="img_1 hide pt-page-moveFromTop" src="img/word_8.png" /></a>
+					<img class="img_2 hide pt-page-moveFromTop" src="img/pic_8.jpg" alt="">
+				</div>
+			</div>
+		</div>	
+		<script src="js/zepto.min.js"></script>
+		<script src="js/touch.js"></script>
+		<script src="js/index.js"></script>
+		<script>
+         window.onload=function(){
+         	alertshow=function(){
+         		document.getElementById('alert').style.display="block"
+         	}
+         	alertnone=function(){
+         	   document.getElementById('alert').style.display="none";   		
+         	}
+
+         }
+		</script>
+	</body>
+</html>
