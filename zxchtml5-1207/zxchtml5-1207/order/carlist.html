@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="yes" name="apple-touch-fullscreen">
+    <meta content="telephone=no,email=no" name="format-detection">
+    <meta content="fullscreen=yes,preventMove=no" name="ML-Config">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no,minimal-ui">
+    <meta name="apple-mobile-web-app-title" content="神州准新车">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta content="telephone=no" name="format-detection">
+    <meta name="baidu-tc-cerfication" content="xxxxxxxxxxxxxxxxxxxxxxxxxxx">
+    <script src="../js/jquery/jquery-2.1.4.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/zcbase.css">
+    <link rel="stylesheet" type="text/css" href="../css/zcorder.css">
+</head>
+<body style="background-color: #ccc;">
+<header class="zxc_fixed">
+    <div class="getback" data-url="/index.html">
+        <i class="zxc_home_i"></i>
+    </div>
+    <div class="get_cities">
+       	 全国<i class="getcitiesimg"></i>
+    </div>
+    <h1>我要买车</h1>
+     <div class="zxc_search">
+       	 <i class="zxc_search_i"></i>
+    </div>
+    <div class="zxc_added">
+       	<i class="zxc_added_i"></i>
+    </div>
+</header>
+<div class="zxc_sort">
+    <ul class="zxc_tlist">
+        <li>默认排序<i class="zxc_gbup_i m5"></i></li>
+        <li>按品牌<i class="zxc_gbup_i m5"></i></li>
+        <li>按价格<i class="zxc_gbup_i m5"></i></li>
+        <li>更多筛选<i class="zxc_gbup_i m5"></i></li>
+    </ul>
+    <ul class="sortbox stbox stbox1">
+        <li>默认排序</li>
+        <li>按价格<i class="zxc_graysjt_i m5"></i></li>
+        <li>按里程<i class="zxc_graysjt_i m5"></i></li>
+        <li>按车龄<i class="zxc_graysjt_i m5"></i></li>
+    </ul>
+    <ul class="sortbox">
+    	<li class="choose">
+    		<span class="st-relt re-brand">不限品牌</span>
+    	</li>
+    	<li>
+    		<dl class="squarebox hotbrand">
+    			<dt class="graybar">热门品牌</dt>
+    			<dd>宝马</dd>
+    			<dd>大众</dd>
+    			<dd>标致</dd>
+    			<dd>雪佛兰</dd>
+    			<dd>本田</dd>
+    			<dd>起亚</dd>
+    			<dd>别克</dd>
+    			<dd>雪铁龙</dd>
+    			<dd>奥迪</dd>
+    			<dd>丰田</dd>
+    			<dd>长城</dd>
+    			<dd>奔驰</dd>
+    		</dl>
+    		<dl class="alphabet">
+    			<dt class="graybar">A</dt>
+    			<dd>奥迪</dd>
+    		</dl>
+    		<dl class="alphabet">
+    			<dt class="graybar">b</dt>
+    			<dd>北京</dd>
+    			<dd>北汽新能源</dd>
+    			<dd>比亚迪</dd>
+    		</dl>
+    	</li>
+    </ul>
+    <ul class="sortbox">
+    	<li class="choose">
+    		<span class="st-relt re-price">不限价格</span>
+    	</li>
+    	<li>
+    		<dl class="squarebox pricech">
+    			<dt class="graybar">价格选择</dt>
+    			<dd>5万以下</dd>
+    			<dd>5-10万</dd>
+    			<dd>10-15万</dd>
+    			<dd>15-20万</dd>
+    			<dd>20-30万</dd>
+    			<dd>30-50万</dd>
+    			<dd>50万以上</dd>
+    		</dl>
+    		<dl class="pricebox">
+    			<dt class="graybar">自定义价格</dt>
+    			<dd>
+    				<ul class="pricein">
+    					<li><input type="tel" maxlength="5">万</li>
+    					<li class="line">-</li>
+    					<li><input type="tel" maxlength="5">万</li>
+    					<li class="tc">确定</li>
+    				</ul>
+    			</dd>
+    		</dl>
+    	</li>
+    </ul>
+    <ul class="sortbox stbox">
+    	<li>车型<i class="grayarr"></i></li>
+        <li>车龄<i class="grayarr"></i></li>
+        <li>行驶里程<i class="grayarr"></i></li>
+        <li>变速箱<i class="grayarr"></i></li>
+        <li>排量<i class="grayarr"></i></li>
+        <li>排放标准<i class="grayarr"></i></li>
+        <li>颜色<i class="grayarr"></i></li>
+       	<li class="que">
+       		<button class="btn-confirm">确定</button>
+       	</li>
+    </ul>
+    <div class="closebar">
+    	<i class="close_top_i"></i><span>点击收起</span>
+    </div>
+</div>
+<div class="zhezhao"></div>
+<section class="wrapper" id="wrapper">
+	<div id="scroller">
+		<ul id="thelist" class="thelist">
+			<li>
+				<div class="type-item">
+					<div class="pic">
+						<a href="javascript:;">
+							<img src="../images/temporaryimg/pic_car1.jpg" alt="" class="pic-car"/>
+						</a>
+					</div>
+					<div class="disc">
+						<a href="javascript:;" class="disc-title">
+							<h3 class="d-title">本田飞度<span class="label label-1"></span></h3>
+						</a>
+						<div class="disc-m disc-m1">
+							<span class="d-kuan">2011款</span>
+							<span class="d-size">1.6L</span>
+							<span class="d-auto">自动</span>
+							<span class="d-ban">舒适版</span>
+						</div>
+						<div class="disc-m disc-m2">
+							<span class="d-lice">2012/11 上牌 </span>
+							<span class="d-mile">7万公里</span>
+							<span class="d-site">鞍山店</span>
+						</div>
+						<p class="disc-price">
+							<b>￥<span class="bigred">5.8</span>万起</b>
+							<em>80.2km</em>
+						</p>
+					</div>
+				</div>
+			</li>
+			<li>
+				<div class="type-item">
+					<div class="pic">
+						<a href="javascript:;">
+							<img src="../images/temporaryimg/pic_car1.jpg" alt="" class="pic-car"/>
+						</a>
+					</div>
+					<div class="disc">
+						<a href="javascript:;" class="disc-title">
+							<h3 class="d-title">丰田凯美瑞<span class="label label-2"></span></h3>
+						</a>
+						<div class="disc-m disc-m1">
+							<span class="d-kuan">2011款</span>
+							<span class="d-size">1.6L</span>
+							<span class="d-auto">自动</span>
+							<span class="d-ban">舒适版</span>
+						</div>
+						<div class="disc-m disc-m2">
+							<span class="d-lice">2012/11 上牌 </span>
+							<span class="d-mile">7万公里</span>
+							<span class="d-site">鞍山店</span>
+						</div>
+						<p class="disc-price">
+							<b>￥<span class="bigred">5.8</span>万起</b>
+							<em>80.2km</em>
+						</p>
+					</div>
+				</div>
+			</li>
+			<li>
+				<div class="type-item">
+					<div class="pic">
+						<a href="javascript:;">
+							<img src="../images/temporaryimg/pic_car1.jpg" alt="" class="pic-car"/>
+						</a>
+					</div>
+					<div class="disc">
+						<a href="javascript:;" class="disc-title">
+							<h3 class="d-title">本田飞度<span class="label label-3"></span></h3>
+						</a>
+						<div class="disc-m disc-m1">
+							<span class="d-kuan">2011款</span>
+							<span class="d-size">1.6L</span>
+							<span class="d-auto">自动</span>
+							<span class="d-ban">舒适版</span>
+						</div>
+						<div class="disc-m disc-m2">
+							<span class="d-lice">2012/11 上牌 </span>
+							<span class="d-mile">7万公里</span>
+							<span class="d-site">鞍山店</span>
+						</div>
+						<p class="disc-price">
+							<b>￥<span class="bigred">5.8</span>万起</b>
+							<em>80.2km</em>
+						</p>
+					</div>
+				</div>
+			</li>
+			<li>
+				<div class="type-item">
+					<div class="pic">
+						<a href="javascript:;">
+							<img src="../images/temporaryimg/pic_car1.jpg" alt="" class="pic-car"/>
+						</a>
+					</div>
+					<div class="disc">
+						<a href="javascript:;" class="disc-title">
+							<h3 class="d-title">本田飞度<span class="label label-4"></span></h3>
+						</a>
+						<div class="disc-m disc-m1">
+							<span class="d-kuan">2011款</span>
+							<span class="d-size">1.6L</span>
+							<span class="d-auto">自动</span>
+							<span class="d-ban">舒适版</span>
+						</div>
+						<div class="disc-m disc-m2">
+							<span class="d-lice">2012/11 上牌 </span>
+							<span class="d-mile">7万公里</span>
+							<span class="d-site">鞍山店</span>
+						</div>
+						<p class="disc-price">
+							<b>￥<span class="bigred">5.8</span>万起</b>
+							<em>80.2km</em>
+						</p>
+					</div>
+				</div>
+			</li>
+			<li>
+				<div class="type-item">
+					<div class="pic">
+						<a href="javascript:;">
+							<img src="../images/temporaryimg/pic_car1.jpg" alt="" class="pic-car"/>
+						</a>
+					</div>
+					<div class="disc">
+						<a href="javascript:;" class="disc-title">
+							<h3 class="d-title">本田飞度<span class="label label-5"></span></h3>
+						</a>
+						<div class="disc-m disc-m1">
+							<span class="d-kuan">2011款</span>
+							<span class="d-size">1.6L</span>
+							<span class="d-auto">自动</span>
+							<span class="d-ban">舒适版</span>
+						</div>
+						<div class="disc-m disc-m2">
+							<span class="d-lice">2012/11 上牌 </span>
+							<span class="d-mile">7万公里</span>
+							<span class="d-site">鞍山店</span>
+						</div>
+						<p class="disc-price">
+							<b>￥<span class="bigred">5.8</span>万起</b>
+							<em>80.2km</em>
+						</p>
+					</div>
+				</div>
+			</li>
+			<li>
+				<div class="type-item">
+					<div class="pic">
+						<a href="javascript:;">
+							<img src="../images/temporaryimg/pic_car1.jpg" alt="" class="pic-car"/>
+						</a>
+					</div>
+					<div class="disc">
+						<a href="javascript:;" class="disc-title">
+							<h3 class="d-title">本田飞度<span class="label label-6"></span></h3>
+						</a>
+						<div class="disc-m disc-m1">
+							<span class="d-kuan">2011款</span>
+							<span class="d-size">1.6L</span>
+							<span class="d-auto">自动</span>
+							<span class="d-ban">舒适版</span>
+						</div>
+						<div class="disc-m disc-m2">
+							<span class="d-lice">2012/11 上牌 </span>
+							<span class="d-mile">7万公里</span>
+							<span class="d-site">鞍山店</span>
+						</div>
+						<p class="disc-price">
+							<b>￥<span class="bigred">5.8</span>万起</b>
+							<em>80.2km</em>
+						</p>
+					</div>
+				</div>
+			</li>
+		</ul>		
+		<div id="pullUp">
+			<span class="pullUpIcon"></span><span class="pullUpLabel">上拉加载更多...</span>
+		</div>
+	</div>
+</section>
+<script type="application/javascript" src="../js/iscroll.js"></script>
+<script type="text/javascript">
+var myScroll,
+	pullUpEl, pullUpOffset,
+	generatedCount = 0;
+/**
+
+/**
+ * 滚动翻页 （自定义实现此方法）
+ * myScroll.refresh();		// 数据加载完成后，调用界面更新方法
+ */
+function pullUpAction () {
+	setTimeout(function () {	// <-- Simulate network congestion, remove setTimeout from production!
+		var el, li, i,div;
+		el = document.getElementById('thelist');
+
+		for (i=0; i<3; i++) {
+			li = document.createElement('li');
+			li.innerHTML="<div class='type-item'><div class='pic'><a href='javascript:;'><img src='../images/temporaryimg/pic_car"+i+"jpg'class='pic-car'/></a></div><div class='disc'><a href='javascript:;' class='disc-title'><h3 class='d-title'>本田飞度<span class='label label-4'></span></h3></a><div class='disc-m disc-m1'><span class='d-kuan'>2011款</span><span class='d-size'>1.6L</span><span class='d-auto'>自动</span><span class='d-ban'>舒适版</span></div><div class='disc-m disc-m2'><span class='d-lice'>2012/11 上牌 </span><span class='d-mile'>7万公里</span><span class='d-site'>鞍山店</span></div><p class='disc-price'><b>￥<span class='bigred'>5.8</span>万起</b><em>80.2km</em></p></div></div>";
+			el.appendChild(li, el.childNodes[0]);
+			//(++generatedCount)
+		}
+		myScroll.refresh();		// 数据加载完成后，调用界面更新方法 Remember to refresh when contents are loaded (ie: on ajax completion)
+	}, 1000);	// <-- Simulate network congestion, remove setTimeout from production!
+}
+
+/**
+ * 初始化iScroll控件
+ */
+function loaded() {
+
+	pullUpEl = document.getElementById('pullUp');	
+	pullUpOffset = pullUpEl.offsetHeight;
+	
+	myScroll = new iScroll('wrapper', {
+		scrollbarClass: 'myScrollbar', /* 重要样式 */
+		useTransition: false, /* 此属性不知用意，本人从true改为false */
+		onRefresh: function () {
+			if (pullUpEl.className.match('loading')) {
+				pullUpEl.className = '';
+				pullUpEl.querySelector('.pullUpLabel').innerHTML = '上拉加载更多...';
+			}
+		},
+		onScrollMove: function () {
+			if (this.y < (this.maxScrollY - 5) && !pullUpEl.className.match('flip')) {
+				pullUpEl.className = 'flip';
+				pullUpEl.querySelector('.pullUpLabel').innerHTML = '松手开始更新...';
+				this.maxScrollY = this.maxScrollY;
+			} else if (this.y > (this.maxScrollY + 5) && pullUpEl.className.match('flip')) {
+				pullUpEl.className = '';
+				pullUpEl.querySelector('.pullUpLabel').innerHTML = '上拉加载更多...';
+				this.maxScrollY = pullUpOffset;
+			}
+		},
+		onScrollEnd: function () {
+			if(pullUpEl.className.match('flip')) {
+				pullUpEl.className = 'loading';
+				pullUpEl.querySelector('.pullUpLabel').innerHTML = '加载中...';				
+				pullUpAction();	// Execute custom function (ajax call?)
+			}
+		}
+	});
+	
+	setTimeout(function () { document.getElementById('wrapper').style.left = '0'; }, 800);
+}
+
+//初始化绑定iScroll控件 
+document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
+document.addEventListener('DOMContentLoaded', loaded, false); 
+
+</script>
+<script type="text/javascript">
+	$(function(){
+		$('.zxc_tlist li').each(function(i){
+			$(this).click(function(){
+				$(this).addClass('cur').siblings('.zxc_tlist li').removeClass('cur');
+				$('.sortbox').eq(i).slideDown().siblings('.sortbox').hide();
+				$('.closebar').show(200);
+				$('.zhezhao').show();
+			});
+		});
+		$('.closebar').click(function(){
+			$('.sortbox').slideUp();
+			$(this).hide();
+			$('.zxc_tlist li').removeClass('cur');
+			$('.zhezhao').hide();
+		});
+		$('.stbox1 li').click(function(){
+			$(this).toggleClass('curr').siblings('.stbox1 li').removeClass('curr');
+			$(this).siblings('.stbox1 li').children('i').removeClass('zxc_redsjt_i').addClass(
+				'zxc_graysjt_i');
+			var that = $(this);
+			if(that.children('i').hasClass('zxc_redsjt_i')){
+				that.children('i').removeClass('zxc_redsjt_i').addClass('zxc_graysjt_i');
+			}else{
+				that.children('i').removeClass('zxc_graysjt_i').addClass('zxc_redsjt_i');
+			}
+		});
+		$('.hotbrand dd').click(function(){
+			var brand = $(this).html();
+			$('.re-brand').html(brand);
+		});
+		$('.pricech dd').click(function(){
+			var price = $(this).html();
+			$('.re-price').html(price);
+		})
+	})
+</script>
+</body>
+</html>
