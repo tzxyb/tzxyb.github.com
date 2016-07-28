@@ -8,33 +8,60 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black">
 <meta name="description" content="">
 <meta name="keywords" content="">
-<!-- 其他  -->
-<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
-<meta http-equiv="Pragma" content="no-cache" />
-<meta http-equiv="Expires" content="0" />
-<title>300万邀你拍广告！</title>
-<link rel="prefetch alternate stylesheet" title="Designed for Mozilla" href="get.html" />
-<link type="text/css" rel="stylesheet" href="style.css"/>
-<script type="text/javascript" src="js/jquery-2.1.3.min.js"></script>
-<script type="text/javascript" src="js/jweixin-1.0.0.js"></script>
-<script type="text/javascript" src="js/weixin.js?v=20150806"></script>
+<title>aomei</title>
+<style media="screen">
+body,html{margin:0;padding:0;height:100%;}
+body{background:#fddf48 url(img/bg.jpg);background-size:100%;color:#404040;font-size:10px;}
+a{-webkit-tap-highlight-color:transparent;}
+.img{display:block;width:100%;}
+.mrt15{margin-top:1.5rem;}
+.page{display:none;z-index:1;}
+.pages{position:absolute;width:100%;max-width:40pc;}
+.page .head{position:relative;margin:.5rem auto;width:90%;height:auto;text-align:center;}
+.page .head img{display:inline-block;vertical-align:top;}
+.page .turn{position: relative;margin:0 auto;width:90%;height:auto;text-align:center;}
+.page .btn-4,.page .btn-5,.page .btn-6{position:relative;display:block;width:100%;height:auto;}
+.page .btn-4 i.cur,.page .btn-5 i.cur,.page .btn-6 i.cur{position:absolute;top:0;right:1.5rem;z-index:999;display:block;width:2.2rem;height:2.2rem;background:url(img/icon_cur.png) no-repeat;background-size:cover;}
+.head-none{display:none;}
+.alert-con{position:fixed;top:0;left:0;z-index:9999;width:100%;height:100%;}
+.page-8 .head{top:6rem;}
+.head .icon-play{position:absolute;top:50%;left:50%;display:block;margin-top:-1.5rem;margin-left:-1.5rem;width:3rem;height:3rem;}
+.page-8 .turn{top:6rem;}
+.turn .btn{display:block;width:100%;height:auto;}
+.turn .half{float:left;display:inline-block;width:49%;height:auto;}
+.input-tel{position:absolute;bottom:.8rem;left:35%;width:50%;height:1.7rem;outline:0;border:none;background:0 0;font-size:1.5rem;line-height:1.7rem;}
+.page-1 .turn{top:1rem;}
 
+@media screen and (device-width:414px) and (device-height:736px){
+.page-1 .head,
+.page-2 .head,
+.page-3 .head{top:1.5rem;}
+.page-1 .turn,
+.page-2 .turn,
+.page-3 .turn{top:2rem;}
+}
+@media screen and (device-width:375px) and (device-height:667px){
+.page-1 .head,
+.page-2 .head,
+.page-3 .head{top:1rem;}
+.page-1 .turn,
+.page-2 .turn,
+.page-3 .turn{top:1.5rem;}
+}
+</style>
 </head>
 <body>
     <div class="pages">
-	    <div>
-            <a href="javascript:void(0)" id="music" class="music on">
-				<audio src="http://mktstatic.10101111cdn.com/download/2015/music/aomei.mp3" loop="" autoplay=""></audio>
-			</a>
-		</div>
+
         <!-- section 1 -->
+
         <section class="page page-1" >
             <div class="head">
-                <img src="http://mktimage.10101111cdn.com/wap/2015/aomei/pic_1_1.png" alt="霸道总裁300万请你拍朋友圈广告" class="img"/>
-                <img src="http://mktimage.10101111cdn.com/wap/2015/aomei/pic_1_2.png" alt="霸道总裁300万请你拍朋友圈广告" class="img"/>
+                <img src="img/pic_1_1.png" alt="霸道总裁300万请你拍朋友圈广告" class="img"/>
+                <img src="img/pic_1_2.png" alt="霸道总裁300万请你拍朋友圈广告" class="img"/>
             </div>
             <div class="turn">
-                <a href="javascript:(0)" class="btn btn-1"><img src="http://mktimage.10101111cdn.com/wap/2015/aomei/btn_1.png" alt="" class="img"></a>
+                <a href="javascript:()" class="btn btn-1"><img src="img/btn_1.png" alt="" class="img"></a>
             </div>
         </section>
 
@@ -42,18 +69,12 @@
 
         <section class="page page-2">
             <div class="head">
-                <img src="http://mktimage.10101111cdn.com/wap/2015/aomei/pic_2_1.png" alt="霸道总裁300万请你拍朋友圈广告" class="img"/>
-                <img src="http://mktimage.10101111cdn.com/wap/2015/aomei/pic_2_2.png" alt="霸道总裁300万请你拍朋友圈广告" class="img"/>
-                <img src="http://mktimage.10101111cdn.com/wap/2015/aomei/pic_2_3.png" alt="霸道总裁300万请你拍朋友圈广告" class="img"/>
-                <div class="btns">
-                   <i class="btn-radio checked"></i>
-                   <i class="btn-radio"></i>
-                   <i class="btn-radio"></i>
-                </div>
-                <img src="http://mktimage.10101111cdn.com/wap/2015/aomei/pic_2_4.png" alt="霸道总裁300万请你拍朋友圈广告" class="img"/>
+                <img src="img/pic_2_1.png" alt="霸道总裁300万请你拍朋友圈广告" class="img"/>
+                <img src="img/pic_2_2.png" alt="霸道总裁300万请你拍朋友圈广告" class="img"/>
+                <img src="img/pic_2_3.png" alt="霸道总裁300万请你拍朋友圈广告" class="img"/>
             </div>
             <div class="turn">
-                <a href="javascript:(0)"  class="btn btn-2"><img src="http://mktimage.10101111cdn.com/wap/2015/aomei/btn_2.png" alt="" class="img"></a>
+                <a href="javascript:()"  class="btn btn-2"><img src="img/btn_2.png" alt="" class="img"></a>
             </div>
         </section>
 
@@ -61,13 +82,13 @@
 
         <section class="page page-3">
             <div class="head">
-                <img src="http://mktimage.10101111cdn.com/wap/2015/aomei/pic_3_1.png" alt="霸道总裁300万请你拍朋友圈广告" class="img"/>
-                <img src="http://mktimage.10101111cdn.com/wap/2015/aomei/pic_3_2.png" alt="霸道总裁300万请你拍朋友圈广告" class="img"/>
-                <img src="http://mktimage.10101111cdn.com/wap/2015/aomei/pic_3_3.png" alt="霸道总裁300万请你拍朋友圈广告" class="img"/>
-                <img src="http://mktimage.10101111cdn.com/wap/2015/aomei/pic_3_4.png" alt="霸道总裁300万请你拍朋友圈广告" class="img"/>
+                <img src="img/pic_3_1.png" alt="霸道总裁300万请你拍朋友圈广告" class="img"/>
+                <img src="img/pic_3_2.png" alt="霸道总裁300万请你拍朋友圈广告" class="img"/>
+                <img src="img/pic_3_3.png" alt="霸道总裁300万请你拍朋友圈广告" class="img"/>
+                <img src="img/pic_3_4.png" alt="霸道总裁300万请你拍朋友圈广告" class="img"/>
             </div>
             <div class="turn">
-                <a href="javascript:(0)" class="btn btn-3"><img src="http://mktimage.10101111cdn.com/wap/2015/aomei/btn_3.png" alt="" class="img"></a>
+                <a href="javascript:()" class="btn btn-3"><img src="img/btn_3.png" alt="" class="img"></a>
             </div>   
         </section>
 
@@ -75,14 +96,14 @@
 
         <section class="page page-4">
             <div class="head">
-                <img src="http://mktimage.10101111cdn.com/wap/2015/aomei/pic_4_1.png" alt="霸道总裁300万请你拍朋友圈广告" class="img"/>
-                <img src="http://mktimage.10101111cdn.com/wap/2015/aomei/pic_4_2.png" alt="霸道总裁300万请你拍朋友圈广告" class="img"/>
-                <img src="http://mktimage.10101111cdn.com/wap/2015/aomei/pic_4_3.png" alt="霸道总裁300万请你拍朋友圈广告" class="img"/>
-                <img src="http://mktimage.10101111cdn.com/wap/2015/aomei/pic_4_4.png" alt="霸道总裁300万请你拍朋友圈广告" class="img"/>
+                <img src="img/pic_4_1.png" alt="霸道总裁300万请你拍朋友圈广告" class="img"/>
+                <img src="img/pic_4_2.png" alt="霸道总裁300万请你拍朋友圈广告" class="img"/>
+                <img src="img/pic_4_3.png" alt="霸道总裁300万请你拍朋友圈广告" class="img"/>
+                <img src="img/pic_4_4.png" alt="霸道总裁300万请你拍朋友圈广告" class="img"/>
             </div>
             <div class="turn">
-                <a href="javascript:(0)" class="btn-4"><img src="http://mktimage.10101111cdn.com/wap/2015/aomei/btn_4_a.png" alt="" class="img"> <i></i></a>
-                <a href="javascript:(0)" class="btn-4"><img src="http://mktimage.10101111cdn.com/wap/2015/aomei/btn_4_b.png" alt="" class="img"> <i></i></a> 
+                <a href="javascript:()" class="btn-4"><img src="img/btn_4_a.png" alt="" class="img"> <i></i></a>
+                <a href="javascript:()" class="btn-4"><img src="img/btn_4_b.png" alt="" class="img"> <i></i></a> 
             </div> 
         </section>
 
@@ -90,14 +111,14 @@
 
         <section class="page page-5">
             <div class="head">
-                <img src="http://mktimage.10101111cdn.com/wap/2015/aomei/pic_5_1.png" alt="霸道总裁300万请你拍朋友圈广告" class="img"/>
-                <img src="http://mktimage.10101111cdn.com/wap/2015/aomei/pic_5_2.png" alt="霸道总裁300万请你拍朋友圈广告" class="img"/>
-                <img src="http://mktimage.10101111cdn.com/wap/2015/aomei/pic_5_3.png" alt="霸道总裁300万请你拍朋友圈广告" class="img"/>
-                <img src="http://mktimage.10101111cdn.com/wap/2015/aomei/pic_5_4.png" alt="霸道总裁300万请你拍朋友圈广告" class="img"/>
+                <img src="img/pic_5_1.png" alt="霸道总裁300万请你拍朋友圈广告" class="img"/>
+                <img src="img/pic_5_2.png" alt="霸道总裁300万请你拍朋友圈广告" class="img"/>
+                <img src="img/pic_5_3.png" alt="霸道总裁300万请你拍朋友圈广告" class="img"/>
+                <img src="img/pic_5_4.png" alt="霸道总裁300万请你拍朋友圈广告" class="img"/>
             </div>
             <div class="turn">
-                <a href="javascript:(0)" class="btn-5"><img src="http://mktimage.10101111cdn.com/wap/2015/aomei/btn_5_a.png" alt="" class="img"> <i></i></a>
-                <a href="javascript:(0)" class="btn-5"><img src="http://mktimage.10101111cdn.com/wap/2015/aomei/btn_5_b.png" alt="" class="img"> <i></i></a> 
+                <a href="javascript:()" class="btn-5"><img src="img/btn_5_a.png" alt="" class="img"> <i></i></a>
+                <a href="javascript:()" class="btn-5"><img src="img/btn_5_b.png" alt="" class="img"> <i></i></a> 
             </div>   
         </section>
 
@@ -105,38 +126,130 @@
 
         <section class="page page-6">
             <div class="head">
-                <img src="http://mktimage.10101111cdn.com/wap/2015/aomei/pic_6_1.png" alt="霸道总裁300万请你拍朋友圈广告" class="img"/>
-                <img src="http://mktimage.10101111cdn.com/wap/2015/aomei/pic_6_2.png" alt="霸道总裁300万请你拍朋友圈广告" class="img"/>
-                <img src="http://mktimage.10101111cdn.com/wap/2015/aomei/pic_6_3.png" alt="霸道总裁300万请你拍朋友圈广告" class="img"/>
-                <img src="http://mktimage.10101111cdn.com/wap/2015/aomei/pic_6_4.png" alt="霸道总裁300万请你拍朋友圈广告" class="img"/>
+                <img src="img/pic_6_1.png" alt="霸道总裁300万请你拍朋友圈广告" class="img"/>
+                <img src="img/pic_6_2.png" alt="霸道总裁300万请你拍朋友圈广告" class="img"/>
+                <img src="img/pic_6_3.png" alt="霸道总裁300万请你拍朋友圈广告" class="img"/>
+                <img src="img/pic_6_4.png" alt="霸道总裁300万请你拍朋友圈广告" class="img"/>
             </div>
             <div class="turn">
-                <a class="btn-6-a btn-6" href="javascript:(0)"><img src="http://mktimage.10101111cdn.com/wap/2015/aomei/btn_6_a.png" alt="" class="img"><i></i></a>
-                <a class="btn-6-b btn-6" href="javascript:(0)"><img src="http://mktimage.10101111cdn.com/wap/2015/aomei/btn_6_b.png" alt="" class="img"><i></i></a> 
+                <a class="btn-6-a btn-6" href="javascript:"><img src="img/btn_6_a.png" alt="" class="img"><i></i></a>
+                <a class="btn-6-b btn-6" href="javascript:"><img src="img/btn_6_b.png" alt="" class="img"><i></i></a> 
             </div> 
         </section>
 
         <!-- section 7 -->
 
         <section class="page page-7">
-            <img src="http://mktimage.10101111cdn.com/wap/2015/aomei/pic_bg_7.jpg" alt="霸道总裁300万请你拍朋友圈广告" class="img alert-bg-7"/>
+            <div class="head head-1">
+                <img src="img/pic_8_1.png" alt="霸道总裁300万请你拍朋友圈广告" class="img"/>
+                <img src="img/pic_8_2.png" alt="霸道总裁300万请你拍朋友圈广告" class="img"/>
+                <img src="img/pic_8_3.png" alt="霸道总裁300万请你拍朋友圈广告" class="img"/>
+                <img src="img/pic_8_4.png" alt="霸道总裁300万请你拍朋友圈广告" class="img"/>
+            </div>
             <div class="head head-2">
-                <img src="http://mktimage.10101111cdn.com/wap/2015/aomei/pic_7_1.png" alt="霸道总裁300万请你拍朋友圈广告" class="img">
-                <img src="http://mktimage.10101111cdn.com/wap/2015/aomei/pic_7_2.png" alt="霸道总裁300万请你拍朋友圈广告" class="img">
-                <img src="http://mktimage.10101111cdn.com/wap/2015/aomei/pic_7_3.png" alt="霸道总裁300万请你拍朋友圈广告" class="img">
+                <img src="img/pic_7_1.png" alt="霸道总裁300万请你拍朋友圈广告" class="img">
+                <img src="img/pic_7_2.png" alt="霸道总裁300万请你拍朋友圈广告" class="img">
             </div>
             <div class="turn">
-                <a href="javascript:(0)" class="btn btn-mm"><img src="http://mktimage.10101111cdn.com/wap/2015/aomei/btn_mm.png" alt="" class="img"></a>
+                <a href="javascript:()" class="btn btn-7"><img src="img/btn_7.png" alt="" class="img"></a>
             </div>  
         </section>
-        <div class="alert-con"></div>
-        <div class="alert-7">
-            <img src="http://mktimage.10101111cdn.com/wap/2015/aomei/alert_bg_7.png" alt="" class="img"/>
-            <div class="turn">
-                <a href="javascript:" class="btn btn-7"><img src="http://mktimage.10101111cdn.com/wap/2015/aomei/btn_7.png" class="img"/></a>
+
+        <!-- section 8 -->
+
+        <section class="page page-8">
+            <div class="head">
+                <embed src="img/pic_bg_8.png" width="90%" height="" id="video"></embed>
+                <span class="icon-play"><img src="img/icon_play.png" alt="" class="img"></span>
             </div>
+            <div class="turn">
+                <a href="javascript:" class="half btn-8-l"><img src="img/btn_8_l.png" alt="" class="img"></a>
+                <a href="javascript:" class="half btn-8-r"><img src="img/btn_8_r.png" alt="" class="img"></a>
+            </div>
+        </section>
+
+        <!-- section 9 -->
+
+        <section class="page page-9">
+            <div class="head">
+                <img src="img/pic_9_1.png" alt="" class="img mrt15"/>
+                <img src="img/pic_9_2.png" alt="" class="img mrt15"/>
+                <img src="img/bg_tel.png" alt="" class="img mrt15"/>
+                <input type="tel" class="input-tel" maxlength="11" />
+            </div>
+            <div class="turn mrt15">
+                <a href="javascript:" class="btn btn-9"><img src="img/btn_9.png" alt="" class="img"></a>
+            </div>
+        </section>
+
+        <!-- 弹出框 -->
+
+        <div class="alert-con head-none">
+            <img src="img/alert_con.png" alt="" class="img"> 
         </div>
     </div>
-    <script src="http://mktjs.10101111cdn.com/wap/2015/aomei/index.js"></script>
+<script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<script>
+    $('.page-1').show();
+    $('.btn-1').click(function(){
+        $('.page-1').hide();
+        $('.page-2').show();
+    })
+    $('.btn-2').click(function(){
+        $('.page-2').hide();
+        $('.page-3').show();
+    })
+    $('.btn-3').click(function(){
+        $('.page-3').hide();
+        $('.page-4').show();
+    })
+    $('.btn-4').click(function(){
+        $('.btn-4').children('i').removeClass('cur');
+        $(this).children('i').addClass('cur');
+        $('.page-4').delay(500).hide(0);
+        $('.page-5').delay(500).show(0);
+    })
+    $('.btn-5').click(function(){
+        $('.btn-5').children('i').removeClass('cur');
+        $(this).children('i').addClass('cur');
+        $('.page-5').delay(500).hide(0);
+        $('.page-6').delay(500).show(0);
+    })
+
+    $('.btn-6-a').click(function(){
+        $('.btn-6').children('i').removeClass('cur');
+        $(this).children('i').addClass('cur');
+        $('.page-6').delay(500).hide(0);
+        $('.page-7').delay(500).show(0);
+        $('.page-7 .head-1').delay(500).hide(0);
+        $('.page-7 .head-2').delay(500).show(0)
+    })
+    $('.btn-6-b').click(function(){
+        $('.btn-6').children('i').removeClass('cur');
+        $(this).children('i').addClass('cur');
+        $('.page-6').delay(500).hide(0);
+        $('.page-7').delay(500).show(0);
+        $('.page-7 .head-1').delay(500).show(0);
+        $('.page-7 .head-2').delay(500).hide(0);
+    })
+    $('.btn-7').click(function(){
+        $('.page-7').delay(500).hide(0);
+        $('.page-8').delay(500).show(0)
+    })
+    $('.btn-8-l').click(function(){
+        $('.page-8').hide();
+        $('.page-9').show()
+    })
+    $('.btn-8-r').click(function(){
+        $('.alert-con').show()
+    })
+    $('.alert-con').click(function(){
+        $(this).hide()
+    })
+    $('.icon-play').click(function(){
+        $(this).hide();
+        $('#video').replaceWith('<embed src="aomei.mov" allowFullScreen="true" quality="high" width="100%" height="200" align="middle" allowScriptAccess="always" type=""></embed>')
+    })
+</script>
 </body>
 </html>
