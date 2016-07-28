@@ -1,0 +1,114 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="pragma" content="no-cache">
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+	<title></title>
+    <link rel="stylesheet" href="style/animate.css">
+    <link rel="stylesheet" href="style/style.css">
+	<script src="js/jquery-1.7.1.min.js"></script>
+	<script src="js/queryloader2.min.js"></script>
+    <link type="text/css" rel="stylesheet" href="style/dialog_1215.css"/>
+	<script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+    <script type="text/javascript" src="js/weixin.js?v=2016"></script>
+	<script type="text/javascript" src="js/core.js"></script>
+    <script type="text/javascript">
+      var origin = "summer6";
+      getWeixinShareData();
+    </script>
+     <!--移动端版本兼容 -->
+    <script type="text/javascript">
+   		var jsVer=22;var phoneWidth=parseInt(window.screen.width);var phoneScale=phoneWidth/640;var ua=navigator.userAgent;if(/Android (\d+\.\d+)/.test(ua)){var version=parseFloat(RegExp.$1);if(version>2.3){document.write('<meta name="viewport" content="width=640, minimum-scale = '+phoneScale+', maximum-scale = '+phoneScale+', target-densitydpi=device-dpi">')}else{document.write('<meta name="viewport" content="width=640, target-densitydpi=device-dpi">')}}else{document.write('<meta name="viewport" content="width=640, minimum-scale = '+phoneScale+', maximum-scale = '+phoneScale+', target-densitydpi=device-dpi">')};window.addEventListener('DOMContentLoaded',function(){new QueryLoader2(document.querySelector("body"),{barColor:"#fff",backgroundColor:"#36a5a7",percentage:true,barHeight:0,onComplete:function(){$(".loading_overlay").hide()},deepSearch:true,minimumTime:300,maxTime:10000,fadeOutTime:300})});
+    </script>
+
+</head>
+<body>
+	<div class="container" id="container">
+		<audio src="image/summer.mp3" loop="" autoplay="true"></audio>			
+		<div class="con con1">
+			<img src="image/bg1.jpg" alt="" class="img">
+			<img src="image/tcloud1.png" alt="" class="img1 con1_1">
+			<img src="image/tcloud2.png" alt="" class="img1 con1_2">
+			<img src="image/tcloud3.png" alt="" class="img1 con1_3">	
+		</div>
+		<div class="con con2">
+			<img src="image/bg2.jpg" alt="" class="img">
+			<img src="image/leaves.png" alt="" class="img1 leaves con2_1">
+			<img src="image/leaf1.png" alt="" class="img1 leaf1 con2_2">
+			<img src="image/leaf2.png" alt="" class="img1 leaf2 con2_3">
+		</div>
+		<div class="con con3">
+			<img src="image/bg3.jpg" alt="" class="img">
+			<img src="image/cloudr1.png" alt="" class="img1 cloudr1 con3_1" >
+			<img src="image/cloudl1.png" alt="" class="img1 cloudl1 con3_2">
+			<img src="image/cloudr2.png" alt="" class="img1 cloudr2 con3_3">
+			<img src="image/cloudl2.png" alt="" class="img1 cloudl2 con3_4">
+		</div>
+		<div class="con con4">
+			<img src="image/bg4.jpg" alt="" class="img">
+			<img src="image/flowers.png" alt="" class="img1 flowers con4_1">
+			<img src="image/flowerbig.png" alt="" class="img1 flower con4_2">
+		</div>
+		<div class="con con5">
+			<img src="image/bg5.jpg" alt="" class="img">
+			<img src="image/treer.png" alt="" class="img1 treer con5_1">
+			<img src="image/treel.png" alt="" class="img1 treel con5_2">
+		</div>
+		<div class="con con6">
+			<img src="image/bg6.jpg" alt="" class="img">
+			<img src="image/words.png" alt="" class="img1 con6_1">
+			<ul class="ustab inputcon">
+		        <li>	
+		       		<input type="tel" name="mobile" id="mobile" placeholder="请输入您的手机号" maxlength="11">
+		        </li>
+		        <li>
+		       		<a href="javascript:;" class="btn-go">领取夏日专车券</a>
+		        </li>
+			</ul>
+            <div class="popup layer">
+                <div class="inner">
+                    <span class="close-btn"></span>
+                    <div class="res">
+                    	<p class="get">恭喜您获得</p>
+                    	<p class="got">很抱歉，您刚才已经领过了</p>
+                    	<p class="ticket">
+                    		<span>6.00元</span>专车券
+                    	</p>
+                    	<p class="account">已放入阁下<span id="phone"></span>账户中</p>
+                    </div>
+                    <a href="http://mktm.10101111.com/html5/2015/app/mobileapp.html" class="download">下载专车App</a>
+                   	<a href="javascript:;" class="share">分享给更多朋友</a>
+                </div>
+            </div>
+		</div>
+	</div>
+	<div class="shadow">
+		<img src="image/pic_share.png" class="pic-share"/>
+	</div>
+	<script src="js/mobile_validate.js"></script>
+	<script src="js/get.js"></script>
+
+	<script src="js/event.js"></script>
+	<script>
+		$(function(){
+
+			$('.popup .close-btn').click(function(){
+				$('.shadow').hide();
+				$('.popup').hide();
+			});
+			$('.popup .share').click(function(){
+				$('.popup').hide();
+				$('.pic-share').show()
+			});
+			$('.shadow').click(function(){
+				$('.popup').hide();
+				$('.pic-share').hide();
+				$(this).hide()
+			});
+		})
+	</script>
+</body>
