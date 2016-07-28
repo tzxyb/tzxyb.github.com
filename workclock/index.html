@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta http-equiv="Pragma" content="no-cache">
+	<meta http-equiv="Cache-Control" content="no-cache, must-revalidate">
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+	<title>加班打卡机</title>
+	<link rel="stylesheet" type="text/css" href="css/reset.css" />
+	<script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+	<script type="text/javascript" src="js/loader.js"></script>
+	<script type="text/javascript">
+		//环境设置
+		!!navigator.userAgent.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/) && document.getElementsByTagName("html")[0].setAttribute('class', 'ios');
+		document.getElementsByTagName("html")[0].style.fontSize = (parseInt(document.documentElement.clientWidth)/320*12).toFixed(2)+'px';
+		window.addEventListener('touchmove', function(e){ e.preventDefault(); }, false);
+		//加载资源
+		window.onload=function(){
+			var myload=new loader('.asset');
+			myload.onLoading=function(pf){
+				var percent=Math.floor(pf*100);
+				document.querySelector('.assetloading var').innerHTML=percent+'%';
+				document.querySelector('.assetloading i').style.width=percent+'%';
+				if(percent==100){
+					$("img").each(function(){ $(this).attr('data-src') && $(this).attr('src', $(this).attr('data-src')); });
+					window.setTimeout(function(){ appBegin(); },300);
+				}
+			}
+			myload.load();
+		}
+	</script>	
+</head>
+
+<body>
+	
+<div class="assetloading">
+	<!--资源loading-->
+	<var>0%</var>
+	<p><i></i></p>
+</div>	
+	
+<div class="asset">
+	<!--资源列表-->
+	<link assetUrl="css/main.css" />
+	<script assetUrl="js/jquery-2.1.1.min.js" ></script>
+	<script assetUrl="js/jquery-transit.js" ></script>
+	<script assetUrl="js/main.js" ></script>  	
+	<img assetUrl="img/arrow.png" />  
+	<img assetUrl="img/bg1.jpg" />  
+	<img assetUrl="img/bg2b.png" />    
+	<img assetUrl="img/bg3.png" />   
+	<img assetUrl="img/blank.png" />    
+	<img assetUrl="img/card_bg.png" />  
+	<img assetUrl="img/card1.png" />  
+	<img assetUrl="img/card2.png" />  
+	<img assetUrl="img/handle.png" />  
+	<img assetUrl="img/loading.png" />  
+	<img assetUrl="img/mask1.png" />  
+	<img assetUrl="img/mask2.png" />  
+	<img assetUrl="img/msg_head.png" />  
+	<img assetUrl="img/msg_txt.png" />  
+	<img assetUrl="img/placeholder.png" />  
+	<img assetUrl="img/roller.png" />  
+	<img assetUrl="img/rule.png" />  
+	<img assetUrl="img/share.png" />   
+	<img assetUrl="img/time.png" />  
+</div>
+
+
+<div class="wrapper">
+	
+	<!--场景-->
+	<div class="scene">
+		
+		<section class="bg">
+			<sup></sup><center></center><sub></sub>
+			<figure></figure>
+		</section>
+		
+		<section class="msg">
+			<dl>
+				<dt class="type1"><figure></figure><font></font></dt>
+				<dd class="type2"><figure></figure><font></font></dt>
+			</dl>
+		</section>
+		
+		<section class="card">
+			<dl>
+				<dt>
+					<sub></sub><figure class="type1"></figure><var class="type1"></var><a></a>
+				</dt>
+				<dd>
+					<sub></sub><figure class="type3"></figure><a></a><a></a>
+				</dd>
+			</dl>
+		</section>
+		
+		<section class="time">
+			<ul>
+				<li class="time3"></li>
+				<li class="time1"></li>
+				<li class="time2"></li>
+			</ul>
+			<center><p></p><a></a></center>
+			<div class="mask"></div>
+			<div class="arrow"></div>
+		</section>
+		
+		<section class="handle">
+			<dl><dt></dt><dd></dd></dl>
+			<a></a>
+			<div class="arrow"></div>
+		</section>
+		
+		<section class="phone">
+			<label><input type="tel" maxlength="11" placeholder=" " /></label>
+		</section>
+		
+		<section class="rule">
+			<center><del></del></center>
+			<a></a>
+		</section>
+		
+		<section class="share">
+			<center><figure></figure></center>
+		</section>
+		
+	</div>
+	
+	
+	<!--loading-->
+	<div class="loading"><p><i></i></p></div>
+	
+
+</div>
+
+</body>
+</html>
+
+
+

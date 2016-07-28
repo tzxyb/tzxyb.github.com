@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link href="http://m.zuche.com" rel="dns-prefetch">
+    <title>够实力才敢降</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-title" content="">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="style/style.css?v=20160621" />
+    <script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+    <script type="text/javascript" src="js/weixin.js"></script>
+    <link rel="stylesheet" href="style/dialog_1215.css">
+    <script src="js/jquery-1.7.1.min.js"></script>
+    <script src="js/mobile_validate.js"></script>
+    <script type="text/javascript" src="js/core.js"></script>
+
+</head>
+<body>
+<div class="mmc-main">
+	<img src="img/mmc_1.jpg" alt="" class="img">
+	<img src="img/mmc_2.jpg" alt="" class="img">
+	<img src="img/mmc_3.jpg" alt="" class="img">
+	<img src="img/mmc_4.jpg" alt="" class="img">
+	<img src="img/mmc_5.jpg" alt="" class="img">
+	<img src="img/mmc_6.jpg" alt="" class="img">
+	<img src="img/mmc_7.jpg" alt="" class="img">
+	<img src="img/mmc_8.jpg" alt="" class="img">
+	<img src="img/mmc_9.jpg" alt="" class="img">
+	<img src="img/mmc_10.jpg" alt="" class="img">
+	<div class="mmc-con">
+		<img src="img/mmc_11.jpg" alt="" class="img">
+		
+		<div class="iptbox">
+			<img src="img/title.png" alt="" class="img">
+			<ul>
+				<li>
+					<span>姓名：</span>
+					<input type="text" id="name" class="n-val ipt" value="" maxlength="4">
+				</li>
+				<li>
+					<span>电话：</span>
+					<input type="tel" id="mobile" class="t-val ipt" value="" maxlength="11">
+				</li>
+				<li>
+					<a class="btn-go">点击提交</a>
+				</li>
+			</ul>
+			<p>全国百家门店，竭诚以待！<br>门店详细地址请参考官网: www.maimaiche.com</p>
+		</div>
+		<div class="alert-box" style="display: none;">
+			<span class="btn-close"></span>
+			<img src="img/alcon_err.png" alt="" class="img err">
+			<img src="img/alcon_suc.png" alt="" class="img suc">
+		</div>
+	</div>
+	<div class="zhezhao"></div>
+</div>     
+<script type="text/javascript" src="js/dcs_tag_M1024.js"></script>
+<script type="text/javascript" src="js/webtrends.js"></script>
+<script src="js/py_dm_webtrends.js"></script>
+<script type="text/javascript">
+$(function(){
+	$('.btn-close').click(function(){
+		$('.zhezhao').hide();
+		$('.alert-box').hide();
+		if($('.suc').hasClass('tip')){
+			window.location.href=window.location.href;
+		}
+	});
+
+	$('.btn-order').click(function(){
+		dcsMultiTrack('DCS.dcsuri','/maimaichehuodong.html','WT.market','maimaichedianhua')
+	});
+	$(".ipt").focus(function(){
+		var txt_value = $(this).val();
+		if(txt_value == this.defaultValue){
+			$(this).val("");
+		}
+	}).blur(function(){
+		var txt_value = $(this).val();
+		if(!txt_value){
+			$(this).val(this.defaultValue);
+		}
+	});
+})
+</script>
+<script src="js/get.js"></script>
+</body>
+
+</html>

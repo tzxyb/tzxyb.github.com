@@ -1,0 +1,36 @@
+@charset "utf-8";
+*{margin:0;padding:0;}
+body{font:14px/1.5 "Microsoft Yahei",Verdana,STXihei;
+	color:#333;overflow-x:hidden;-webkit-tap-highlight-color: rgba(0,0,0,0);-webkit-text-size-adjust:none;-moz-user-select:none;}
+img{border:0}
+a{text-decoration:none;-webkit-tap-highlight-color:rgba(0,0,0,0);}
+ul{list-style:none;margin:0;padding:0}
+.mmc-main{width:100%;min-height:100%;margin:0 auto;max-width:420px;background-color:#ab1b28;}
+.img{width:100%;vertical-align:top;}
+.mmc-con{position:relative;}
+.iptbox{width:100%;margin:0 auto;color:#fff;padding-bottom:4rem;position:absolute;top:0;}
+.iptbox ul li{width:70%;margin-left:15%;margin-bottom:1rem;position:relative;}
+.iptbox ul li span{display:block;width:20%;position:absolute;height:2.6rem;line-height:2.6rem;color:#fff;left:1rem;top:0;z-index:2;}
+.iptbox ul li input,.iptbox ul li a{display:block;height:2.6rem;line-height:2.6rem;background:transparent;width:100%;letter-spacing:3px;outline:0;border-radius:5px;margin:.3rem 0;border:1px solid #ff3852;font-family:"Microsoft Yahei";padding-left:5rem;;color:#fff;box-sizing:border-box;}
+.iptbox ul li a{text-align:center;padding-left:0;width:50%;margin-left:25%;background:#d5362d;border:none;font-size:1.2rem;}
+.iptbox p{text-align:center;color:#f7de04;font-size:.8rem;line-height:1.3rem;}
+.order-box{position:fixed;right:0;top:42%;z-index:99;}
+.order-box a{display:block;overflow:hidden;}
+.order-box a img{width:8rem;}
+.zhezhao{display:none;position:fixed;top:0;left:0;width:100%;height:100%;z-index:199;background-color:rgba(0,0,0,.24);}
+.alert-box{position:absolute;top:20%;width:100%;left:0%;z-index:299;background-color:#fff;}
+.alert-box .err {width:100%;height:auto}
+.alert-box .btn-close{position:absolute;top:-1.2rem;right:5%;width:2.4rem;height:2.4rem;background:url(../img/btn_close.png) no-repeat;background-size:100% 100%;}
+.alert-box .suc {width:100%;height:auto}
+@media only screen and (min-width: 320px) {
+    html{font-size:75%!important}
+}
+@media only screen and (min-width: 360px) and (max-width:374px){
+    html{font-size:84%!important}
+}
+@media only screen and (min-width: 375px) {
+	html{font-size:87.89%!important}
+}
+@media only screen and (min-width: 414px) {
+    html{font-size:97.03%!important}
+}

@@ -1,0 +1,219 @@
+/* 2015 Web De: gongxy */
+
+/***** 全局 *****/
+a, a:visited{ text-decoration: none; color: #222; }
+img { display: block; width: 100%; border: none; }
+.hide { display: none !important; }
+.show { display: block !important;}
+
+
+/***** loading *****/
+.loading { display: none; position: absolute; z-index: 99; left: 0; top: 0; width: 100%; height: 100%;}
+.loading p { position: absolute; top: 38%; left: 35%; width: 30%; padding: 7% 0; overflow: hidden; border-radius: 1em; background: rgba(0,0,0,0.5);}
+.loading i { -webkit-animation: roundLoop1 0.7s linear infinite; display: block; margin: 0 auto; width: 40%; padding-bottom: 40%; background: url(../img/loading.png) no-repeat; background-size: 100% 100%;}
+
+
+/***** 场景 *****/
+.scene { position: relative; width: 100%; height: 100%; overflow: hidden; color: #fff;}
+section {  position: absolute; top: 0; left: 0; width: 100%; height: 100%; box-sizing: border-box; overflow: hidden;  }
+
+
+/***** bg *****/
+.bg { padding: 10% 0; background:#000 url(../img/bg1-xxx.jpg) repeat-x; background-size: 20% 100%;}
+.bg sub, .bg sup { position: absolute; left: 0; top: 0; width: 100%; padding-bottom: 10%; background: url(../img/bg2b.png) no-repeat 0 0; background-size: 100% auto;}
+.bg sub { top: auto; bottom: 0; background-position-y: 100%;}
+.bg center { position: static; height: 100%; background: url(../img/bg2b.png) no-repeat 0 50%; background-size: 100% 112%;}
+.bg figure { position: absolute; left: 0; top: 50%; width: 100%; height: 157.5vw; margin-top: -78.75%; background: url(../img/bg3.png) no-repeat; background-size: 100% auto;}
+
+
+/***** phone *****/
+.phone { top: 50%; width: 44.375%; height: 7.8125vw; margin: -48.6% 0 0 28%;}
+.phone label, .phone input { display: block; width: 100%; height: 100%; }
+.phone input { -webkit-appearance: none; -webkit-animation: ani-flash 0.6s steps(1,end) infinite; padding: 0; border: none; color: #222; font-size: 1.3em; text-align: center;  background: url(../img/placeholder.png) no-repeat center center; background-size: auto 100%;}
+.phone input.has { -webkit-animation: none; background: none;}
+@-webkit-keyframes ani-flash{
+    0%{ opacity: 1;}
+    50%{ opacity: 0;}
+    100%{ opacity: 1;}
+}
+
+
+/***** time *****/
+.time {  top: 50%; height: 33vw; margin-top: -32.3%;}
+.time .mask { position: absolute; pointer-events: none; top: 0; left: 0; width: 100%; height: 100%; background: url(../img/mask1.png) no-repeat 0 0; background-size: 100% auto;}
+.time ul { position: absolute; top: 0; left: 0; width: 100%; height: auto; margin-top: -11%;}
+.time li { padding-bottom: 18.75%; background: url(../img/time.png) no-repeat; background-size: 100% auto;}
+.time li.time2 { background-position-y: 50%;}
+.time li.time3 { background-position-y: 100%;}
+.time center { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+.time center p { height: 300%; margin-top: -32%; background: url(../img/roller.png) repeat-y; background-size: 100% auto;}
+.time center a { position: absolute; z-index: 1; width: 14%; height: 80%; top: 10%; left: 36.2%;}
+.time .arrow { display: none; -webkit-animation: ani-arrow 0.6s infinite linear both; pointer-events: none; position: absolute; top: 38%; left: 39.5%; width: 7.8%; padding-bottom: 7.8%; background: url(../img/arrow.png) no-repeat; background-size: 100% auto;}
+@-webkit-keyframes ani-arrow{
+    0%{ -webkit-transform: translateY(-60%); opacity: 0;}
+    45%{ -webkit-transform: translateY(0%); opacity: 1;}
+    90%,100%{ -webkit-transform: translateY(60%); opacity: 0;}
+}
+
+/***** handle *****/
+.handle { top: 50%; left: auto; right: 0; width: 34.375%; height: 37.5vw; margin: -44% -2.5% 0 0; overflow: visible;}
+.handle dl * { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: url(../img/handle.png) no-repeat; background-size: 100% auto;}
+.handle dt { background-position-y: 100%; -webkit-transform-origin: 50% 90%;}
+.handle a { position: absolute; top: 9%; left: 22%; width: 55%; height: 50%; }
+.handle .arrow { display: none; -webkit-animation: ani-arrow 0.6s infinite linear both; pointer-events: none; position: absolute; top: 25%; left: 38.5%; width: 7.8vw; padding-bottom: 7.8vw; background: url(../img/arrow.png) no-repeat 0 100%; background-size: 100% auto;}
+
+
+/***** card *****/
+.card { top: 50%; height: 46.875vw; margin-top: 9.2%;}
+.card dl { position: relative; height: 100%; -webkit-mask: url(../img/mask2.png); -webkit-mask-size: 100% auto; }
+.card dl>* { display: none; -webkit-animation: ani-cardout 2.3s 0.1s both linear; position: absolute; top: -100%; left: 0; width: 100%; height: 100%; background: url(../img/card_bg.png) no-repeat 48% 0; background-size: 81.875% 96%; }
+.card dl * * { position: absolute; top: 0; left: 0; width: 100%; height: 100%;  background: url(../img/card1.png) no-repeat 0 0; background-size: 100%;}
+.card dl * a { background: none; z-index: 2;}
+.card dl * a:active { background: rgba(255,255,255,0.3);}
+.card dt { display: none;}
+.card dt var.type1 { background-position-y: 5%;}
+.card dt var.type2 { background-position-y: 10%;}
+.card dt var.type3 { background-position-y: 15%;}
+.card dt figure.type1 { background-position-y: 20%;}
+.card dt figure.type2 { background-position-y: 25%;}
+.card dt figure.type3 { background-position-y: 30%;}
+.card dt figure.type4 { background-position-y: 35%;}
+.card dt figure.type5 { background-position-y: 40%;}
+.card dt figure.type6 { background-position-y: 45%;}
+.card dt figure.type7 { background-position-y: 50%;}
+.card dt figure.type8 { background-position-y: 55%;}
+.card dt figure.type9 { background-position-y: 60%;}
+.card dt figure.type10 { background-position-y: 65%;}
+.card dt figure.type11 { background-position-y: 70%;}
+.card dt figure.type12 { background-position-y: 75%;}
+.card dt figure.type13 { background-position-y: 80%;}
+.card dt figure.type14 { background-position-y: 85%;}
+.card dt a { top: 63%; left: 43%; width: 44.6875%; height: 26.66%;}
+.card dd * { background-image: url(../img/card2.png);}
+.card dd figure.type1 { background-position-y: 10%;}
+.card dd figure.type2 { background-position-y: 20%;}
+.card dd figure.type3 { background-position-y: 30%;}
+.card dd a { top: 22%; left: 41.8%; width: 46.1%; height: 29.3333%;}
+.card dd a:last-child { top: 59%; height: 30%;} 
+@-webkit-keyframes ani-cardout{
+    0%{ top: -100%;}
+    100%{ top: 0;}
+}
+
+
+/***** msg *****/
+.msg { top: 50%; height: 12.5vw; margin-top: 54.2%;}
+.msg dl { height: 100%;}
+.msg dl>* { height: 100%;}
+.msg dl figure { display: inline-block; width: 12.5%; height: 100%; overflow: hidden; margin-left: 9%; background: url(../img/msg_head.png) no-repeat; background-size: 100% auto;}
+.msg dl font { display: inline-block; width: 68%; height: 100%; overflow: hidden; background: url(../img/msg_txt.png) no-repeat; background-size: 100% auto;}
+.msg .type1 figure, .msg .type1 font { background-position-y: 0%;}
+.msg .type2 figure, .msg .type2 font { background-position-y: 10%;}
+.msg dl.change { -webkit-animation: ani-msgroll 0.2s 6 linear both;}
+@-webkit-keyframes ani-msgroll{
+    50%{ -webkit-transform: translateY(-100%);}
+    50.0001%{ -webkit-transform: translateY(100%);}
+    100%{ -webkit-transform: translateY(-100%);}
+}
+
+
+/***** rule *****/
+.rule { top: 50%;  width: 100%; height: 2.2em; margin-top: 67.5%;}
+.rule a { display: block; margin: 0 auto; width: 25%; height: 100%; }
+.rule center { display: none;  position: relative; height: 100%; background: url(../img/rule.png) no-repeat 0 bottom; background-size: 100% auto;}
+.rule center del { position: absolute; right: 0; bottom: 0; width: 11%; padding-bottom: 11%; margin-bottom: 126%;}
+.rule2 { top: auto; bottom: 0; height: 100%; margin-top: 0;}
+.rule2 a { display: none;}
+.rule2 center { display: block; -webkit-animation: ani-ruleshow 0.5s 0.1s both;}
+@-webkit-keyframes ani-ruleshow{
+    0%{ -webkit-transform: translateY(100%);}
+    100%{ -webkit-transform: translateY(0%);}
+}
+
+
+/***** share *****/
+.share { display: none; background: rgba(255,255,255,0.85);}
+.share center { height: 100%; background: url(../img/share.png) no-repeat; background-size: 100% auto;}
+
+
+
+
+
+
+
+/***** 动画效果 *****/
+@-webkit-keyframes Zindex { 0%{ -webkit-transform: skewX(0); }}
+@-webkit-keyframes fadeIn{
+    0%{ opacity: 0;}
+    100%{ opacity: 1;}
+}
+@-webkit-keyframes fadeOut{
+    0%{ opacity: 1;}
+    100%{ opacity: 0;}
+}
+@-webkit-keyframes fadeIn-u{
+    0%{ -webkit-transform: translateY(-80%); opacity: 0;}
+    100%{ -webkit-transform: translateY(0); opacity: 1;}
+}
+@-webkit-keyframes fadeIn-d{
+    0%{ -webkit-transform: translateY(80%); opacity: 0;}
+    100%{ -webkit-transform: translateY(0); opacity: 1;}
+}
+@-webkit-keyframes fadeIn-l{
+    0%{ -webkit-transform: translateX(-80%); opacity: 0;}
+    100%{ -webkit-transform: translateX(0); opacity: 1;}
+}
+@-webkit-keyframes fadeIn-r{
+    0%{ -webkit-transform: translateX(80%); opacity: 0;}
+    100%{ -webkit-transform: translateX(0); opacity: 1;}
+}
+@-webkit-keyframes scaleIn1{
+    0%{ -webkit-transform: scale(4); opacity: 0;}
+    100%{ -webkit-transform: scale(1); opacity: 1;}
+}
+@-webkit-keyframes scaleIn2{
+    0%{ -webkit-transform: scale(0.2); opacity: 0;}
+    70%{ -webkit-transform: scale(1.15); opacity: 1;}
+    100%{ -webkit-transform: scale(1); opacity: 1;}
+}
+@-webkit-keyframes roundLoop1{
+    0%{ -webkit-transform: rotate(0deg); }
+    100%{ -webkit-transform: rotate(360deg); }
+}
+@-webkit-keyframes roundLoop2{
+    0%{ -webkit-transform: rotate(0deg); }
+    100%{ -webkit-transform: rotate(-360deg); }
+}
+@-webkit-keyframes flashLoop1{
+    0%{ opacity: 1; }
+    50%{ opacity: 0; }
+    100%{ opacity: 1; }
+}
+@-webkit-keyframes flashLoop2{
+    0%{ opacity: 0; }
+    50%{ opacity: 1; }
+    100%{ opacity: 0; }
+}
+@-webkit-keyframes lineIn{
+    0%{ height: 0; }
+    100%{ height: 100%; }   
+}
+
+
+
+/* 兼容调整 */
+@media (device-height:480px) and (-webkit-min-device-pixel-ratio:2){ 
+	.bg figure { -webkit-transform: scale(0.8);}
+	.phone { -webkit-transform: scale(0.8); margin-top: -39.6%;}
+	.time { -webkit-transform: scale(0.8); margin-top: -29.1%;}
+	.handle { -webkit-transform: scale(0.8); margin: -39.1% 4.5% 0 0;}
+	.card {  -webkit-transform: scale(0.8); margin-top: 2.8%; }
+	.msg { -webkit-transform: scale(0.8); margin-top: 42.2%;}
+	.rule{ margin-top: 53.5%;}
+	.rule center { background-position: 0 0;}
+	.rule center del { margin: 0; bottom: auto; top: 0;}
+}
+@media screen and (max-height:480px) { 
+	
+
+}

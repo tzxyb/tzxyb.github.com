@@ -1,0 +1,48 @@
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <title>径向菜单展开效果</title>
+  <link rel="stylesheet" type="text/css" href="1.css"/>
+</head>
+<body>
+  <h1>径向菜单展开效果</h1>
+  <div class="nav-wrap">
+    <nav>
+      <a class="nav-item">1</a>
+      <a class="nav-item">2</a>
+      <a class="nav-item">3</a>
+      <a class="nav-item">4</a>
+      <a class="nav-item">5</a>
+      <a class="nav-item">6</a>
+    </nav>
+    <a class="clickMe">点我</a>
+  </div>
+
+  <script type="text/javascript" src="jquery-1.7.1.min.js"></script>
+  <script type="text/javascript">
+    $(function(){
+        $('.nav-wrap').on('click','.clickMe',function(e){
+          e.preventDefault();
+          var me=$(this),
+          navWrap = me.closest('.nav-wrap'),
+          navs = navWrap.find('nav a');
+          if(!navWrap.hasClass('active')){
+            var width = navWrap.width(),
+                radius = width/2;
+            var startAngle = 0,
+                endAngle = 360;
+            var total= navs.length,
+                gap = (endAngle-startAngle)/total;
+            $.each(navs,function(index,item){
+              var myAngle = (startAngle + gap * index)*(Math.PI/180),
+                  myX = radius + radius * Math.cos(myAngle),
+                  myY = radius + radius * Math.sin(myAngle);
+              $(this).css({left:myX+'px',top:myY+'px'})
+            })
+          } 
+          navWrap.toggleClass('active');
+        })
+    })
+  </script>
+</body>
+</html>
