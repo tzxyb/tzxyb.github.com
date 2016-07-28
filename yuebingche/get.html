@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="zh-cn" class="no-js">
+	<script type="text/javascript" src="http://mktjs.10101111cdn.com/common/jquery/jquery-1.7.1.min.js"></script>		
+	<head>
+		<meta http-equiv="Content-Type">
+		<meta content="text/html; charset=utf-8">
+		<meta charset="utf-8">
+		<title></title>		
+		<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="format-detection" content="telephone=no">
+		<meta name="format-detection" content="email=no">
+		<link rel="stylesheet" type="text/css" href="css/index.css" />
+	</head>
+	<body>
+		<div>
+			<div class="page page-8-1 page-current">
+			   <div class="wrap">
+			   	    <a href="javascript:;" class="btn-2">
+			   	    	<img src="img/btn_2.png"/>
+			   	    </a>
+			   </div>
+		    </div>
+		</div>
+		<div class="fires-mask"></div>
+		<div class="fires-alert">
+			<img src="img/btn_close.png" class="btn btn-close"/>
+			<img src="img/fires_i_bg1.png" class="img"/>
+			<img src="img/fires_i_bg2.png" class="img"/>
+			<img src="img/fires_i_bg3.png" class="img"/>
+			<img src="img/fires_i_bg4.png" class="img"/>
+			<img src="img/fires_i_bg5.png" class="img"/>
+			<div class="input-con">
+				<img src="img/bg_tel.png" class="img"/>
+				<img src="img/tel_w.png" class="img tel-w"/>
+				<input type="tel" class="v_tel" value="" maxlength="11">
+			</div>
+			<a href="javascript:;" class="btn-go">
+	   	    	<img src="img/btn_go.png" class="img"/>
+	   	    </a>
+	   	    
+			<img src="img/alert_title.png" class="img alert-title"/>
+	   	    <!-- 券 -->
+	   	  	<img src="img/quan_8.png" class="img quan quan-8"/>
+	   	  	<img src="img/quan_10.png" class="img quan quan-10"/>
+	   	  	<img src="img/quan_got.png" class="img quan quan-got"/>
+	   	  	<!-- 按钮 -->
+	   	  	<div class="btns">
+	   	  		<img src="img/btn_dld.png" class="img btn btn-dld"/>
+	   	  		<img src="img/btn_share.png" class="img btn btn-share"/>
+	   	  	</div>
+	   	  	<p class="b-word">专车券已放入:<span class="tel_num">180********</span> 账户中</p>
+		</div>
+		
+		<script>
+		$(function(){
+			$('.btn-2').click(function(){
+				$('.fires-alert').show();
+			})
+			
+			$('.v_tel').focus(function(){
+				$('.input-con .tel-w').css('opacity','0');
+			}).blur(function(){
+				var txt_value = $(this).val();
+				if(!txt_value){
+					$('.input-con .tel-w').css('opacity','1');
+				}
+			});
+			var txt_value = $(".v_tel").val();
+			if(txt_value){
+				$('.input-con .tel-w').css('opacity','0');
+			}
+			
+			$('.btn-close').click(function(){
+				$('.fires-alert').hide();
+			})
+			$('.btn-share').click(function(){
+				$('.fires-mask').show();
+				$('.fires-share').show();
+			})
+			$('.fires-share').click(function(){
+				$('.fires-mask').hide();
+				$('.fires-share').hide();
+			})
+			$('.btn-go').click(function(){
+				$('.input-con').hide();
+				$(this).hide();
+				$('.alert-title').show();
+				$('.quan-8').show();
+				$('.btns').show();
+			})
+		})
+		</script> 
+	</body>
+</html>

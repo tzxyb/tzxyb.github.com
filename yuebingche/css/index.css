@@ -1,0 +1,308 @@
+.img,.page,body {
+	width: 100%
+}
+
+* {
+	font-family: 微软雅黑
+}
+
+.page,.page .wrap,body {
+	margin: 0;
+	padding: 0
+}
+
+.page .img,.page,.page ul,.pub-passdown {
+	position: absolute
+}
+
+body {
+	overflow: hidden;
+	font-size: 15px
+}
+
+body {
+	background: #12151A;
+}
+
+.hide {
+	display: none
+}
+
+.page {
+	height: 100%;
+	min-width: 320px;
+	text-align: center;
+	font-size: 100px;
+	max-width:414px;
+	max-height:736px;
+	min-height:480px;
+}
+.page .wrap .btn-1,.page .wrap .btn-2,.btn-go,input{outline:none;-webkit-tap-highlight-color: rgba(0,0,0,0);}
+.page .wrap .btn-1{position:absolute;bottom: 5%;width: 50%;left: 25%;}
+.page .wrap .btn-1 img{display:block;width:100%;height:auto;}
+.page .wrap .btn-2{display:block;width:50%;left:25%;position:absolute;bottom:2%;height:auto;border:none;}
+.page .wrap .btn-2 img{display:block;width:100%;height:auto}
+.first-page{
+	background: url(http://mktimage.10101111cdn.com/wap/2015/fires/bg_0.jpg) center;
+	background-size: cover;
+}
+.page-1-1 {
+	background: url(http://mktimage.10101111cdn.com/wap/2015/fires/bg_1.jpg) center;
+	background-size: cover;
+}
+
+.page-2-1 {
+	background: url(http://mktimage.10101111cdn.com/wap/2015/fires/bg_2.jpg) center;
+	background-size: cover;
+}
+
+.page-3-1 {
+	background: url(http://mktimage.10101111cdn.com/wap/2015/fires/bg_3.jpg) center;
+	background-size: cover;
+}
+
+.page-4-1 {
+	background: url(http://mktimage.10101111cdn.com/wap/2015/fires/bg_4.jpg) center;
+	background-size: cover;
+}
+.page-5-1 {
+	background: url(http://mktimage.10101111cdn.com/wap/2015/fires/bg_5.jpg) center;
+	background-size: cover;
+}
+.page-6-1 {
+	background: url(http://mktimage.10101111cdn.com/wap/2015/fires/bg_6.jpg) center;
+	background-size: cover;
+}
+
+.page-7-1 {
+	background: url(http://mktimage.10101111cdn.com/wap/2015/fires/bg_7.jpg) center;
+	background-size: cover;
+}
+.page-8-1 {
+	background: url(http://mktimage.10101111cdn.com/wap/2015/fires/bg_8.jpg) center;
+	background-size: cover;
+}
+
+.page-current {
+	z-index: 1
+}
+
+.img {
+	left: 0;
+	z-index: 99
+}
+
+.pub-passdown {
+	-webkit-animation-timing-function: ease;
+	-webkit-animation-duration: 1s;
+	-webkit-animation-iteration-count: infinite;
+	bottom: 4%;
+	left: 45%;
+	z-index: 99;
+	width: 5%;
+	-webkit-animation-name: passdown
+}
+
+@-webkit-keyframes passdown {
+	0% {
+		bottom: 6%;
+		opacity: .3
+	}
+
+	50% {
+		bottom: 4%;
+		opacity: .8
+	}
+
+	100% {
+		bottom: 6%;
+		opacity: 1
+	}
+}
+
+.wrap {
+	width: 100%;
+	height: 100%
+}
+.first-page .wrap{
+	background: url(http://mktimage.10101111cdn.com/wap/2015/fires/w_0.png) center;
+	background-size: 100%;
+	background-repeat: no-repeat;
+	animation-delay:0;
+	-webkit-animation-delay:0;
+}
+.page-1-1 .wrap{
+	background: url(http://mktimage.10101111cdn.com/wap/2015/fires/w_1.png) center;
+	background-size: 100%;
+	background-repeat: no-repeat;
+}
+.page-2-1 .wrap {
+	background: url(http://mktimage.10101111cdn.com/wap/2015/fires/w_2.png) center;
+	background-size: 100%;
+	background-repeat: no-repeat;
+}
+
+.page-3-1 .wrap {
+	background: url(http://mktimage.10101111cdn.com/wap/2015/fires/w_3.png) center;
+	background-size: 100%;
+	background-repeat: no-repeat;
+}
+.page-4-1 .wrap {
+	background: url(http://mktimage.10101111cdn.com/wap/2015/fires/w_4.png) center;
+	background-size: 100%;
+	background-repeat: no-repeat;
+}
+.page-5-1 .wrap {
+	background: url(http://mktimage.10101111cdn.com/wap/2015/fires/w_5.png) center;
+	background-size: 100%;
+	background-repeat: no-repeat;
+}
+.page-6-1 .wrap {
+	background: url(http://mktimage.10101111cdn.com/wap/2015/fires/w_6.png) center;
+	background-size: 100%;
+	background-repeat: no-repeat;
+}
+.page-7-1 .wrap {
+	background: url(http://mktimage.10101111cdn.com/wap/2015/fires/w_7.png) center;
+	background-size: 100%;
+	background-repeat: no-repeat;
+}
+
+.fires-mask {
+	display: none;
+	position: fixed;
+	z-index: 90;
+	top:0;
+	width: 100%;
+	height: 100%;
+	max-width: 414px;
+	max-height: 736px;
+	min-height: 480px;
+	*max-width: 414px;
+	*max-height: 736px;
+	*min-height: 480px;
+	margin:0 auto;
+	background: rgba(0,0,0,.87);
+}
+
+.fires-alert {
+	position: absolute;
+	left: 50%;
+	width: 18rem;
+	height: 17rem;
+	margin-left: -9rem;
+	*width: 270px;
+	*height:255px;
+	*margin-left: -135px;
+	*margin-top: -128px;
+	bottom: 2rem;
+	z-index: 101;
+	display: none;
+}
+.fires-alert .img{float:left;width:100%;}
+
+
+.fires-alert .alert-word {
+	font-family: "微软雅黑";
+	position: absolute;
+	width: 90%;
+	left: 5%;
+	*top:152px;
+	top: 10.5rem;
+	*font-size:12px;
+	font-size: 0.9rem;
+	color: #000;
+	text-align: center;
+}
+
+.fires-alert .btn-close {
+	display: block;
+	width: 2.5rem;
+	*width:40px;
+	*height:40px;
+	height: 2.5rem;
+	position: absolute;
+	right: 1rem;
+	top:1rem;
+}
+.fires-alert .input-con{
+	position:absolute;
+	top:25%;
+	width:15rem;
+	left:1.5rem;
+	height:4.3rem;
+	line-height:4.3rem;
+	padding:0;
+}
+.fires-alert .input-con .tel-w{
+	position:absolute;
+	top:32%;
+	height:auto;
+	width:40%;
+	left:30%;
+	z-index:8;
+}
+.fires-alert .input-con .v_tel{
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	top:50%;
+	margin-top:-1.1rem;
+	height:2rem;
+	border:none;
+	background:none;
+	outline:none;
+	text-align:center;
+	font-size:1.2rem;
+	z-index:9;
+}
+.fires-alert .btn-go{
+	display:block;
+	position:absolute;
+	bottom:4rem;
+	width:10rem;
+	left:4rem;
+}
+.fires-alert .btn-go .img{width:100%;height:auto}
+.fires-alert .alert-title{
+	position:absolute;
+	top:20%;
+	left:8%;
+	width:84%;
+	display:none;
+	height:auto;
+}
+.fires-alert .quan{
+	position:absolute;
+	top:34%;
+	left:15%;
+	width:70%;
+	display:none;
+	height:auto;
+}
+.fires-alert .btns{
+	position:absolute;
+	bottom:2.5rem;
+	left:5%;
+	width:90%;
+	display:none;
+	height:auto;
+}
+.fires-alert .btns .btn{
+	width:50%;
+	margin:0;
+	height:auto;
+}
+.fires-alert .b-word{
+	position:absolute;
+	bottom:0;
+	color:#fff;
+	font-size:.7rem;
+	width:100%;
+	text-align:center;
+	margin:0;
+	padding:0;
+	line-height:1.5rem;
+	
+}
