@@ -1,0 +1,192 @@
+@charset "utf-8";
+/*
+* last-edit-date: 20160321
+*/
+
+/*
+reset
+ */
+html, body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td, em, button {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font: 12px/1.5 'microsoft yahei', "黑体", arial, Simsun, sans-serif;
+    color: #333;
+    background-color: #fff;
+}
+img, fieldset {
+    border: none;
+    vertical-align: middle;
+}
+input, textarea {
+    font-size: 12px;
+}
+table {
+    border-collapse: collapse;
+}
+a {
+    color: #3983e5;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+h1, h2, h3, h4, h5 {
+    font-family: 'microsoft yahei', "黑体", arial, Simsun, sans-serif;
+    font-weight: normal;
+}
+ul, ol {
+    list-style: none;
+}
+input[type="button"], input[type="submit"] {
+    -webkit-appearance: none;
+}
+input[type="text"] {
+    border-radius: 0;
+}
+.hide {
+    display: none;
+}
+.iefix-bg {
+    position: absolute;
+    height: 33px;
+    bottom: 0;
+    width: 100%;
+    background: #000 \9;
+    filter: alpha(opacity=40) \9;
+    opacity: 0.4 \9;
+    z-index: 1 \9;
+}
+/*IE6/7/8 alpha bugfix */
+:root .iefix-bg {
+    display: none \9;
+}
+.clearfix{overflow: hidden;*zoom: 1}
+.fl{float: left}
+.fr{float: right}
+.clear{clear: both;}
+.overflow{overflow: hidden}
+.divin{display: inline;}
+.p-re{position: relative;}
+/*IE9 alpha bugfix */
+.mr20 {
+    margin-right: 20px;
+}
+.mb10 {
+    margin-bottom: 10px;
+}
+.ml5 {
+    margin-left: 5px;
+}
+/*
+baseStyle
+*/
+.inputSel {
+    color: #999 !important;
+}
+.link_hhtravel {
+    display: inline-block;
+    margin-bottom: -7px;
+    vertical-align: middle;
+    text-align: center;
+    width: 69px;
+    height: 24px;
+    line-height: 24px;
+    color: #333;
+    background: #fff;
+    border: 1px solid #f0f0f0;
+    border-radius: 4px;
+}
+.zxcsign,.subtractionicon,.line-cur{background-image: url("../images/icon.png");background-repeat: no-repeat;}
+.zxcsign{display:inline-block;width:50px;height:20px; background-position:-90px 0; vertical-align: middle;}
+.subtractionicon{display:inline-block;height:20px;line-height:20px;padding:0px 6px 0px 12px;font-size: 14px;color:#fff; background-position:-160px 0; vertical-align: middle;}
+.line-cur{display:inline-block;width:20px;height:24px; background-position:0px -29px; vertical-align: middle;}
+/* price
+.price {
+    position: relative;
+    float: right;
+    font: 22px/1.5 tahoma;
+    color: #f60;
+}
+.no-price {
+    font: 14px/33px "Microsoft yahei";
+}
+.price dfn {
+    vertical-align: 7px;
+    font: 12px/1.5 arial;
+    color: #666;
+}
+.price .price_info {
+    margin-left: 3px;
+    vertical-align: 2px;
+    font: 12px/1.5 simsun;
+    color: #666;
+}
+.price del {
+    margin-right: 5px;
+    font: 12px/1.5 arial;
+    color: #adadad;
+    text-decoration: line-through;
+}
+input.btn-bgray,input.btn-red{height:30px;line-height:30px;}
+*/
+a.btn-bgray,a.btn-red,a.btn-yuanred{display:inline-block;min-width: 88px;height:28px; line-height:28px;}
+
+.btn-bgray:hover,.btn-red:hover{text-decoration:none;}
+.btn-bgray{
+    border: 1px solid #b0b0b0;
+    color: #616161;
+    min-width:118px;
+    text-align: center;
+    padding: 0 15px;
+    font-weight: 700;
+    height:30px;
+    font-size: 14px;
+    cursor: pointer;
+    vertical-align: middle;
+    background-color: #fff;
+    *-webkit-filter: chroma(color=#000);
+    *filter: chroma(color=#000);
+    overflow: visible;
+}
+.btn-bgray:hover{color: #fff;border:1px solid #757575; background-color: #757575;}
+.btn-red{
+    border: 1px solid #df0615;
+    color: #fff;
+    min-width:118px;
+    text-align: center;
+    padding: 0 15px;
+    font-weight: 700;
+    height:30px;
+    font-size: 14px;
+    font-family:"Microsoft yahei";
+    cursor: pointer;
+    vertical-align: middle;
+    *-webkit-filter: chroma(color=#000);
+    *filter: chroma(color=#000);
+    background-color: #df0615;
+    overflow: visible;
+}
+.btn-red:hover{border:1px solid #b20511; background-color: #b20511;}
+.btn-yuanred{
+    border: 1px solid #df0615;
+    color: #fff;
+    min-width:118px;
+    text-align: center;
+    padding: 0 15px;
+    font-weight: 700;
+    height:30px;
+    font-size: 14px;
+    font-family:"Microsoft yahei";
+    cursor: pointer;
+
+    vertical-align: middle;
+    *-webkit-filter: chroma(color=#000);
+    *filter: chroma(color=#000);
+    background-color: #df0615;
+    overflow: visible;
+}
+.btn-yuanred:hover{border:1px solid #b20511; background-color: #b20511;}
+.btn-bgray.del-c{color:#b0b0b0;}
+.f18{font-size:18px;}

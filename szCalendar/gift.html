@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>神州租车</title>
+<meta name="viewport" content="width=640, user-scalable=no" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="apple-mobile-web-app-capable" content="yes">
+<link rel="stylesheet" href="css/animate.css">
+<link rel="stylesheet" href="css/pagestyle.css">
+</head>
+
+<body>
+	<audio src="audio/loop.mp3" autoplay loop></audio>
+
+	<div class="page1"></div>
+	<div class="page2">
+		<input type="text" class="phone" placeholder="输入手机号，即刻领取跨年大礼包" maxlength="11" pattern="\d*" value="">
+		<div class="submit_btn"></div>
+	</div>
+	<div class="page3">
+		<div class="light"></div>
+		<div class="box_top fadeInUp"></div>
+		<div class="title zoomInUp"></div>
+		<div class="tips zoomInUp">已存入158XXXX3398的手机中了</div>
+		<div class="download_btn"></div>
+		<div class="share_btn"></div>
+	</div>
+	<div class="page4">
+		<div class="ok_btn"></div>
+	</div>
+
+	<script src="js/vendor/vendor.min.js"></script>
+
+	<script>
+		$('.page1').on('tap',function(){
+			$('.page1').fadeOut();
+			$('.page3 div').show().addClass('animated');
+			$('.page3').fadeIn();
+		});
+
+		$('.page2 .submit_btn').on('tap',function(){
+			var phone = $('.page2 .phone').val();
+			if(phone.length != 11){
+				alert('请输入正确手机号码');
+				return;
+			}
+
+			$('.page2').fadeOut();
+			if(Math.random() > 0.1){
+				$('.page3 div').show().addClass('animated');
+				$('.page3').fadeIn();
+			} else {
+				$('.page4').fadeIn();
+			}
+		});
+
+		$('.page4 .ok_btn').on('tap',function(){
+			$('.page4').fadeOut();
+			$('.page2').fadeIn();
+		});
+
+		$('.page3 .share_btn').on('tap',function(){
+			$('.page3').fadeOut();
+			$('.page1').fadeIn();
+		});
+	</script>
+
+</body>
+</html>
