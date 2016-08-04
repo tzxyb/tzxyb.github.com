@@ -1,56 +1,22 @@
 (function(){
-
 var now = { row:1, col:1 }, last = { row:0, col:0};
-//const towards = { up:1, right:2, down:3, left:4};
 var towards = { up:1, right:2, down:3, left:4};
 var isAnimating = false;
-
-//s=window.innerHeight/500;
-//ss=250*(1-s);
-
-//$('.wrap').css('-webkit-transform','scale('+s+','+s+') translate(0px,-'+ss+'px)');
-
 document.addEventListener('touchmove',function(event){
 	event.preventDefault(); },false);
-
 $(document).swipeUp(function(){
 	if (isAnimating) return;
 	last.row = now.row;
 	last.col = now.col;
 	if (last.row != 11) { now.row = last.row+1; now.col = 1; pageMove(towards.up);}
-	/*if (last.row == 11) { now.row = 1; now.col = 1; pageMove(towards.up);}*/
 });
-
 $(document).swipeDown(function(){
 	if (isAnimating) return;
 	last.row = now.row;
 	last.col = now.col;
 	if (last.row!=1) { now.row = last.row-1; now.col = 1; pageMove(towards.down);}	
-	/*if (last.row==1) { now.row = 11; now.col = 1; pageMove(towards.down);}*/
 });
 
-/*$(document).swipeLeft(function(){
-	if (isAnimating) return;
-	last.row = now.row;
-	last.col = now.col;
-	if (last.row==3 && last.col==1) { now.row = last.row; now.col = 2; pageMove(towards.left);}	
-	if (last.row==3 && last.col==2) { now.row = last.row; now.col = 3; pageMove(towards.left);}	
-	
-	if (last.row==6 && last.col==1) { now.row = last.row; now.col = 2; pageMove(towards.left);}	
-	if (last.row==6 && last.col==2) { now.row = last.row; now.col = 3; pageMove(towards.left);}	
-})
-
-$(document).swipeRight(function(){
-	if (isAnimating) return;
-	last.row = now.row;
-	last.col = now.col;
-	if (last.row==3 && last.col==3) { now.row = last.row; now.col = 2; pageMove(towards.right);}
-	if (last.row==3 && last.col==2) { now.row = last.row; now.col = 1; pageMove(towards.right);}	
-	
-	if (last.row==6 && last.col==3) { now.row = last.row; now.col = 2; pageMove(towards.right);}
-	if (last.row==6 && last.col==2) { now.row = last.row; now.col = 1; pageMove(towards.right);}	
-})
-*/
 function pageMove(tw){
 	var lastPage = ".page-"+last.row+"-"+last.col,
 		nowPage = ".page-"+now.row+"-"+now.col;
@@ -75,10 +41,8 @@ function pageMove(tw){
 	}
 	isAnimating = true;
 	$(nowPage).removeClass("hide");
-	
 	$(lastPage).addClass(outClass);
 	$(nowPage).addClass(inClass);
-	
 	setTimeout(function(){
 		$(lastPage).removeClass('page-current');
 		$(lastPage).removeClass(outClass);
@@ -92,16 +56,4 @@ function pageMove(tw){
 		isAnimating = false;
 	},600);
 }
-
 })();
-
-
-$('#music').on('touchstart', function() {
-	if ($(this).hasClass('on')) {
-		$('audio').get(0).pause();
-		$(this).addClass('off').removeClass('on');
-	} else {
-		$('audio').get(0).play();
-		$(this).removeClass('off').addClass('on');
-	}
-});
