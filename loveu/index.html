@@ -105,13 +105,7 @@
 				$('.btn-share').on('tap',function(){
 					$('.shadow').css('display','block')
 				});
-				$('.shadow').on('tap',function(){
-					$(this).css('display','none')
-				});
-                                $('.shadow').on('swipeUp',function(){
-					$(this).css('display','none')
-				});
-                                $('.shadow').on('swipeDown',function(){
+				$('.shadow').on(['tap','swipeUp','swipeDown'],function(){
 					$(this).css('display','none')
 				});
 
