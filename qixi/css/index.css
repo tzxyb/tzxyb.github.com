@@ -1,0 +1,188 @@
+.wh100 {
+  width: 100%;
+  height: 100%;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+input,
+button,
+a {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
+  border: none;
+}
+html {
+  width: 100%;
+  height: 100%;
+  font-family: 'MicroSoft YaHei', sans-serif;
+}
+html body {
+  width: 100%;
+  height: 100%;
+  background: url(../images/qixi82_bg_notext.png) no-repeat center #fdfdfe;
+  -webkit-background-size: 100% 100%;
+  background-size: 100% 100%;
+  overflow: hidden;
+}
+html body img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+html body input {
+  border: none;
+}
+html body .logo {
+  width: 80%;
+  height: 6%;
+  margin: 0 auto;
+  padding: .3rem 0;
+}
+html body section {
+  width: 100%;
+  height: 90%;
+  overflow: hidden;
+}
+html body section.test .top {
+  height: auto;
+  padding-top: .6rem;
+}
+html body section.test .top div {
+  width: 100%;
+}
+html body section.test .top div.text {
+  height: 30%;
+}
+html body section.test .top div.text img {
+  width: 80%;
+  height: auto;
+}
+html body section.test .top div.flower {
+  height: 70%;
+  text-align: right;
+}
+html body section.test .top div.flower img {
+  display: inline-block;
+  width: 82%;
+  height: auto;
+}
+html body section.test .bottom {
+  height: 30%;
+}
+html body section.test .bottom .fingers {
+  width: 60%;
+  margin: 0 auto;
+  padding: .2rem .5rem;
+  font-size: 0;
+  background: url(../images/qixi82_finger_border.png) no-repeat center;
+  background-size: 100% 100%;
+}
+html body section.test .bottom .fingers span {
+  display: inline-block;
+  width: 50%;
+  height: 100%;
+}
+html body section.test .bottom .fingers span img {
+  width: 90%;
+}
+html body section.test .bottom .fingers span img.left {
+  -webkit-transform: translate(18%, 0);
+  transform: translate(18%, 0);
+}
+html body section.test .bottom .fingers span img.right {
+  -webkit-transform: translate(-18%, 0);
+  transform: translate(-18%, 0);
+}
+html body section.test .bottom .tips {
+  width: 60%;
+  margin: 1rem auto 0;
+}
+html body section.test .bottom .tips img {
+  width: 90%;
+}
+html body section.match {
+  display: none;
+}
+html body section.match .top {
+  height: auto;
+  padding-top: .6rem;
+}
+html body section.match .top div {
+  width: 100%;
+}
+html body section.match .top div.text {
+  height: 30%;
+}
+html body section.match .top div.text img {
+  width: 70%;
+  height: auto;
+}
+html body section.match .top div.flower {
+  height: 70%;
+  text-align: right;
+}
+html body section.match .top div.flower img {
+  display: inline-block;
+  width: 80%;
+  height: auto;
+}
+html body section.match .bottom {
+  width: 75%;
+  height: 30%;
+  margin: 0 auto;
+}
+html body section.match .bottom a {
+  display: block;
+  width: 100%;
+  margin-top: .6rem;
+}
+html body section.noprize {
+  display: none;
+  text-align: right;
+}
+html body section.noprize img {
+  display: inline-block;
+  width: 90%;
+  margin: 0;
+}
+@media (max-height: 481px) {
+  /*html body .scene .top {
+        text-align: right;
+
+        img {
+            display: inline-block;
+            width: 76%;
+            margin: 0;
+        }
+    }
+    html body section.noprize {
+       text-align: right;
+
+       img {
+           display: inline-block;
+           width: 84%;
+           margin: 0;
+       }
+   }*/
+  html body section.test .top div.flower,
+  html body section.match .top div.flower {
+    text-align: right;
+  }
+  html body section.test .top div.flower img,
+  html body section.match .top div.flower img {
+    display: inline-block;
+    width: 84%;
+  }
+  html body section.text .top div.text img,
+  html body section.match .top div.text img {
+    width: 58%;
+  }
+  html body section.noprize img {
+    height: 100%;
+  }
+}
