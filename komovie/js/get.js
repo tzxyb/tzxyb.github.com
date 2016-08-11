@@ -22,3 +22,26 @@ $('.shadow span.close').click(function(){
 			return true;
 		}
 	}
+
+
+	var u = navigator.userAgent;
+	isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1; //android终端
+	isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
+ 
+	$(".t_val").focus(function(){
+		var txt_value = $(this).val();
+		if(txt_value == this.defaultValue){
+			$(this).val("");
+		};
+		if(isAndroid){
+			$('.pic-bot').hide();
+		};
+	}).blur(function(){
+		var txt_value = $(this).val();
+		if(!txt_value){
+			$(this).val(this.defaultValue);
+		};
+		if(isAndroid){
+			$('.pic-bot').show();
+		}
+	})
