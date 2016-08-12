@@ -152,10 +152,23 @@
 				$('.showdetail').on('click',function(){
 					$('.shadow').show();
 					$('.shadow .detailcon').show();
-				})
+				});
 				$('.shadow .detailcon .btn-knew,.shadow .error .close').on('click',function(){
 					$('.shadow').hide();
-				})
+				});
+				var n=0;
+				var timer=null;
+				$('.reset').on('click',function(){
+					n=60;
+					timer=setInterval(function(){
+						n--;
+						$('.reset').html("剩余 "+n+" s");
+						if(!n){
+							$('.reset').html("重新发送");
+							clearInterval(timer);
+						}
+					},1000);
+				});
 			})
 		</script>
 	</body>
