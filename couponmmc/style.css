@@ -251,10 +251,10 @@ ol,ul{margin:0;padding:0;list-style:none}
     background: url(image/line_default.png) no-repeat;
     background-size: 100% auto;
     background-position: 0px;
-    font-size: .8rem;
+    font-size: .9rem;
     color: #c32026;
     text-align: center;
-    font-weight: 300;
+    font-weight: 700;
     font-family: 'Microsoft Yahei';
 }
 .coupon-mmc .lists .rule ul li{
