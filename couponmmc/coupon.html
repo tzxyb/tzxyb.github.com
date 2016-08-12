@@ -20,7 +20,7 @@
 					<img src="image/bg_mmc.jpg" alt="" class="bg-top img">
 					<div class="activecon">
 						<!-- 正常UI显示层 -->
-						<ul class="inputcon" style="display:none">
+						<ul class="inputcon">
 							<li>
 								<input type="text" class="username" placeholder="姓名">
 							</li>
@@ -32,10 +32,10 @@
 								<input type="text" class="authcode" placeholder="验证码">
 							</li>
 							<li>
-								<a href="javascript:;" class="btn-go">领取免费流量</a>
+								<a href="javascript:;" class="btn-get">领取免费流量</a>
 							</li>
 						</ul>
-						<p class="slogan" style="display:none">
+						<p class="slogan">
 							革命性购车新方式<br/>
 							<span class="sub-slogan">超低首付 · 3折月供 · 可买可还</span>
 						</p>
@@ -48,7 +48,7 @@
 						</div>
 
 						<!-- 结果页面 领完了-->
-						<div class="rescon rescon-none">
+						<div class="rescon rescon-none" style="display:none">
 							<h3>稍晚一步券已抢完！</h3>
 							<img src="image/erwm_wx.png" alt="" class="erwm"/>
 							<p>长按识别二维码关注神州买卖车官方微信<br>月！月！有！福！利！</p>
@@ -143,6 +143,21 @@
 				<a href="javascript:;" class="close">×</a>
 			</div>
 		</div>
+		<script type="text/javascript">
+			$(function(){
+				$('.btn-get').on('click',function(){
+					$('.rescon-got').show();
+					$('.inputcon,.slogan').hide();
+				});
+				$('.showdetail').on('click',function(){
+					$('.shadow').show();
+					$('.shadow .detailcon').show();
+				})
+				$('.shadow .detailcon .btn-knew,.shadow .error .close').on('click',function(){
+					$('.shadow').hide();
+				})
+			})
+		</script>
 	</body>
 </html>
 

@@ -49,7 +49,7 @@ ol,ul{margin:0;padding:0;list-style:none}
 	height:1.8rem;
 	line-height: 1.8rem;
 	text-align: left;
-	margin:.3rem auto;
+	margin-bottom:0.4rem;
 	border-radius:.4rem;
 	border:1px solid #fff;
 	color:#fff;
@@ -63,7 +63,7 @@ ol,ul{margin:0;padding:0;list-style:none}
 .inputcon li .reset{
 	position:absolute;
 	right:0;
-	top:.3rem;
+	top:0;
 	display:block;
 	width:4.5rem;
 	text-align:center;
@@ -73,7 +73,8 @@ ol,ul{margin:0;padding:0;list-style:none}
 	border-radius: 0px .4rem .4rem 0px;
 	white-space:nowrap;
 }
-.inputcon li .btn-go{
+.inputcon li .btn-go,
+.inputcon li .btn-get{
 	display:block;
 	width:100%;
 	border-radius:.5rem;
@@ -84,7 +85,6 @@ ol,ul{margin:0;padding:0;list-style:none}
 	line-height: 1.8rem;
 	text-decoration: none;
 	font-family: "Microsoft Yahei";
-	margin-top:.3rem;
 	font-size:1rem;
 
 }
@@ -94,7 +94,7 @@ ol,ul{margin:0;padding:0;list-style:none}
 	color:rgba(255,255,255,0.5);
 	font-size:.5rem;
 	line-height:1rem;
-	margin-top:1rem;
+	margin-top:.5rem;
 }
 
 .activecon .slogan .sub-slogan::before,
@@ -109,16 +109,19 @@ ol,ul{margin:0;padding:0;list-style:none}
 /*结果页面*/
 .activecon .rescon{
 	width:100%;
-	line-height: 1.2rem;
+	line-height: 1rem;
 	font-size:.75rem;
 	color:#fff;
 }
 .activecon .rescon h3{color:#c8a974;font-size:.75rem;}
 .activecon .rescon .erwm{width:30%;margin:.5rem auto;}
 .activecon .rescon .showdetail{
-	display:block;
-	color:#c8a974;
-	text-decoration:underline;
+    display: block;
+    font-size: .75rem;
+    color: #c8a974;
+    width: 6rem;
+    margin: 0 auto;
+    border-bottom: 1px solid #c8a974;
 }
 
 /*弹层*/
@@ -267,5 +270,5 @@ ol,ul{margin:0;padding:0;list-style:none}
 
 /*以下是表单页面*/
 .coupon-form.coupon-mmc{
-	background:#a7252a;
+	background:#C42027;
 }
