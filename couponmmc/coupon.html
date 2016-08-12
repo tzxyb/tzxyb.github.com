@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="pragma" content="no-cache">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">	
+		<meta name="format-detection" content="telephone=no">
+		<meta http-equiv="X-UA-Compatible" content="edge">
+		<title id="pagetitle"></title>
+		<link rel="stylesheet" href="style.css" type="text/css">
+		<script type="text/javascript" src="http://mktjs.10101111cdn.com/common/jquery/jquery-1.7.1.min.js"></script>
+	</head>
+	<body>
+		<div class="coupon-mmc">
+			<section class="changeTop">
+				<img src="image/mmc_top.jpg" alt="" class="pic-top img">
+				<div class="coupon-res">
+					<img src="image/bg_mmc.jpg" alt="" class="bg-top img">
+					<div class="activecon">
+						<!-- 正常UI显示层 -->
+						<ul class="inputcon" style="display:none">
+							<li>
+								<input type="text" class="username" placeholder="姓名">
+							</li>
+							<li>
+								<input type="tel" class="telnum" placeholder="手机号码">
+								<span class="reset">获取验证码</span>
+							</li>
+							<li>
+								<input type="text" class="authcode" placeholder="验证码">
+							</li>
+							<li>
+								<a href="javascript:;" class="btn-go">领取免费流量</a>
+							</li>
+						</ul>
+						<p class="slogan" style="display:none">
+							革命性购车新方式<br/>
+							<span class="sub-slogan">超低首付 · 3折月供 · 可买可还</span>
+						</p>
+						<!-- 结果页面 已经领过-->
+						<div class="rescon rescon-got" style="display:none">
+							<h3>长按识别下方二维码关注微信<br>立即抢走<span class="urfri"></span>送您的30M流量！</h3>
+							<img src="image/erwm_wx.png" alt="" class="erwm"/>
+							<p>在微信对话框内回复“抢流量”即可</p>
+							<a href="javascript:;" class="showdetail">点击查看如何操作</a>
+						</div>
+
+						<!-- 结果页面 领完了-->
+						<div class="rescon rescon-none">
+							<h3>稍晚一步券已抢完！</h3>
+							<img src="image/erwm_wx.png" alt="" class="erwm"/>
+							<p>长按识别二维码关注神州买卖车官方微信<br>月！月！有！福！利！</p>
+						</div>
+					</div>
+
+				</div>
+			</section>
+			<section class="lists">
+				<div class="friends">
+					<h4 class="sub-title">
+						<span id="change-title"></span>
+						送您20份流量红包
+					</h4>
+					<ul class="friend-list">
+						<li class="friend-item">
+							<div class="peo">
+								<img src="image/user_default.jpg" alt="">
+							</div>
+							<div class="item-inner">
+								<p>
+									<span class="name">阿洛洛</span>
+									<span class="time">11.10 17:31</span>
+								</p>
+								<p class="item-w">庆祝神州上市，热销车型最高直降5000</p>
+							</div>
+							<div class="money">
+								<b>
+									30M
+								</b>
+							</div>
+						</li>
+						<li class="friend-item">
+							<div class="peo">
+								<img src="image/user_default.jpg" alt="">
+							</div>
+							<div class="item-inner">
+								<p>
+									<span class="name">果子鱼</span>
+									<span class="time">11.10 17:31</span>
+								</p>
+								<p class="item-w">全行业最低首付，用低低的价格开走好车</p>
+							</div>
+							<div class="money">
+								<b>
+									30M
+								</b>
+							</div>
+						</li>
+
+						<li class="friend-item border-none">
+							<div class="peo">
+								<img src="image/user_default.jpg" alt="">
+							</div>
+							<div class="item-inner">
+								<p>
+									<span class="name">MondAy</span>
+									<span class="time">11.10 17:31</span>
+								</p>
+								<p class="item-w">全国百家门店陆续开设中，一站式购车更方便</p>
+							</div>
+							<div class="money">
+								<b>
+									30M
+								</b>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div class="rule">
+					<h4 class="sub-title">活动细则</h4>
+					<ul>
+						<li>1.一个微信号仅限填写一次手机号</li>
+						<li>2.一个手机号仅限领取一次流量</li>
+						<li>3.共发放20份流量包，领完即止</li>
+						<li>4.关注神州买卖车官方微信，回复“抢流量”才能成功领取</li>
+						<li>5.领取成功后，后台将在1-2个工作日为您充值完毕</li>
+						<li>6.神州买卖车保留法律范围内允许的对活动的解释权</li>
+					</ul>
+				</div>
+			</section>
+			<img src="image/logo_mmc.png" alt="" class="img logo">
+		</div>
+		<div class="shadow" style="display:none">
+			<div class="detailcon" style="display:none;">
+				<img src="image/pic_detail.png" alt="" class="">
+				<a href="javascript:;" class="btn-knew">我知道了</a>
+			</div>
+			<div class="error"style="display:none">
+				<img src="image/bg_error.png" alt="" class="" >
+				<p>请填写<br>正确信息</p>
+				<a href="javascript:;" class="close">×</a>
+			</div>
+		</div>
+	</body>
+</html>
+
