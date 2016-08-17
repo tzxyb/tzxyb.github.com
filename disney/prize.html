@@ -25,6 +25,12 @@
 		.bot .intro-btn{line-height: 3rem;font-weight:bold;font-size:1.5rem;color:#D73334;text-decoration: none;border-bottom:1px solid #D73334;}
 		.slideup{display:none;width:100%;height:auto;position:fixed;bottom:0;}
 		.slideup .intro-p{width:94%;box-sizing:border-box;background:#d73334;padding:1rem;color:#fff;font-size:1.2rem;line-height:1.8rem;margin-left:3%;}
+		.alcon{position:fixed;top:30%;height:auto;width:80%;left:10%;border-radius:.5rem;background:#fff;z-index:999;padding:5% 0;display:none}
+		.alcon h2{width:100%;color:#d73334;text-align:center;line-height:2rem;font-size:1.5rem;}
+		.alcon p{width:100%;color:#d73334;font-size:1.3rem;line-height:2rem;text-align:center;}
+		.alcon img{width:100%;height:auto;display:block;}
+		.alcon .btn-red{text-align:center;display:block;margin:1rem auto;border-radius:.5rem;width:70%;height:2rem;text-decoration:none;line-height:2rem;color:#fff;background:#d4281e;}
+
 		@media only screen and (max-device-width :320px) {
 			.container .top .luckydraw .drawbg{width:220px;height:220px}
 			.drawbg .pointer{width:63px;height:80px;margin-left:-32px;margin-top:-50px}
@@ -47,7 +53,7 @@
             };
             var bRotate = false;
 
-            var rotateFn = function (awards, angles, txt){
+            var rotateFn = function (awards, angles,txt){
                 bRotate = !bRotate;
                 $('#rotate').stopRotate();
                 $('#rotate').rotate({
@@ -55,11 +61,13 @@
                     animateTo:angles+1800,
                     duration:8000,
                     callback:function (){
-                        alert(txt);
+
                         bRotate = !bRotate;
+                        
                     }
                 })
             };
+
 
             $('.pointer').click(function (){
 
@@ -68,19 +76,19 @@
 
                 switch (item) {
                     case 0:
-                        rotateFn(0, 0, '特等奖');
+                        rotateFn(0, 0);
                         break;
                     case 1:
-                        rotateFn(1, 72, '一等奖');
+                        rotateFn(1, 72);
                         break;
                     case 2:
-                        rotateFn(2, 144, '未中奖');
+                        rotateFn(2, 144);
                         break;
                     case 3:
-                        rotateFn(3, 216, '三等奖');
+                        rotateFn(3, 216);
                         break;
                     case 4:
-                        rotateFn(4, 288, '二等奖');
+                        rotateFn(4, 288);
                         break;
                   
                 }
@@ -122,6 +130,27 @@
 				<p class="intro-p">神州专车为回馈用户，与中青旅强强联手，推出独家抢票活动！4月20日—4月29日期间，每天每个神州专车用户乘坐神州专车时，请打开微信“摇一摇”，参与大转盘活动，即有机会免费赢取价值499元的迪士尼乐园门票兑换券哦！每个神州专车用户每天仅限参与一次。5张迪士尼乐园门票将会在活动结束后的5个工作日内，用短信的形式发送至中奖用户。其余奖品将会及时通过短信下发，请注意查收。</p>
 			</div>
 		</div>
+		<div class="alcon alcon0">
+			<h2>未中奖</h2>
+			<p>很遗憾本次未中奖，<br>感谢您对本次活动的支持，谢谢参与。</p>
+		</div>
+		<div class="alcon alcon1">
+			<h2></h2>
+			<p></p>
+		</div>
+		<div class="alcon alcon2">
+			<h2>恭喜中奖</h2>
+			<p>悦途高铁VIP贵宾厅体验一次</p>
+			<img src="images/alcon.png"/>
+			<a href="http://www.yuetuvip.net/wx/member/register.html" class="btn-red">点击领取</a>
+		</div>
+		<div class="alcon alcon3">
+			<h2>恭喜中奖</h2>
+			<p>悦途会籍贵宾厅五星要客服务免费体验一次</p>
+			<img src="${ucarmktwap.mktimage.url}/wap/2016/dial817/alcon.png"/>
+			<a href="http://www.yuetuvip.net/wx/member/register.html" class="btn-red">点击领取</a>
+		</div>
+
 	</body>
 	<script type="text/javascript">
 		$(function(){
