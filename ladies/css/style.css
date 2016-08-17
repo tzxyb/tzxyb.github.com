@@ -19,7 +19,7 @@ input::input-placeholder { color:#fff }
 
 .xiugaibox_con,.djns{width: 100%;max-width:414px;margin:0 auto;}
 .xiugaibox_con img{width: 100%;vertical-align: top;}
-.shadow{display:none;position:fixed;text-align:center;line-height:1.8rem;font-size:1rem;left:10%;top:40%;width:80%;height:auto;border:.2rem solid #000;box-sizing:border-box;background:#fff;border-radius:1rem;padding:1rem 0;z-index:999;}
+.shadow{display:none;position:fixed;text-align:center;line-height:1.8rem;font-size:1rem;left:10%;top:40%;width:80%;height:auto;box-sizing:border-box;background:#fff;border-radius:1rem;padding:1rem 0;z-index:999;}
 .shadow h2{font-size:1.5rem;text-align:center;line-height:3.2rem;}
 .shadow a{float:left;margin:1% 2%;display:block;width:46%;height:2rem;text-align:center;font-size:1rem;color:#fff;border-radius:1.1rem;font-weight:bold;line-height:2.2rem;background:#000;}
 
