@@ -63,6 +63,7 @@ ol,ul {
 	box-sizing: border-box;
 	word-spacing: .1rem;
 	letter-spacing: .1rem;
+	font-size: 1.2rem;
 }
 
 .inputcon li input {
@@ -73,7 +74,6 @@ ol,ul {
 .inputcon li a {
 	background: #c8a974;
 	color: #fff;
-	font-size: 1.2rem;
 	margin-top: 1rem;
 	font-weight: 500
 }
