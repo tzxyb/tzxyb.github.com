@@ -23,6 +23,8 @@
 				        percentage: true,
 				        barHeight: 0,
 				        onComplete: function() {
+				            var $width=$(".page-current .gif").css("width");
+					    $(".wrap").css({"width":$width});
 				            $(".loading_overlay").hide()
 				        },
 				        deepSearch: true,
@@ -76,11 +78,7 @@
 			</div>
 		</div>
 		<script src="js/touch.js"></script>
-		<script src="js/index.js"></script>
-		<script>
-			var $width=$('.page-current .gif').css('width');
-			$('.wrap').css({"width":$width})
-		</script>	
+		<script src="js/index.js"></script>	
 	</body>
 </html>
 
