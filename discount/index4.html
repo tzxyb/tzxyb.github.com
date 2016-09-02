@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh-cn" class="no-js">
+	<head>
+		<meta http-equiv="Content-Type">
+		<meta content="text/html; charset=utf-8">
+		<meta charset="utf-8">
+		<title></title>		
+		<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="format-detection" content="telephone=no">
+		<meta name="format-detection" content="email=no">
+		<link rel="stylesheet" type="text/css" href="style/index.css" />
+		<link rel="stylesheet" type="text/css" href="style/animations.css" />
+		<script src="js/zepto.min.js"></script>
+		<script src="js/queryloader2.min.js"></script>
+		<script type="text/javascript" src="js/weixin.js"></script>
+		<script type="text/javascript">
+			window.addEventListener('DOMContentLoaded', 
+				function() {
+				    new QueryLoader2(document.querySelector("body"), {
+				        barColor: "#fff",
+				        backgroundColor: "red",
+				        percentage: true,
+				        barHeight: 0,
+				        onComplete: function() {
+				            $(".loading_overlay").hide()
+				        },
+				        deepSearch: true,
+				        minimumTime: 300,
+				        maxTime: 10000,
+				        fadeOutTime: 300
+				    })
+				});
+		</script>
+
+	</head>
+	<body>
+		<div class="wrapper">
+			<!-- <audio src="http://mktstatic.10101111cdn.com/download/2016\music\discount.mp3" loop="" autoplay=""></audio> -->
+			<div class="page page-1-1 page-current"> 
+				 <div class="wrap">
+				 	<img src="image/650.jpg" class="img gif">
+                    <div class="pub-passdown"><img src="image/arrow.png"></div>
+				</div> 
+			</div>
+			<div class="page page-2-1 hide">
+				<div class="wrap pt-page-fadeUp">
+					<img src="image/2.gif" class="img gif">
+					<div class="pub-passdown"><img src="image/arrow.png"></div>                  
+				</div>
+				
+			</div>
+			<div class="page page-3-1 hide">
+				<div class="wrap pt-page-fadeUp">
+					<img src="image/3.gif" class="img gif">
+					<div class="pub-passdown"><img src="image/arrow.png"></div>
+				</div>
+			</div>
+			<div class="page page-4-1 hide">
+				<div class="wrap pt-page-fadeUp">
+					<img src="image/4.gif" class="img gif">
+					<div class="pub-passdown"><img src="image/arrow.png"></div>
+				</div>
+			</div>
+			<div class="page page-5-1 hide">
+				<div class="wrap pt-page-fadeUp">
+					<img src="image/5.gif" class="img gif">
+					<div class="pub-passdown"><img src="image/arrow.png"></div>
+				</div>
+			</div>
+			<div class="page page-6-1 hide">
+				<div class="wrap pt-page-fadeUp">
+					<img src="image/6.gif" class="img gif">
+					<div class="pub-passdown"><img src="image/arrow.png"></div>
+				</div>
+			</div>
+		</div>
+		<script src="js/touch.js"></script>
+		<script src="js/index.js"></script>
+		<script>
+			var $width=$('.page-current .gif').css('width');
+			$('.wrap').css({"width":$width})
+		</script>	
+	</body>
+</html>
+
