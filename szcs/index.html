@@ -1,0 +1,247 @@
+<!Doctype html>
+<head>
+<meta charset="UTF-8">
+	<meta charset="utf-8" />
+	<meta name="format-detection" content="telephone=no" />
+	<meta name="viewport" id="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1,user-scalable=no"/>
+	<meta content="true" name="apple-mobile-web-app-capable">
+	<meta content="black" name="apple-mobile-web-app-status-bar-style">
+	<meta name="HandheldFriendly" content="true" />
+	<meta name="authoring-tool" content="Adobe_Animate_CC">
+	<title>眼球全城大搜寻</title>
+	<!-- write your code here -->
+	<script src="js/easeljs-0.8.1.min.js"></script>
+	<script src="js/tweenjs-0.6.1.min.js"></script>
+	<script src="js/movieclip-0.8.1.min.js"></script>
+	<script src="js/preloadjs-0.6.1.min.js"></script>
+	<script src="js/soundjs-0.6.1.min.js"></script>
+
+
+	<script src="js/loading.js"></script>
+	<script src="js/xDev.js"></script>
+
+	<style>
+		.img{
+			 position: absolute;
+
+			 z-index: 501;
+		 }
+
+		.img2{
+			position: absolute;
+			pointer-events:none;
+			z-index: 501;
+		}
+
+        .bbgImg{
+            position: absolute;
+            display: none;
+            top: 0px;
+            left: 0px;
+            z-index: 506;
+        }
+
+        .v{
+            position: absolute;
+            z-index: 503;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0, 0.7);
+            display: none;
+
+        }
+
+
+
+		@-ms-viewport { width:device-width; }
+		@media only screen and (min-device-width:800px) { html { overflow:hidden; } }
+		html { height:100%; }
+		body { height:100%; overflow:hidden; margin:0; padding:0; font-family:Arial, Helvetica, sans-serif; font-size:16px; color:#FFFFFF; background-color:#000000; }
+	</style>
+<script>
+	function set_meta(){
+		// alert(document.documentElement.clientWidth + "___" + document.documentElement.clientHeight);
+		var body_width = document.documentElement.clientWidth;
+		var get_scale = (body_width)/640;
+
+		if(document.documentElement.clientWidth < document.documentElement.clientHeight)
+		{
+			get_scale = (body_width)/640;
+		}else{
+			get_scale = (body_width)/1138;
+		}
+		// console.log(get_scale);
+		var get_content = "width=device-width, initial-scale="+get_scale+", minimum-scale="+get_scale+", maximum-scale="+get_scale + ", user-scalable=no";
+		document.getElementById("viewport").setAttribute('content',get_content);
+	}
+	set_meta();
+</script>
+<!-- write your code here -->
+</head>
+<body onload="init()" style="margin:0px;">
+    <img src="images/bbg.jpg" class="bbgImg" id="bbgImg" style="display: none">
+    <div id="video" class="v">
+        <img src="images/close.png" style="top:20px;right: 10px;position: absolute;" onclick="closePlayer()">
+        <iframe id="player" frameborder="0" width="640" height="498" style="padding-top: 40%" src="http://v.qq.com/iframe/player.html?vid=b01706o6mpr&tiny=0&auto=0" allowfullscreen></iframe>
+    </div>
+
+	<div id="img" class="img">
+        
+		<canvas id="canvas"  width="640" height="1030" style=" display: block; background-color:rgba(0, 0, 0, 0);user-select: none; touch-action: none;"></canvas>
+	</div>
+
+	<script src="tour.js"></script>
+	<div id="pano" style="width:100%;height:100%;z-index: 500;display: none">
+		<noscript><table style="width:100%;height:100%;"><tr style="vertical-align:middle;"><td><div style="text-align:center;">ERROR:<br/><br/>Javascript not activated<br/><br/></div></td></tr></table></noscript>
+		<script>
+			embedpano({swf:"tour.swf", xml:"tour.xml", target:"pano", html5:"auto", mobilescale:1.0, passQueryParameters:true});
+		</script>
+	</div>
+
+	<div id="soundDiv" style="display:none ">
+		<audio src="sounds/bg.mp3" id="audio" autoplay loop ></audio>
+	</div>
+
+</body>
+
+<script>
+    function showPlayer()
+    {
+        window.document.getElementById("video").style.display = "block";
+        audio.pause();
+    }
+
+    function closePlayer()
+    {
+        window.document.getElementById("video").style.display = "none";
+        window.document.getElementById("player").src = "http://v.qq.com/iframe/player.html?vid=b01706o6mpr&tiny=0&auto=0";
+        audio.play();
+    }
+
+
+
+
+    var isTouch = false;
+
+    setTimeout(function(){
+        if(runInit == false || runInit == undefined || runInit == null)
+        {
+            init();
+        }},1000);
+
+    setTimeout(function(){
+        if(runInit == false || runInit == undefined || runInit == null)
+        {
+            init();
+        }},4000);
+
+
+    //alert(111);
+    document.addEventListener('touchstart',endSound2, false);
+
+    function endSound2()
+    {
+        audio.play();
+        //showPlayer()
+        document.removeEventListener('touchstart',endSound2, false);
+    }
+
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?c84fc55ddb2c4788105eb094b896d68f";
+      var s = document.getElementsByTagName("script")[0]; 
+      s.parentNode.insertBefore(hm, s);
+    })();
+
+</script>
+
+<?php
+require_once "jssdk.php";
+$weixin = new JSSDK("wx69cbe0465459a339", "cfab414a8077b1e66278b72a8a06f3c7");
+$signPackage = $weixin->GetSignPackage();
+$appId=$signPackage["appId"];
+$timestamp=$signPackage["timestamp"];
+$nonceStr=$signPackage["nonceStr"];
+$signature=$signPackage["signature"];
+?>
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script type="text/javascript">
+
+
+    //封装ajax
+    function ajaxPackage(url,jsonData,callback){
+        url = url||"api/data.php";
+        $.ajax({
+            url:url,
+            type:"post",
+            data:jsonData,
+            success:callback
+        });
+    }
+
+
+
+    wx.config({
+        //debug: true,
+        appId: '<?php echo $appId ?>',
+        timestamp: <?php echo $timestamp?>,
+        nonceStr: '<?php echo $nonceStr ?>',
+        signature: '<?php echo $signature ?>',
+        jsApiList: [
+            // 所有要调用的 API 都要加到这个列表中
+            'checkJsApi',
+            'onMenuShareTimeline',
+            'onMenuShareAppMessage',
+            'onMenuShareQQ',
+            'onMenuShareWeibo'
+        ]
+    });
+
+
+    //微信分享
+    var imgUrl1 = "http://www.runh5.com/szcs/images/share.jpg";
+    var link = "http://www.runh5.com/szcs/";
+
+    var desc = "看谁更会抓眼球！敢不敢来跟我挑战一下？";
+    var title = "这实在太抓眼球了！";
+
+    function weixin(imgUrl, link, desc, title) {
+        wx.ready(function () {
+            var sharetitle = title;
+            var sharelink = link;
+            var shareImg = imgUrl;
+            var shareDesc = desc;
+
+
+            wx.onMenuShareTimeline({title: shareDesc, link: sharelink, imgUrl: shareImg, success: function () {
+
+                //ajaxPackage("",{action:"save_pic_type",typeid:"3"},function(data){});
+
+            }, cancel: function () {
+            }});
+            wx.onMenuShareAppMessage({title: sharetitle, desc: shareDesc, link: sharelink, imgUrl: shareImg, type: "", dataUrl: "", success: function () {
+
+                //ajaxPackage("",{action:"save_pic_type",typeid:"3"},function(data){});
+            }, cancel: function () {
+            }});
+            wx.onMenuShareQQ({title: sharetitle, desc: shareDesc, link: sharelink, imgUrl: shareImg, success: function () {
+
+                //ajaxPackage("",{action:"save_pic_type",typeid:"3"},function(data){});
+            }, cancel: function () {
+            }});
+            wx.onMenuShareWeibo({title: sharetitle, desc: shareDesc, link: sharelink, imgUrl: shareImg, success: function () {
+
+                //ajaxPackage("",{action:"save_pic_type",typeid:"3"},function(data){});
+            }, cancel: function () {
+            }})
+        });
+        wx.error(function (res) {
+        })
+    }
+    weixin(imgUrl1, link, desc, title);
+
+    
+</script>
+
+</html>
