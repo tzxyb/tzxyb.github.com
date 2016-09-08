@@ -1,4 +1,7 @@
-<!Doctype html>
+<!DOCTYPE html>
+
+<html>
+
 <head>
 <meta charset="UTF-8">
 	<meta charset="utf-8" />
@@ -82,7 +85,7 @@
     <img src="images/bbg.jpg" class="bbgImg" id="bbgImg" style="display: none">
     <div id="video" class="v">
         <img src="images/close.png" style="top:20px;right: 10px;position: absolute;" onclick="closePlayer()">
-        <iframe id="player" frameborder="0" width="640" height="498" style="padding-top: 40%" src="http://v.qq.com/iframe/player.html?vid=b01706o6mpr&tiny=0&auto=0" allowfullscreen></iframe>
+        <iframe id="player" frameborder="0" width="640" height="498" style="padding-top: 40%" src="http://v.qq.com/iframe/player.html?vid=h0174n4zuf7&tiny=0&auto=0" allowfullscreen></iframe>
     </div>
 
 	<div id="img" class="img">
@@ -118,9 +121,6 @@
         audio.play();
     }
 
-
-
-
     var isTouch = false;
 
     setTimeout(function(){
@@ -146,102 +146,41 @@
         document.removeEventListener('touchstart',endSound2, false);
     }
 
-    var _hmt = _hmt || [];
-    (function() {
-      var hm = document.createElement("script");
-      hm.src = "//hm.baidu.com/hm.js?c84fc55ddb2c4788105eb094b896d68f";
-      var s = document.getElementsByTagName("script")[0]; 
-      s.parentNode.insertBefore(hm, s);
-    })();
+	///////////分享调用
 
-</script>
+	////默认分享
+	function firstShare()
+	{
+		var imgUrl1 = "http://www.runh5.com/szcs/images/share.jpg";  /////改神州地址
+		var link = "http://www.runh5.com/szcs/";  /////改神州地址
+		var desc = "看谁更会抓眼球！敢不敢来跟我挑战一下？";
+		var title = "这实在太抓眼球了！";
+		weixin(imgUrl1, link, desc, title); /////改神州分享
+	}
 
-<?php
-require_once "jssdk.php";
-$weixin = new JSSDK("wx69cbe0465459a339", "cfab414a8077b1e66278b72a8a06f3c7");
-$signPackage = $weixin->GetSignPackage();
-$appId=$signPackage["appId"];
-$timestamp=$signPackage["timestamp"];
-$nonceStr=$signPackage["nonceStr"];
-$signature=$signPackage["signature"];
-?>
-<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
-<script type="text/javascript">
+	////成功分享
+	function winShare(num)
+	{
+		var imgUrl1 = "http://www.runh5.com/szcs/images/share.jpg"; /////改神州地址
+		var link = "http://www.runh5.com/szcs/"; /////改神州地址
+		var desc = "我抓眼球只用了" + num +  "秒！比我慢的以后就别在我面前嚣张了！";
+		var title = "这实在太抓眼球了！"; /////改神州分享
 
+		weixin(imgUrl1, link, desc, title);
+	}
 
-    //封装ajax
-    function ajaxPackage(url,jsonData,callback){
-        url = url||"api/data.php";
-        $.ajax({
-            url:url,
-            type:"post",
-            data:jsonData,
-            success:callback
-        });
-    }
-
+	////失败分享
+	function endShare()
+	{
+		var imgUrl1 = "http://www.runh5.com/szcs/images/share.jpg";  /////改神州地址
+		var link = "http://www.runh5.com/szcs/";  /////改神州地址
+		var desc = "眼力不好，想抓眼球太难了！来试试你能不能行？";
+		var title = "这实在太抓眼球了！";
+		weixin(imgUrl1, link, desc, title); /////改神州分享
+	}
 
 
-    wx.config({
-        //debug: true,
-        appId: '<?php echo $appId ?>',
-        timestamp: <?php echo $timestamp?>,
-        nonceStr: '<?php echo $nonceStr ?>',
-        signature: '<?php echo $signature ?>',
-        jsApiList: [
-            // 所有要调用的 API 都要加到这个列表中
-            'checkJsApi',
-            'onMenuShareTimeline',
-            'onMenuShareAppMessage',
-            'onMenuShareQQ',
-            'onMenuShareWeibo'
-        ]
-    });
 
-
-    //微信分享
-    var imgUrl1 = "http://www.runh5.com/szcs/images/share.jpg";
-    var link = "http://www.runh5.com/szcs/";
-
-    var desc = "看谁更会抓眼球！敢不敢来跟我挑战一下？";
-    var title = "这实在太抓眼球了！";
-
-    function weixin(imgUrl, link, desc, title) {
-        wx.ready(function () {
-            var sharetitle = title;
-            var sharelink = link;
-            var shareImg = imgUrl;
-            var shareDesc = desc;
-
-
-            wx.onMenuShareTimeline({title: shareDesc, link: sharelink, imgUrl: shareImg, success: function () {
-
-                //ajaxPackage("",{action:"save_pic_type",typeid:"3"},function(data){});
-
-            }, cancel: function () {
-            }});
-            wx.onMenuShareAppMessage({title: sharetitle, desc: shareDesc, link: sharelink, imgUrl: shareImg, type: "", dataUrl: "", success: function () {
-
-                //ajaxPackage("",{action:"save_pic_type",typeid:"3"},function(data){});
-            }, cancel: function () {
-            }});
-            wx.onMenuShareQQ({title: sharetitle, desc: shareDesc, link: sharelink, imgUrl: shareImg, success: function () {
-
-                //ajaxPackage("",{action:"save_pic_type",typeid:"3"},function(data){});
-            }, cancel: function () {
-            }});
-            wx.onMenuShareWeibo({title: sharetitle, desc: shareDesc, link: sharelink, imgUrl: shareImg, success: function () {
-
-                //ajaxPackage("",{action:"save_pic_type",typeid:"3"},function(data){});
-            }, cancel: function () {
-            }})
-        });
-        wx.error(function (res) {
-        })
-    }
-    weixin(imgUrl1, link, desc, title);
-
-    
 </script>
 
 </html>

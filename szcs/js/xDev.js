@@ -272,12 +272,7 @@ function endGame()
     gameMc.type_mc.getChildAt(0).gotoAndStop(1);
 
     try {
-        var imgUrl1 = "http://www.runh5.com/szcs/images/share.jpg";
-        var link = "http://www.runh5.com/szcs/";
-        var desc = "眼力不好，想抓眼球太难了！来试试你能不能行？";
-        var title = "这实在太抓眼球了！";
-
-        weixin(imgUrl1, link, desc, title);
+        endShare();
     }catch(e){}
 }
 
@@ -291,12 +286,8 @@ function winGame()
 
 
     try {
-        var imgUrl1 = "http://www.runh5.com/szcs/images/share.jpg";
-        var link = "http://www.runh5.com/szcs/";
-        var desc = "我抓眼球只用了" + endTime +  "秒！比我慢的以后就别在我面前嚣张了！";
-        var title = "这实在太抓眼球了！";
 
-        weixin(imgUrl1, link, desc, title);
+        winShare(endTime);
     }catch(e){}
 }
 
@@ -528,12 +519,7 @@ function loadPage(num)
             krpano.call("lookto(0,0,120);");
 
             try {
-                var imgUrl1 = "http://www.runh5.com/szcs/images/share.jpg";
-                var link = "http://www.runh5.com/szcs/";
-                var desc = "看谁更会抓眼球！敢不敢来跟我挑战一下？";
-                var title = "这实在太抓眼球了！";
-
-                weixin(imgUrl1, link, desc, title);
+                firstShare();
             }catch(e){}
 
             partArray[currPage].getChildAt(0).gotoAndPlay(46);
