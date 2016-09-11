@@ -1,0 +1,79 @@
+@charset:'utf-8';
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, input, button {background: none repeat scroll 0 0 transparent; border: 0 none;font-size: 100%;margin: 0;outline: 0 none;padding: 0;vertical-align: baseline;background: transparent;}
+h1, h2, h3, h4, h5, h6 {font-size: 100%;font-weight: normal;}
+ul, ol {list-style: none outside none;}
+html,body{width:100%;font-size:14px;overflow-x:hidden;font-family:'Microsoft Yahei'}
+ul, li{list-style:none;margin:0;padding:0;}
+.clearfix:after{clear:both;content:".";display:block;font-size:0;height:0;line-height:0;visibility:hidden}
+.clearfix{zoom:1}
+img,input{-webkit-tap-highlight-color:transparent;outline:0;border:none}
+a{text-decoration:none;cursor:pointer;outline:none;border:none;-webkit-tap-highlight-color:transparent;outline:0;}
+a:hover {text-decoration:none;outline:none;}
+a:focus {outline:none;-moz-outline:none;}
+input::input-placeholder { text-align: center;color:#fff}
+.disney{width:100%;height:100%;background:#d7dce3 url(../images/bg_index.jpg) no-repeat; background-size:100% 100%;text-align:center;max-width:420px;overflow: hidden;margin:0 auto}
+
+.disney >img{display:block;width:auto;margin:0 auto}
+.disney .title{height:20%;margin-top:10%;}
+.disney .peo{height:40%;}
+.disney .inputcon{width:100%;}
+.disney .inputcon li{width:100%;margin:0 auto;}
+.disney .inputcon li a,.disney .inputcon li input{width:70%;border-radius:.3rem;display:inline-block;line-height:3rem;height:3rem;color:#fff;text-align:center;font-size:1.2rem;margin:.5rem 0;}
+.disney .inputcon li .btn-go{background:#ff9c11;color:#fff}
+.disney .inputcon li input{background:#fff;color:#8a8a8a;font-family:'Microsoft Yahei'}
+.disney .inputcon li input::-webkit-input-placeholder {color:#403e41;font-family:'Microsoft Yahei'}
+
+.prize{width:100%;max-width:420px;background:#a51e1e}
+.prize img{width:100%;margin:0;padding:0;vertical-align: top}
+.prize .luckydraw{width:100%;position:relative;}
+
+.prize .luckydraw .drawbg{
+	position:absolute;
+	top:0;
+	width:292px;height:292px;
+	left:50%;
+	margin-left:-146px;
+	background:url(../images/bg_draw.png) no-repeat;
+	background-size:100%;
+}
+.prize .luckydraw .drawbg .pointer{
+	width:84px;
+	height:109px;
+	position:absolute;
+	left:50%;
+	top:50%;
+	margin-left:-42px;
+	margin-top:-71px;
+	z-index:9;
+	transform:rotate(0);
+}
+.prize .luckydraw .colors{
+	position:absolute;
+	top:0;width:80%;
+	left:10%;
+	z-index:8
+}
+.prize .safecon{width:100%;padding-bottom:2rem;background: #EB0D00;}
+.safecon a,.safecon img{display:block;width:100%;}
+.safecon a.btn-more{width:60%;margin:0 auto;}
+
+.shadow{display:none;position:fixed;left:0;top:0;width:100%;height:100%;background:rgba(0,0,0,.7);max-width:420px;z-index:99;}
+.shadow .pic-share{position:absolute;right:0;width:100%}
+.shadow .alcon{width:70%;left:15%;border-radius:1rem;background:#fff;min-height:3rem;padding:2rem .5rem;box-sizing: border-box;position: absolute;top:20%;text-align: center}
+.shadow .alcon .close{position: absolute;display:block;width:20%;height:auto;top:.2rem;right:.2rem;z-index:99}
+.shadow .alcon .quan {width:100%;height:auto;display:block}
+.shadow .alcon .btn,.shadow .alcon input{width:90%;margin:.5rem auto;display: block;border-radius:.5rem;text-align:center;height:2.5rem;line-height: 2.5rem;box-sizing: border-box;}
+.shadow .alcon input{border:1px solid #eb0d00;background:rgba(220,220,220,.3);color:#eb0d00}
+.shadow .alcon .btn{background:#eb0d00;color:#fff}
+.shadow .alcon input::-webkit-input-placeholder {color:#eb0d00;font-family:'Microsoft Yahei'}
+.shadow .alcon h2{font-size:1.2rem;padding:1rem 0;font-weight:bold;color:#462121}
+.shadow .alcon p{font-size:1rem;color:#462121}
+@media screen and (device-width :414px)and (device-height :736px){
+	html,body{font-size:100%;}
+}
+@media screen and (device-width :375px)and (device-height :667px){
+	html,body{font-size:90%;}
+}
+@media screen and (device-width :320px){
+	html,body{font-size:80%;}
+}
