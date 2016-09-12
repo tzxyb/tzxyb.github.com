@@ -133,9 +133,9 @@ function replaceLast (str, replace) {
 
 $('.pic-share,.close').click(function(){
     $('.shadow').hide();
-    document.removeEventListener('touchmove',function(event){
+    document.addEventListener('touchmove',function(event){
         event.preventDefault();
-    },false);
+    },true);
 });
 
 $('.step1 .btn-next').click(function(){
