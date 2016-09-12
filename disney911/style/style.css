@@ -77,3 +77,4 @@ input::input-placeholder { text-align: center;color:#fff}
 @media screen and (device-width :320px){
 	html,body{font-size:80%;}
 }
+.noscroll{overflow:hidden}
