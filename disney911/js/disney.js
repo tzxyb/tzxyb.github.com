@@ -228,8 +228,9 @@ $(".download").click(function(){
 $('.pointer').click(function (){
 
     if(bRotate)return;
-
+    document.addEventListener('touchmove',function(event){
+        event.preventDefault();
+    },false);
     renderMobile('18611245681');
     rotatePrize(2); // rotatePrize()参数替换为返回的中奖结果对应数值
-
 });
