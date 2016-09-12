@@ -62,7 +62,7 @@ input::input-placeholder { text-align: center;color:#fff}
 .shadow .alcon{width:70%;left:15%;border-radius:1rem;background:#fff;min-height:3rem;padding:2rem .5rem;box-sizing: border-box;position: absolute;top:20%;text-align: center}
 .shadow .alcon .close{position: absolute;display:block;width:20%;height:auto;top:.2rem;right:.2rem;z-index:99}
 .shadow .alcon .quan {width:100%;height:auto;display:block}
-.shadow .alcon .btn,.shadow .alcon input{width:90%;margin:.5rem auto;display: block;border-radius:.5rem;text-align:center;height:2.5rem;line-height: 2.5rem;box-sizing: border-box;}
+.shadow .alcon .btn,.shadow .alcon input{width:90%;margin:.5rem auto;display: block;border-radius:.5rem;text-align:center;height:2.5rem;line-height: 2.5rem;box-sizing: border-box;font-family:'Microsoft Yahei';font-size:1.2rem;}
 .shadow .alcon input{border:1px solid #eb0d00;background:rgba(220,220,220,.3);color:#eb0d00}
 .shadow .alcon .btn{background:#eb0d00;color:#fff}
 .shadow .alcon input::-webkit-input-placeholder {color:#eb0d00;font-family:'Microsoft Yahei'}

@@ -230,6 +230,6 @@ $('.pointer').click(function (){
     if(bRotate)return;
 
     renderMobile('18611245681');
-    rotatePrize(randomNum(9)); // rotatePrize()参数替换为返回的中奖结果对应数值
+    rotatePrize(2); // rotatePrize()参数替换为返回的中奖结果对应数值
 
 });
