@@ -133,7 +133,7 @@ function replaceLast (str, replace) {
 
 $('.pic-share,.close').click(function(){
     $('.shadow').hide();
-    event.ontouchmove=null;
+    document.removeEventListener('touchmove',this,false);
 });
 
 $('.step1 .btn-next').click(function(){
