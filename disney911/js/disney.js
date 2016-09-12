@@ -133,9 +133,7 @@ function replaceLast (str, replace) {
 
 $('.pic-share,.close').click(function(){
     $('.shadow').hide();
-    document.addEventListener('touchmove',function(event){
-        event.preventDefault();
-    },true);
+    event.ontouchmove=null;
 });
 
 $('.step1 .btn-next').click(function(){
