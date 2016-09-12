@@ -64,7 +64,7 @@ input::input-placeholder { text-align: center;color:#fff}
 .shadow .alcon .quan {width:100%;height:auto;display:block}
 .shadow .alcon .btn,.shadow .alcon input{width:90%;margin:.5rem auto;display: block;border-radius:.5rem;text-align:center;height:2.5rem;line-height: 2.5rem;box-sizing: border-box;font-family:'Microsoft Yahei';font-size:1.2rem;}
 .shadow .alcon input{border:1px solid #eb0d00;background:rgba(220,220,220,.3);color:#eb0d00}
-.shadow .alcon input.c-date{display:content-box;height:1.5rem;line-height: 1.5rem;padding:.5rem 0;}
+.shadow .alcon input.c-date{box-sizing:content-box;height:1.5rem;line-height: 1.5rem;padding:.5rem 0;}
 .shadow .alcon .btn{background:#eb0d00;color:#fff}
 .shadow .alcon input::-webkit-input-placeholder {color:#eb0d00;font-family:'Microsoft Yahei'}
 .shadow .alcon h2{font-size:1.2rem;padding:1rem 0;font-weight:bold;color:#462121}
