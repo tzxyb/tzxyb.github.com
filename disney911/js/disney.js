@@ -133,6 +133,7 @@ function replaceLast (str, replace) {
 
 $('.pic-share,.close').click(function(){
     $('.shadow').hide();
+    document.removeEventListener('touchmove',stopscroll,false);
 });
 
 $('.step1 .btn-next').click(function(){
@@ -228,7 +229,10 @@ $(".download").click(function(){
 $('.pointer').click(function (){
 
     if(bRotate)return;
-    jQuery(window).scrollTop(0);
+    document.addEventListener('touchmove',stopscroll,false);
     renderMobile('18611245681');
     rotatePrize(2); // rotatePrize()参数替换为返回的中奖结果对应数值
 });
+function stopscroll(event){
+     event.preventDefault();
+}
