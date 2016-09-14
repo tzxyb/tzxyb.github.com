@@ -29,7 +29,6 @@
                 onComplete : function() {
                     $("#loadingicon").hide();
                     setTimeout(function(){$(".loading_overlay").hide();},2000);
-                    $('audio').attr('autoplay', true);
                 },
                 deepSearch: true,
                 minimumTime: 300,
@@ -44,10 +43,8 @@
     <img src="images/loading.gif" class="lodingicon" id="loadingicon">
 </div> -->
 <!-- <audio src="http://mktstatic.10101111cdn.com/download/2016/music/driverapply/Firework1new.mp3" controls="controls" autoplay loop></audio> -->
-<audio controls="controls" autoplay loop>
-  <source src="media/midkinship_music.mp3" type="audio/mpeg">
-  <source src="media/midkinship_music.ogg" type="audio/ogg">
-</audio>
+
+<audio src="media/midkinship_music.mp3" autoplay loop></audio>
 <section class="main">
     <img src="images/midkinship_all.gif" alt="">
     <a href="getcoupon.html" class="get_coupon_btn"></a>
