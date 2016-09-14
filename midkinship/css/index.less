@@ -1,0 +1,243 @@
+.wh100 {
+    width: 100%;
+    height: 100%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul, li {
+    list-style: none;
+}
+input, button, a {
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-tap-highlight-color: transparent;
+    outline:none;
+    border:none;
+}
+
+html {
+    width: 100%;
+    height: auto;
+    max-width: 414px;
+    max-height: 736px;
+    margin: 0 auto;
+    font-family: 'MicroSoft YaHei', sans-serif;
+    background: none;
+    //overflow: hidden;
+
+    &.coupon {
+        height: 100%;
+    }
+    body {
+        position: relative;
+        width: 100%;
+        height: auto;
+        background: #ebebeb;
+        //overflow: hidden;
+
+        &.coupon {
+            height: 100%;
+            overflow: hidden;
+        }
+        img {
+            display: block;
+            width: 100%;
+            height: auto;
+            margin: 0 auto;
+        }
+        input {
+            border: none;
+        }
+    }
+}
+
+.loading_overlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 667000;
+    top: 0;
+    left: 0;
+    -webkit-transition: opacity 1000ms;
+    transition: opacity 1000ms;
+}
+.lodingicon {
+    position: absolute;
+    width:30%;
+    left: 35%;
+    top: 40%;
+
+    &.hide {
+        opacity: 0;
+    }
+}
+
+section {
+    //display: none;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    //margin-top: 12%;
+    //border: 1px solid blue;
+    overflow: hidden;
+
+    div {
+        width: 90%;
+        margin: 0 auto;
+
+    }
+
+    &.main {
+        
+        .get_coupon_btn {
+            position: absolute;
+            left: 31%;
+            bottom: .7%;
+            width: 51%;
+            height: 9rem;
+            //border: 1px solid red;
+            -webkit-transform: rotate(-13deg);
+            transform: rotate(-13deg);
+        }
+    }
+    &.get_coupon {
+        background: url(../images/midkinship_get_coupon_bg.png) no-repeat center;
+        background-size: 100% 100%;
+
+
+        .info {
+            position: relative;
+            margin-top: 45%;
+            text-align: center;
+
+            &.novalue:after {
+                content: '';
+                position: absolute;
+                top: 5%;
+                left: 26%;
+                width: 48%;
+                height: 3rem;
+                background: url(../images/midkinship_mobile_btn_text.png) no-repeat center;
+                background-size: 100% 100%;
+                pointer-events: none;
+            }
+            input {
+                position: relative;
+                width: 90%;
+                height: 5rem;
+                margin: 0 auto 2rem;
+            }
+            .mobile {
+                text-align: center;
+                font-size: 2rem;
+                background: url(../images/midkinship_mobile_btn_bg.png) no-repeat center;
+                background-size: 100% 100%;
+            }
+            .get_btn {
+                background: url(../images/midkinship_get_coupon_btn.png) no-repeat center;
+                background-size: 100% 100%;
+            }
+        }
+    }
+    &.popup {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #fff;
+
+        .result {
+            position: relative;
+            margin-top: 20%;
+            padding: 3rem 0;
+            background: url(../images/midkinship_popup_bg.png) no-repeat center;
+            background-size: 100% 100%;
+
+            .close_btn {
+                position: absolute;
+                top: 0;
+                right: 0;
+                width: 3rem;
+                height: 3rem;
+                //border: 1px solid red;
+                border-radius: 50%;
+            }
+            img {
+                width: 45%;
+            }
+            p {
+                width: 76%;
+                margin: .5rem auto 1.2rem;
+                text-align: center;
+                color: #515254;
+            }
+            .download_btn {
+                display: block;
+                width: 80%;
+                height: 4rem;
+                margin: 0 auto 1rem;
+                background: url(../images/midkinship_download_btn.png) no-repeat center;
+                background-size: 100% 100%;
+            }
+            .share_btn {
+                display: block;
+                width: 80%;
+                height: 4rem;
+                margin: 0 auto;
+                background: url(../images/midkinship_share_btn.png) no-repeat center;
+                background-size: 100% 100%;
+            }
+        }
+        .share {
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            text-align: right;
+            background: rgba(0, 0, 0, .5);
+            z-index: 1000;
+
+            img {
+                display: inline-block;
+                width: 30%;
+                height: auto;
+                margin: 1rem 1rem 0 0;
+            }
+        }
+    }
+
+}
+
+
+@media (max-height: 481px) {
+    html {
+        font-size: 12px;
+    }
+    section.begin div {
+        height: 70%;
+    }
+    section.questions .ques {
+        height: 60%;
+    }
+    section.questions .result_tip {
+        top: 60%;
+    }
+}
+@media (max-height: 568px) {
+    html {
+        font-size: 12px;
+    }
+}
+@media (min-height: 569px) {
+    html {
+        font-size: 14px;
+    }
+}

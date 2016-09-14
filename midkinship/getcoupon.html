@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html class="coupon">
+<head>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" name="viewport">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <title>中秋亲情账户</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <script type="text/javascript" src="../../common/js/jquery/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="../../common/js/queryloader2.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <link type="text/css" rel="stylesheet" href="../../common/css/dialog_1215.css"/>
+    <script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+    <!-- <script type="text/javascript" src="../../common/js/weixin.js?v=2015"></script> -->
+    <script type="text/javascript" src="../../common/js/core.js"></script>
+    <!-- <script type="text/javascript">
+            var origin = "midkinship";
+            getWeixinShareData();
+    </script> -->
+    <script type="text/javascript">
+        window.addEventListener('DOMContentLoaded', function() {
+            new QueryLoader2(document.querySelector("body"), {
+                barColor: "#000",
+                backgroundColor:"#f8b62a",
+                percentage: true,
+                barHeight:0,
+                onComplete : function() {
+                    $("#loadingicon").hide();
+                   setTimeout(function(){$(".loading_overlay").hide();},2000);
+                },
+                deepSearch: true,
+                minimumTime: 300,
+                maxTime: 10000,
+                fadeOutTime: 20
+            });
+        });
+    </script>
+</head>
+<body class="coupon">
+<!-- <div class="loading_overlay" style="">
+    <img src="images/loading.gif" class="lodingicon" id="loadingicon">
+</div> -->
+<section class="main get_coupon">
+    <div class="info novalue">
+        <input type="tel" class="mobile" id="mobile" maxlength="11">
+        <input type="button" class="get_btn">
+    </div>
+</section>
+<section class="popup">
+    <div class="result layer_get">
+        <span class="close_btn"></span>
+        <img src="images/midkinship_get_coupon.png" alt="" class="money">
+        <p>已放入阁下<span class="account">13311019999</span>账户中</p>
+        <a href="javascript:void(0)" class="download_btn"></a>
+        <button class="share_btn"></button>
+    </div>
+    <div class="result layer_had">
+        <span class="close_btn"></span>
+        <img src="images/midkinship_had_coupon.png" alt="" class="money">
+        <p>已放入阁下<span class="account">13311019999</span>账户中</p>
+        <a href="javascript:void(0)" class="download_btn"></a>
+        <button class="share_btn"></button>
+    </div>
+    <div class="share">
+        <img src="images/midkinship_share_layer.png" alt="">
+    </div>
+</section>
+<audio src="media/midkinship_music.mp3" autoplay loop></audio>
+</body>
+<script src="../../common/js/mobile_validate.js"></script>
+<script src="js/get.js"></script>
+</html>

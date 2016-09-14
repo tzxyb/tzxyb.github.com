@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" name="viewport">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <title>中秋亲情账户</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <script type="text/javascript" src="../../common/js/jquery/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="../../common/js/queryloader2.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <link type="text/css" rel="stylesheet" href="../../common/css/dialog_1215.css"/>
+    <script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+    <!-- <script type="text/javascript" src="../../common/js/weixin.js?v=2015"></script> -->
+    <script type="text/javascript" src="../../common/js/core.js"></script>
+    <!-- <script type="text/javascript">
+            var origin = "midkinship";
+            getWeixinShareData();
+    </script> -->
+    <script type="text/javascript">
+        window.addEventListener('DOMContentLoaded', function() {
+            new QueryLoader2(document.querySelector("body"), {
+                barColor: "#000",
+                backgroundColor:"#f8b62a",
+                percentage: true,
+                barHeight:0,
+                onComplete : function() {
+                    $("#loadingicon").hide();
+                    setTimeout(function(){$(".loading_overlay").hide();},2000);
+                    $('audio').attr('autoplay', true);
+                },
+                deepSearch: true,
+                minimumTime: 300,
+                maxTime: 10000,
+                fadeOutTime: 200
+            });
+        });
+    </script>
+</head>
+<body>
+<!-- <div class="loading_overlay" style="">
+    <img src="images/loading.gif" class="lodingicon" id="loadingicon">
+</div> -->
+<!-- <audio src="http://mktstatic.10101111cdn.com/download/2016/music/driverapply/Firework1new.mp3" controls="controls" autoplay loop></audio> -->
+<audio controls="controls" autoplay loop>
+  <source src="media/midkinship_music.mp3" type="audio/mpeg">
+  <source src="media/midkinship_music.ogg" type="audio/ogg">
+</audio>
+<section class="main">
+    <img src="images/midkinship_all.gif" alt="">
+    <a href="getcoupon.html" class="get_coupon_btn"></a>
+</section>
+<script src="../../common/js/mobile_validate.js"></script>
+<!-- <script src="js/get.js"></script> -->
+    <script type="text/javascript">
+        $(function(){
+            //获取文本框值
+            $(".t_val").focus(function(){
+                var txt_value = $(this).val();
+                if(txt_value == this.defaultValue){
+                    $(this).val("");
+                }
+            }).blur(function(){
+                var txt_value = $(this).val();
+                if(!txt_value){
+                    $(this).val(this.defaultValue);
+                }
+            }).keydown(function(){
+                var txt_value = $(this).val();
+                if(txt_value == this.defaultValue){
+                }
+                else{
+                }
+            });
+            $(".btn-wx").click(function(){
+                $(".shadow").show();
+            });
+            $(".shadow").click(function(){
+                $(this).hide();
+            })
+        });
+    </script>
+</body>
+</html>
