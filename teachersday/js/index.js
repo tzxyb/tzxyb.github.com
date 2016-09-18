@@ -1,24 +1,7 @@
 
 var teachersday = {
     wh: $(window).height(),
-    picPrefix: 'http://mktimage.10101111cdn.com/wap/2016/teachersday/',
-    chance: 1, // 抽奖机会
-    motionData: { // 运动数据
-        shakeFlag: true,
-        limit: 1500,
-        last_update: 0,
-        x: 0,
-        y: 0,
-        z: 0,
-        last_x: 0,
-        last_y: 0,
-        last_z: 0
-    },
-    currentPers: 200000, // 最新摇奖人数
-    currentSum: 500000, // 最新摇奖金额
-    sumsLength: 6, // 金额长度
-    sumsList: [], // 滚动金额列表
-    sumsListLength: 5, // 滚动列表长度
+    picPrefix: 'images/',
     isSelectable: true,
     grade: 0, // 成绩
     currentIdx: 0, //
@@ -87,89 +70,7 @@ var teachersday = {
 
         return mobile;
     },
-    checkTel: function (selectorStr) { // 检查手机号输入
 
-        var tel =  $(selectorStr).val();
-
-        // console.log(tel);
-        if (null === tel || "" === tel || tel.length === 0 || tel == '请输入手机号') {
-             ucar.uitls.show("亲，填写手机号，<br>才能领券哦！");
-            return false;
-        }
-
-        if(! this.mobileValidate(tel) ){
-            ucar.uitls.show("亲，填错啦，<br>重新输入试试！");
-            return false;
-        }else{
-            return true;
-        }
-    },
-    mobileValidate: function (mobile) { // 手机号码验证
-
-        if (null === mobile || "" === mobile) {
-            return false;
-        } else {
-            var reg = /^0?(13[0-9]|14[57]|15[012356789]|17[012356789]|18[0-9])[0-9]{8}$/;
-            if (!reg.test(mobile)) {
-                return false;
-            } else {
-                return true;
-            }
-        }
-    },
-    initDeviceMotion: function () { // 手机运动初始
-
-        if (window.DeviceMotionEvent) {
-            $(window).on('devicemotion', this.handleDeviceMotion)
-        }else{
-             ucar.uitls.show("该设备不支持摇一摇功能!");
-        }
-    },
-    handleDeviceMotion: function (event) { // 手机运动处理事件
-
-        var acceleration = event.accelerationIncludingGravity,
-            curTime = new Date().getTime(),
-            diffTime = curTime - teachersday.motionData.last_update;
-
-        if (diffTime > 100) {
-
-            teachersday.motionData.last_update = curTime;
-            teachersday.motionData.x = acceleration.x;
-            teachersday.motionData.y = acceleration.y;
-            teachersday.motionData.z = acceleration.z;
-
-            var speed = Math.abs(teachersday.motionData.x + teachersday.motionData.y + teachersday.motionData.z - teachersday.motionData.last_x - teachersday.motionData.last_y - teachersday.motionData.last_z) / diffTime * 10000;
-
-            if (speed > teachersday.motionData.limit) {
-
-                if(teachersday.motionData.shakeFlag){
-
-                    teachersday.playMusic();
-
-                    // console.log('shaked');
-                    teachersday.motionData.shakeFlag = false;
-                }
-            }
-
-            last_x = teachersday.motionData.x;
-            last_y = teachersday.motionData.y;
-            last_z = teachersday.motionData.z;
-        }
-    },
-    preventDefault: function (e) { // 阻止默认
-        return false;
-    },
-    releaseDefault: function (e) { // 释放默认
-        return true;
-    },
-    playMusic: function () { // 播放摇动音效
-
-        var $music = $('audio');
-
-        // console.log('Music: ', $music);
-
-        $music[0].play();
-    },
     preloadPics: function (picArr) {
 
         for (var i = 0; i < picArr.length; i++) {
@@ -316,58 +217,6 @@ $('.answer ul li').on('click', function () {
     window.localStorage.cacheAnswers = JSON.stringify(teachersday.cacheAnswers);
 
     teachersday.isSelectable = false;
-});
-
-// 马上领取
-$(".get_coupon").on('click', function () {
-
-    var mobile = $("#mobile").val();
-
-    if(teachersday.checkTel('#mobile')){
-
-    	var szhdbm = ucar.uitls.getUrlParam("szhdbm");
-        // 模拟数据
-    	//teachersday.getAward(mobile, teachersday.grade);
-    	$.ajax({
-            url : "/quan/teachersday.do",
-            type : "post",
-            data : {
-                mobile : mobile,
-                qr:teachersday.grade,
-                szhdbm:szhdbm
-            },
-            dataType:"json",
-            cache : false,
-            success:function(data, textStatus){
-                var result = data;
-                if(result){
-                    result=data.status;
-                    if(mobile){
-                        mobile = mobile.substr(0,3)+"****"+mobile.substr(7,4);
-                    }
-                    if(result == 1){//成功
-                    	teachersday.getAward(mobile, data.result);
-                    }else if(result == 2){//已领取
-                    	teachersday.getAward(mobile, data.result);
-                    }else if(result == 3){//生成代金券失败
-                        ucar.uitls.show("纳尼，领券人太多，<br>系统出错了。<br>您可以稍等或过会再来！<br><br>");
-                    }else if(result == 4){//领光了
-                        ucar.uitls.show("券已领光了！");
-                    }else if(result == 5) {
-                        ucar.uitls.show("不要心急，活动马上开始。一起期待吧！");
-                    }else if(result == 6){
-                        ucar.uitls.show("活动已结束！");
-                    }else if(result == 7){
-                        ucar.uitls.show("未找到配置信息！");
-                    }else if(result == 8){
-                        ucar.uitls.show("不符合领取条件！");
-                    }else if(result == 9){
-                        ucar.uitls.show("纳尼，领券人太多，<br>系统出错了。<br>您可以稍等或过会再来！<br><br>");
-                    }
-                }
-            }
-    });
-    }
 });
 
 // 分享提示
