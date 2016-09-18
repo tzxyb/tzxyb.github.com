@@ -1,0 +1,214 @@
+.wh100 {
+  width: 100%;
+  height: 100%;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+ul,
+li {
+  list-style: none;
+}
+input,
+button,
+a {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
+  border: none;
+}
+html {
+  width: 100%;
+  height: 100%;
+  max-width: 414px;
+  max-height: 736px;
+  margin: 0 auto;
+  font-family: 'MicroSoft YaHei', sans-serif;
+  background: none;
+  overflow: hidden;
+}
+html body {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: #ebebeb;
+  overflow: hidden;
+}
+html body img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+html body input {
+  border: none;
+}
+section {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+section div {
+  width: 90%;
+  margin: 0 auto;
+}
+section div img {
+  height: 100%;
+  width: auto;
+}
+section button,
+section .follow {
+  display: block;
+  width: 90%;
+  margin: 0 auto;
+  border-radius: .5rem;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #fff;
+  background-size: auto 100%;
+}
+section button:after,
+section .follow:after {
+  display: block;
+  content: '';
+  padding-top: 18%;
+}
+section input {
+  display: block;
+  width: 90%;
+  margin: 1.8rem auto 1.5rem;
+  padding: 1rem 1.5rem;
+  font-size: 1.8rem;
+  border: 2px solid #0c5054;
+  border-radius: .5rem;
+}
+section input::-webkit-input-placeholder {
+  font-weight: bold;
+}
+section.begin div {
+  height: 60%;
+  margin: 3rem auto 2rem auto;
+}
+section.begin button {
+  background-image: url(../images/teachersday_begin_btn.png);
+}
+section.questions .ques {
+  height: 50%;
+  margin-top: 1rem;
+}
+section.questions .answer {
+  height: 50%;
+  margin-top: 4rem;
+}
+section.questions .answer ul {
+  height: 60%;
+  background-image: url(../images/teachersday_question_one_a.png);
+  background-repeat: no-repeat;
+  background-position: left 16%;
+  background-size: auto 66%;
+}
+section.questions .answer ul li {
+  width: 100%;
+  height: 19%;
+}
+section.questions .answer ul li.selected {
+  background: url(../images/teachersday_icon_check.png) no-repeat 0.5rem center;
+  background-size: auto 68%;
+}
+section.questions .result_tip {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 80%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+section.questions .result_tip img {
+  width: 100%;
+  height: auto;
+}
+section.results .congrate {
+  height: 50%;
+  margin-top: 1rem;
+}
+section.results .get_coupon {
+  background-image: url(../images/teachersday_get_btn.png);
+}
+section.awards .award_title {
+  width: 60%;
+  height: auto;
+  margin: 3rem auto 1rem;
+}
+section.awards .award_title img {
+  width: 100%;
+  height: auto;
+}
+section.awards .coupon {
+  height: 34%;
+  margin-bottom: 2rem;
+}
+section.awards .putin {
+  width: 65%;
+  height: auto;
+  margin-bottom: 2rem;
+}
+section.awards .putin img {
+  width: 100%;
+  height: auto;
+}
+section.awards .putin .account {
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.8rem;
+  color: #0c5054;
+}
+section.awards .share {
+  margin-bottom: 1.5rem;
+  background-image: url(../images/teachersday_share_btn.png);
+}
+section.awards .follow {
+  background-image: url(../images/teachersday_follow_btn.png);
+}
+section.popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+section.popup img {
+  position: absolute;
+  top: 1rem;
+  right: .5rem;
+  width: 30%;
+  height: auto;
+}
+@media (max-height: 481px) {
+  html {
+    font-size: 12px;
+  }
+  section.begin div {
+    height: 70%;
+  }
+  section.questions .ques {
+    height: 60%;
+  }
+  section.questions .result_tip {
+    top: 60%;
+  }
+}
+@media (max-height: 569px) {
+  html {
+    font-size: 12px;
+  }
+}
+@media (min-height: 568px) {
+  html {
+    font-size: 12px;
+  }
+}
