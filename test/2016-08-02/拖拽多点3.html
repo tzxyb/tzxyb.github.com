@@ -1,0 +1,88 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="author" content="智能社 - zhinengshe.com" />
+<meta name="copyright" content="智能社 - zhinengshe.com" />
+<meta name="description" content="智能社是一家专注于web前端开发技术的公司，目前主要提供JavaScript培训和HTML5培训两项服务，同时还推出了大量javascript基础知识教程，智能课堂为你带来全新的学习方法和快乐的学习体验。" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+<title>智能社— http://www.zhinengshe.com</title>
+<style>
+*{margin:0; padding:0;}
+.box{
+	width:100px; 
+	height:100px; 
+	background:red; 
+	position:absolute; 
+	top:0; 
+	left:0;
+	-webkit-transform:translate3d(0,0,0);
+	transform:translate3d(0,0,0);
+}
+.box2{
+	width:100px; 
+	height:100px; 
+	background:green; 
+	position:absolute; 
+	top:0; 
+	right:0;
+	-webkit-transform:translate3d(0,0,0);
+	transform:translate3d(0,0,0);
+}
+</style>
+<script>
+document.addEventListener('DOMContentLoaded',function(){
+	function drag(obj){
+		var x = 0;
+		var y = 0;
+		obj.addEventListener('touchstart',function(ev){
+			var disX = ev.targetTouches[0].pageX-x;
+			var disY = ev.targetTouches[0].pageY-y;
+			var id = ev.targetTouches[0].identifier;
+			function fnMove(ev){
+				if(id==ev.targetTouches[0].identifier){
+					x = ev.targetTouches[0].pageX-disX;
+					y = ev.targetTouches[0].pageY-disY;
+					obj.style.WebkitTransform = 'translate3d('+x+'px,'+y+'px,0)';
+					obj.style.transform = 'translate3d('+x+'px,'+y+'px,0)';
+				}
+			}
+			function fnEnd(ev){
+				if(id==ev.changedTouches[0].identifier){
+					document.removeEventListener('touchmove',fnMove,false);
+					document.removeEventListener('touchend',fnEnd,false);
+				}
+			}
+			document.addEventListener('touchmove',fnMove,false);
+			document.addEventListener('touchend',fnEnd,false);
+			ev.preventDefault();
+		},false);
+	}
+	var aDiv = document.querySelectorAll('div');
+	for(var i=0;i<aDiv.length;i++){
+		drag(aDiv[i]);
+	}
+},false);
+</script>
+</head>
+
+<body>
+<div class="box"></div>
+<div class="box2"></div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
