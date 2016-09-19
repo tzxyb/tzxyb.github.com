@@ -23,11 +23,11 @@ document.addEventListener('DOMContentLoaded',function(){
 			oBox.style.transform='translate:('+ev.targetTouches[0].pageX-disX+'px,'+ev.targetTouches[0].pageY - disY+'px)';
 		}
 		function touchEnd(){
-			document.removeEventListener('touchmove',touchMove,false);
-			document.removeEventListener('touchend',touchEnd,false);
+			oBox.removeEventListener('touchmove',touchMove,false);
+			oBox.removeEventListener('touchend',touchEnd,false);
 		}
-		document.addEventListener('touchmove',touchMove,false);
-		document.addEventListener('touchend',touchEnd,false);
+		oBox.addEventListener('touchmove',touchMove,false);
+		oBox.addEventListener('touchend',touchEnd,false);
 		ev.preventDefault();
 	},false);
 },false);
