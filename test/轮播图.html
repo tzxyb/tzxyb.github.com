@@ -3,11 +3,12 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+<link rel="shortout icon" href="../tzxyb.ico">
 <style>
 *{margin:0; padding:0; list-style:none;}
-.box{width:320px; height:250px; position:relative; overflow:hidden;}
-.box ul{ position:absolute; top:0; left:0; height:250px; -webkit-transform:translate3d(-320px,0,0);}
-.box ul li{ width:320px; height:250px; text-align:center; line-height:250px; float:left; font-size:50px;}
+.box{ width:320px; height:260px; position:relative; overflow:hidden;}
+.box ul{ position:absolute; left:0; top:0; height:260px; -webkit-transform:translate3d(0,0,0);}
+.box ul li{float:left; width:320px; height:260px; text-align:center; line-height:260px; font-size:50px;}
 </style>
 <script>
 document.addEventListener('DOMContentLoaded',function(){
@@ -16,12 +17,10 @@ document.addEventListener('DOMContentLoaded',function(){
 	var aLi = oUl.children;
 	oUl.style.width = aLi.length*aLi[0].offsetWidth+'px';
 	
-	var iNow = 1;
-	var x = -iNow*aLi[0].offsetWidth;
-	var bOk = false;
+	var iNow = 0;
+	var x = 0;
+	
 	oUl.addEventListener('touchstart',function(ev){
-		if(bOk)return;
-		bOk = true;
 		var disX = ev.targetTouches[0].pageX-x;
 		var downX = ev.targetTouches[0].pageX;
 		oUl.style.WebkitTransition = 'none';
@@ -48,32 +47,30 @@ document.addEventListener('DOMContentLoaded',function(){
 					}
 				}
 			}
+			
+			
+			oUl.style.WebkitTransition = '1s all ease';
+			
 			x = -iNow*aLi[0].offsetWidth;
-			oUl.style.WebkitTransition = '.5s all ease';
 			oUl.style.WebkitTransform = 'translate3d('+x+'px,0,0)';
 			
-		
 			function tranEnd(){
 				oUl.removeEventListener('transitionend',tranEnd,false);
 				oUl.style.WebkitTransition = 'none';
-				if(iNow==aLi.length-1){
-					iNow = 1;
-					x = -iNow*aLi[0].offsetWidth;
-					oUl.style.WebkitTransform = 'translate3d('+x+'px,0,0)';
-				}else if(iNow==0){
-					iNow = aLi.length-2;
-					x = -iNow*aLi[0].offsetWidth;
-					oUl.style.WebkitTransform = 'translate3d('+x+'px,0,0)';
-				}
-				bOk = false;
 			}
 			oUl.addEventListener('transitionend',tranEnd,false);
+			
+			
+			
+			
 			
 		}
 		document.addEventListener('touchmove',fnMove,false);
 		document.addEventListener('touchend',fnEnd,false);
 		ev.preventDefault();
 	},false);
+	
+	
 },false);
 </script>
 </head>
@@ -81,12 +78,10 @@ document.addEventListener('DOMContentLoaded',function(){
 <body>
 <div class="box">
 	<ul>
-		<li style="background:#09f;">4</li>
 		<li style="background:#f90;">1</li>
-		<li style="background:#399;">2</li>
-		<li style="background:#993;">3</li>
-		<li style="background:#09f;">4</li>
-		<li style="background:#f90;">1</li>
+		<li style="background:#09f;">2</li>
+		<li style="background:#0f9;">3</li>
+		<li style="background:#f09;">4</li>
 	</ul>
 </div>
 </body>

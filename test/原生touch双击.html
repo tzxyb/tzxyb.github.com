@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+<link rel="shortout icon" href="../tzxyb.ico">
+<style>
+*{margin:0; padding:0;}
+div{width:200px; height:200px; background:red;}
+</style>
+<script>
+document.addEventListener('DOMContentLoaded',function(){
+	var oDiv = document.querySelector('div');
+	var count = 0;
+	oDiv.addEventListener('touchstart',function(){
+		count++;
+		clearTimeout(oDiv.timer);
+		oDiv.timer = setTimeout(function(){
+			count=0;
+		},300);
+		if(count==2){
+			alert(1);
+		}
+	},false);
+},false);
+</script>
+</head>
+
+<body>
+<div></div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

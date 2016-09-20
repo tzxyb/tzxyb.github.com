@@ -1,9 +1,0 @@
-@charset "utf-8";
-/* CSS Document */
-
-*{margin:0; padding:0;}
-.box a{display:none;}
-.box ul{overflow:hidden;}
-ul li{ float:left; list-style:none; width:12.5%; height:30px; line-height:30px; text-align:center; background:#ccc; border:1px solid #000; box-sizing: border-box;}
-
-
