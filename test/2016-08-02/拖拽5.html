@@ -30,12 +30,13 @@ document.addEventListener('DOMContentLoaded',function(){
 			x = ev.targetTouches[0].pageX-disX;
 			y = ev.targetTouches[0].pageY-disY;
 			oBox.style.transform = 'translate('+x+'px,'+y+'px)';
-			alert(ev.targetTouches[0].identifier);
+			
 		}
 		function fnEnd(){
 			oBox.removeEventListener('touchmove',fnMove,false);
 			oBox.removeEventListener('touchend',fnEnd,false);
 		}
+		alert(ev.targetTouches[0].identifier);
 		oBox.addEventListener('touchmove',fnMove,false);
 		oBox.addEventListener('touchend',fnEnd,false);
 		ev.preventDefault();
