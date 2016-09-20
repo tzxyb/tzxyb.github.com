@@ -3,6 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+<link rel="shortout icon" href="../../tzxyb.ico">
 <style>
 *{margin:0; padding:0;}
 .box{
@@ -10,8 +11,8 @@
 	height:100px; 
 	background:red; 
 	position:absolute; 
-	top:0; 
-	left:0;
+	top:0px; 
+	left:0px;
 }
 </style>
 <script>
@@ -29,7 +30,7 @@ document.addEventListener('DOMContentLoaded',function(){
 			x = ev.targetTouches[0].pageX-disX;
 			y = ev.targetTouches[0].pageY-disY;
 			oBox.style.transform = 'translate('+x+'px,'+y+'px)';
-			console.log(1,2);
+			alert(ev.targetTouches[0].identifier);
 		}
 		function fnEnd(){
 			oBox.removeEventListener('touchmove',fnMove,false);
@@ -40,6 +41,7 @@ document.addEventListener('DOMContentLoaded',function(){
 		ev.preventDefault();
 	},false);
 },false);
+
 </script>
 </head>
 
