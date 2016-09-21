@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="author" content="智能社 - zhinengshe.com" />
+<meta name="copyright" content="智能社 - zhinengshe.com" />
+<meta name="description" content="智能社是一家专注于web前端开发技术的公司，目前主要提供JavaScript培训和HTML5培训两项服务，同时还推出了大量javascript基础知识教程，智能课堂为你带来全新的学习方法和快乐的学习体验。" />
+<title>智能社— http://www.zhinengshe.com</title>
+<style>
+</style>
+<script>
+function Box(){
+	this.value = [];
+}
+Box.prototype.add = function(){
+	for(var i=0;i<arguments.length;i++){
+		this.value.push(arguments[i]);
+	}
+};
+Box.prototype.del = function(n){
+	for(var i=0;i<this.value.length;i++){
+		if(this.value[i]==n){
+			this.value.splice(i,1);
+			i--;
+		}
+	}
+};
+var box = new Box();
+box.add(4,5,6,7,8);
+box.del(5);
+alert(box.value);
+</script>
+</head>
+
+<body>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

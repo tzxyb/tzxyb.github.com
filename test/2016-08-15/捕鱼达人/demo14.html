@@ -1,0 +1,94 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="author" content="智能社 - zhinengshe.com" />
+<meta name="copyright" content="智能社 - zhinengshe.com" />
+<meta name="description" content="智能社是一家专注于web前端开发技术的公司，目前主要提供JavaScript培训和HTML5培训两项服务，同时还推出了大量javascript基础知识教程，智能课堂为你带来全新的学习方法和快乐的学习体验。" />
+<title>智能社— http://www.zhinengshe.com</title>
+<style>
+*{margin:0; padding:0;}
+body{background:#000; text-align:center;}
+#c1{background:url(img/game_bg_2_hd.jpg) no-repeat;}
+</style>
+<script src="js/com.js"></script>
+<script src="js/resour.js"></script>
+<script src="js/sprite.js"></script>
+<script src="js/fish.js"></script>
+<script src="js/bullet.js"></script>
+<script>
+var CANNONE_SIZE = [
+	null,
+	{width:74,height:74},
+	{width:74,height:76},
+	{width:74,height:76},
+	{width:74,height:83},
+	{width:74,height:85},
+	{width:74,height:90},
+	{width:74,height:94}
+];
+function Cannon(images,type){
+	Sprite.call(this,images['cannon'+type]);
+	this.width = CANNONE_SIZE[type].width;
+	this.height= CANNONE_SIZE[type].height;
+	this.type = type;
+}
+Cannon.prototype = new Sprite();
+Cannon.prototype.constructor = Cannon;
+
+window.onload=function(){
+	var oC = document.getElementById('c1');
+	var gd = oC.getContext('2d');
+	loadImage(
+		resources,
+		function(result){
+			var bottom = new Sprite(result.bottom);
+			bottom.width = 765;
+			bottom.height = 71;
+			bottom.x = oC.width/2;
+			bottom.y = oC.height-bottom.height/2;
+			
+			var cannon = new Cannon(result,1);
+			cannon.x = bottom.x+cannon.width/2+6;
+			cannon.y = bottom.y;
+			
+			oC.onmousemove = function(ev){
+				var x = ev.pageX-oC.offsetLeft;
+				var y = ev.pageY-oC.offsetTop;
+				var a = x-cannon.x;
+				var b = y-cannon.y;
+				
+				cannon.r = a2d(Math.atan2(b,a))+90;
+			};
+			
+			
+			setInterval(function(){
+				gd.clearRect(0,0,oC.width,oC.height);
+				bottom.draw(gd);
+				cannon.draw(gd);
+			},30);
+		}
+	);
+};
+</script>
+</head>
+
+<body>
+	<canvas width="800" height="600" id="c1"></canvas>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

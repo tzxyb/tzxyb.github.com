@@ -1,0 +1,75 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="author" content="智能社 - zhinengshe.com" />
+<meta name="copyright" content="智能社 - zhinengshe.com" />
+<meta name="description" content="智能社是一家专注于web前端开发技术的公司，目前主要提供JavaScript培训和HTML5培训两项服务，同时还推出了大量javascript基础知识教程，智能课堂为你带来全新的学习方法和快乐的学习体验。" />
+<title>智能社— http://www.zhinengshe.com</title>
+<style>
+*{margin:0; padding:0;}
+body{background:#000; text-align:center;}
+canvas{background:#fff;}
+</style>
+<script>
+function d2a(n){
+	return n*Math.PI/180;
+}
+window.onload=function(){
+	var oBtn = document.querySelector('input');
+	var oC = document.getElementById('c1');
+	var gd = oC.getContext('2d');
+	var x = 300,
+		y = 200,
+		w = 300,
+		h = 150;
+	
+	var lg = gd.createLinearGradient(-150,-150,150,150);
+	lg.addColorStop(0,'red');
+	lg.addColorStop(1,'green');
+	
+	var d = 0;
+	
+	setInterval(function(){
+		d+=11;
+		gd.save();
+		gd.beginPath();
+		gd.translate(x+w/2,y+h/2);
+		gd.rotate(d2a(d));
+		gd.rect(-w/2,-h/2,w,h);
+		gd.strokeStyle = lg;
+		gd.stroke();
+		gd.restore();
+	},30);
+	
+	oBtn.onclick=function(){
+		var result = oC.toDataURL();
+		window.open(result,'_blank');
+	};
+};
+
+</script>
+</head>
+
+<body>
+	<input type="button" value="导出" /> 
+	<br />
+	<canvas id="c1" width="800" height="600">
+		<strong>您的浏览器版本过低，请尽快升级。</strong>
+	</canvas>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
