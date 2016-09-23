@@ -41,7 +41,9 @@ window.onload=function(){
 	
 	oBtn.onclick=function(){
 		var result = oC.toDataURL();
-		window.open(result,'_blank');
+		var img = document.createElement('img');
+		img.src=result;
+		document.body.append(img);
 	};
 };
 

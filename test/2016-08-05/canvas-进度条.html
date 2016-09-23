@@ -18,9 +18,9 @@ window.onload=function(){
 	var d = 0;
 	
 	var lg = gd.createLinearGradient(290,190,510,410);
-	lg.addColorStop(0,'red');
-	lg.addColorStop(0.5,'green');
-	lg.addColorStop(1,'blue');
+	lg.addColorStop(0,'rgba(255,0,0,1)');
+	lg.addColorStop(0.5,'rgba(255,0,0,.5)');
+	lg.addColorStop(1,'rgba(255,0,0,0)');
 	
 	var timer = null;
 	
@@ -33,7 +33,7 @@ window.onload=function(){
 		gd.lineWidth = 20;
 		gd.stroke();
 		
-		var str = (d/100*100).toFixed(2)+'%';
+		var str = parseInt(d/100*100)+'%';
 		gd.font = '40px 微软雅黑';
 		gd.textAlign = 'center';
 		gd.textBaseline = 'middle';
