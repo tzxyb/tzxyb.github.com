@@ -17,41 +17,24 @@ $('.car').tap(function(){
 	if (isAnimating) return;
 	last.row = now.row;
 	last.col = now.col;
-	if (last.row != 8) { now.row = last.row+1; now.col = 1; pageMove(towards.up);}
-	if (last.row == 8) { now.row = 1; now.col = 1; pageMove(towards.up);}
+	if (last.row != 7) { now.row = last.row+1; now.col = 1; pageMove();}
+	if (last.row == 7) { now.row = 1; now.col = 1; pageMove();}
 });
 
 $('.car').tap(function(){
 	if (isAnimating) return;
 	last.row = now.row;
 	last.col = now.col;
-	if (last.row!=1) { now.row = last.row-1; now.col = 1; pageMove(towards.down);}	
-	if (last.row==1) { now.row = 8; now.col = 1; pageMove(towards.down);}
+	if (last.row!=1) { now.row = last.row-1; now.col = 1; pageMove();}	
+	if (last.row==1) { now.row = 7; now.col = 1; pageMove();}
 });
 
 
-function pageMove(tw){
+function pageMove(){
 	var lastPage = ".page-"+last.row+"-"+last.col,
 		nowPage = ".page-"+now.row+"-"+now.col;
 	
-	switch(tw) {
-		case towards.up:
-			outClass = 'pt-page-moveToTop';
-			inClass = 'pt-page-moveFromBottom';
-			break;
-		case towards.right:
-			outClass = 'pt-page-moveToRight';
-			inClass = 'pt-page-moveFromLeft';
-			break;
-		case towards.down:
-			outClass = 'pt-page-moveToBottom';
-			inClass = 'pt-page-moveFromTop';
-			break;
-		case towards.left:
-			outClass = 'pt-page-moveToLeft';
-			inClass = 'pt-page-moveFromRight';
-			break;
-	}
+
 	isAnimating = true;
 	$(nowPage).removeClass("hide");
 	
