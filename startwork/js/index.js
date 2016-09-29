@@ -85,3 +85,8 @@ $('#music').tap(function() {
 		$(this).addClass('on');
 	}
 });
+if($('.page-7-1').hasClass('page-current')){
+	audio.pause();
+	$('#music').attr('src','image/stop.png');
+	$('#music').removeClass('on');
+}
