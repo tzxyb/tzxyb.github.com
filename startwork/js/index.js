@@ -17,24 +17,41 @@ $('.car').tap(function(){
 	if (isAnimating) return;
 	last.row = now.row;
 	last.col = now.col;
-	if (last.row != 7) { now.row = last.row+1; now.col = 1; pageMove();}
-	if (last.row == 7) { now.row = 1; now.col = 1; pageMove();}
+	if (last.row != 7) { now.row = last.row+1; now.col = 1; pageMove(towards.up);}
+	if (last.row == 7) { now.row = 1; now.col = 1; pageMove(towards.up);}
 });
 
 $('.car').tap(function(){
 	if (isAnimating) return;
 	last.row = now.row;
 	last.col = now.col;
-	if (last.row!=1) { now.row = last.row-1; now.col = 1; pageMove();}	
-	if (last.row==1) { now.row = 7; now.col = 1; pageMove();}
+	if (last.row!=1) { now.row = last.row-1; now.col = 1; pageMove(towards.down);}	
+	if (last.row==1) { now.row = 7; now.col = 1; pageMove(towards.down);}
 });
 
 
-function pageMove(){
+function pageMove(tw){
 	var lastPage = ".page-"+last.row+"-"+last.col,
 		nowPage = ".page-"+now.row+"-"+now.col;
 	
-
+	switch(tw) {
+		case towards.up:
+			outClass = 'fade';
+			inClass = 'fade';
+			break;
+		case towards.right:
+			outClass = 'fade';
+			inClass = 'fade';
+			break;
+		case towards.down:
+			outClass = 'fade';
+			inClass = 'fade';
+			break;
+		case towards.left:
+			outClass = 'fade';
+			inClass = 'fade';
+			break;
+	}
 	isAnimating = true;
 	$(nowPage).removeClass("hide");
 	
