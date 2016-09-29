@@ -11,13 +11,13 @@ body{background:#fff;overflow:hidden;font-size:14px;font-family: 'Microsoft Yahe
 .page-1-1 .car{width:30%;top:50%;left:35%}
 .page-1-1 .title{width:100%;left:0;top:38%}
 .page .car2{bottom:4%;width:100%;left:0}
-.music{position:absolute;left:86%;width:7%;top:4%;z-index:200}
-.page-2-1 .p-2{width:86%;left:7%;top:8%;}
-.page-2-1 .w-t-2{width:20%;left:70%;top:39%;z-index:100;}
-.page-2-1 .w-2-1{width:45%;left:23%;top:61%;z-index:100;}
-.page-2-1 .w-2-2{width:12%;left:8%;top:61%;z-index:100;}
+.music{position:absolute;left:86%;width:7%;top:1%;z-index:200}
+.page-2-1 .p-2{width:86%;left:7%;top:5%}
+.page-2-1 .w-t-2{width:20%;left:70%;top:36%;z-index:100;}
+.page-2-1 .w-2-1{width:45%;left:23%;top:58%;z-index:100;}
+.page-2-1 .w-2-2{width:12%;left:8%;top:58%;z-index:100;}
 
-.page-3-1 .p-3{width:86%;left:7%;top:8%;}
+.page-3-1 .p-3{width:86%;left:7%;top:5%}
 .page-3-1 .w-t-3{width:20%;left:10%;top:10%;z-index:100;}
 .page-3-1 .w-3-1{width:60%;left:10%;top:50%;z-index:100;}
 .page-3-1 .w-3-2{width:60%;left:10%;top:62%;z-index:100;}
@@ -29,11 +29,11 @@ body{background:#fff;overflow:hidden;font-size:14px;font-family: 'Microsoft Yahe
 .page-4-1 .w-4-2{height:30%;left:26%;top:10%;z-index:100;}
 .page-4-1 .w-4-3{height:30%;left:7%;top:10%;z-index:100;}
 
-.page-5-1 .p-5{width:86%;left:7%;top:8%;}
+.page-5-1 .p-5{width:86%;left:7%;top:5%}
 .page-5-1 .w-t-5{height:26%;left:70%;top:10%;z-index:100;}
 .page-5-1 .w-5-1{height:44%;left:10%;top:10%;z-index:100;}
 
-.page-6-1 .p-6{width:86%;left:7%;top:8%;}
+.page-6-1 .p-6{width:86%;left:7%;top:5%}
 .page-6-1 .w-t-6{height:30%;left:68%;top:38%;z-index:100;}
 .page-6-1 .w-6-1{height:24%;left:43%;top:60%;z-index:100;}
 .page-6-1 .w-6-2{height:24%;left:24%;top:60%;z-index:100;}
