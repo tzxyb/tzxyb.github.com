@@ -1,0 +1,131 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="pragma" content="no-cache">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">	
+	<meta name="format-detection" content="telephone=no">
+	<meta http-equiv="X-UA-Compatible" content="edge">
+	<title>Document</title>
+	<style>
+		*{margin:0;padding:0;}
+		html,body{background:#fff;font-family: 'Microsoft yahei';font-size:14px;}
+		.focus{width:100%;max-width:420px;margin:0 auto;text-align:center;}
+		ul{list-style:none;text-align:center;}
+		.focus .img{width:100%;}
+		ul .item{width:84%;margin-left:8%;}
+		ul .item img{width:100%;}
+		ul li .p-7{width:80%;margin:0 auto;}
+		ul .item .imgcon{padding:1rem;box-sizing:border-box;border:1px solid #bbb;}
+		.item .title{display: block;width:2rem;height:2rem;border-radius:1rem;background-color: #d0a762;color:#fff;font-size:1.5rem;line-height: 2rem;text-align:center;margin:1.5rem auto .5rem auto;}
+		.inputcon{width:84%;border-top:1px solid #bbb;border-bottom:1px solid #bbb;height:8rem;margin-left:8%;padding:1rem 2rem;box-sizing:border-box;margin-bottom:2rem;}
+		.inputcon input ,.btn{border:1px solid #000;display:block;background:#c8a974;width:100%;margin:.6rem auto;height:2.2rem;line-height: 2.2rem;outline:none;-webkit-tap-hightlight-color:transparent;text-align:center;color:#fff;text-decoration:none;font-family: 'Microsoft Yahei';font-size:1rem;}
+		.inputcon input::-webkit-input-placeholder{
+			color:#fff;
+			text-align:center;
+		}
+		.alcon{display:none;position:fixed;width:100%;top:20%;left:0;}
+		.alcon img{width:100%;}
+		.logo{width:24%;margin:1rem auto;}
+		.alcon .rescon h2{font-size:1.1rem;}
+		.alcon .rescon p{font-size:1rem;}
+		.alcon .rescon{position: absolute;top:10%;left:0;width:100%;z-index:9;}
+		.alcon .btn{width:60%;margin:.5rem 20%;height:2rem;line-height: 2rem;}
+		.alcon .p-res{width:60%;margin:0 20%;}
+		.alcon .close{display:block;width:3rem;height:3rem;position: absolute;right:5%;top:1%;z-index:99;}
+		.shadow{position: fixed;top:0;width:100%;height:100%;background:rgba(0,0,0,.72);text-align:center;z-index:100;}
+		.shadow img{width:100%;}
+	</style>
+	<script src="http://mktjs.10101111cdn.com/common/zepto.min.js"></script>
+</head>
+<body>
+	<div class="focus">
+		<img src="img/pic_1.jpg" alt="" class="img"/>
+		<ul>
+			<li class="item">
+				<span class="title">1</span>
+				<div class="imgcon">
+					<img src="img/p_1.gif" alt="">
+					<p>开工，而且要连上7天！<br>我热爱Word工作</p>
+				</div>
+			</li>
+			<li class="item">
+				<span class="title">2</span>
+				<div class="imgcon">
+					<img src="img/p_2.gif" alt="">
+					<p>元旦前再无长假。<br>赶紧看看年假有没有余额</p>
+				</div>
+			</li>
+			<li class="item">
+				<span class="title">3</span>
+				<div class="imgcon">
+					<img src="img/p_3.gif" alt="">
+					<p>小编国庆结婚啦！<br>从此世界上又少了一只单身汪</p>
+				</div>
+			</li>
+			<li class="item">
+				<span class="title">4</span>
+				<div class="imgcon">
+					<img src="img/p_4.gif" alt="">
+					<p>重阳节就要到了<br>感谢天下父母恩</p>
+				</div>
+			</li>
+			<li class="item">
+				<span class="title">5</span>
+				<div class="imgcon">
+					<img src="img/p_5.gif" alt="">
+					<p>神州充100得150单单6.6折<br>用到年底可省下一部iPhone 7</p>
+				</div>
+			</li>
+			<li>
+				<img src="img/p_7.png" alt="" class="p-7">
+				<img src="img/p_6.gif" alt="">
+			</li>
+		</ul>
+		<div class="inputcon">
+			<ul>
+				<li><input type="tel" placeholder="请输入手机号" autocomplete="off" maxlength="11" id="mobile"></li>
+				<li><a href="javascript:;" class="btn-go btn">领取专车券</a></li>
+			</ul>
+		</div>
+		<img src="img/logo.png" alt="" class="logo">
+		<div class="alcon">
+			<img src="img/bg_alcon.png" alt="">
+			<span class="close"> </span>
+			<div class="rescon">
+				<h2>恭喜您获得</h2>
+				<img src="img/p_res.png" alt="" class="p-res">
+				<p>已放入神州专车账户<span class="userTel">133***2222</span></p>
+				<a href="javascript:;" class="btn btn-share">分享好友，同闯四方</a>
+				<a href="javascript:;" class="btn btn-dld">下载神州，说走就走</a>
+			</div>
+		</div>
+	</div>
+	<div class="shadow">
+		<img src="img/p_share.png" alt="">
+	</div>
+	<script>
+		$('.btn-go').click(function(){
+			document.addEventListener('touchmove',stopScroll,false);
+			$('.alcon').show();
+		});
+		$('.alcon .close').click(function(){
+			$('.alcon').hide();
+			document.removeEventListener('touchmove',stopScroll,false);
+		})
+		function stopScroll(ev){
+			ev.preventDefault();
+		};
+		$('.alcon .btn-share').click(function(){
+			$('.shadow').show();
+			document.addEventListener('touchmove',stopScroll,false);
+		});
+		$('.shadow').click(function(){
+			$('.shadow').hide();
+			document.removeEventListener('touchmove',stopScroll,false);
+		})
+	</script>
+</body>
+</html>
