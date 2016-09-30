@@ -18,9 +18,21 @@ $('.car').tap(function(){
 	last.row = now.row;
 	last.col = now.col;
 	if (last.row != 7) { now.row = last.row+1; now.col = 1; pageMove(towards.up);}
-	if (last.row == 7) { now.row = 1; now.col = 1; pageMove(towards.up);}
+	if (last.row == 6) {
+		audio.pause();
+		$('#music').css('display','none');
+	}
 });
-
+$(document).swipeUp(function(){
+	if (isAnimating) return;
+	last.row = now.row;
+	last.col = now.col;
+	if (last.row != 7) { now.row = last.row+1; now.col = 1; pageMove(towards.up);}
+	if (last.row == 6) {
+		audio.pause();
+		$('#music').css('display','none');
+	}
+});
 $('.car').tap(function(){
 	if (isAnimating) return;
 	last.row = now.row;
@@ -28,6 +40,14 @@ $('.car').tap(function(){
 	if (last.row!=1) { now.row = last.row-1; now.col = 1; pageMove(towards.down);}	
 	if (last.row==1) { now.row = 7; now.col = 1; pageMove(towards.down);}
 });
+$(document).swipeUp(function(){
+	if (isAnimating) return;
+	last.row = now.row;
+	last.col = now.col;
+	if (last.row!=1) { now.row = last.row-1; now.col = 1; pageMove(towards.down);}	
+	if (last.row==1) { now.row = 7; now.col = 1; pageMove(towards.down);}
+});
+
 
 
 function pageMove(tw){
@@ -85,3 +105,37 @@ $('#music').tap(function() {
 		$(this).addClass('on');
 	}
 });
+
+
+/*   页面领券部分  */
+$('.btn-share').tap(function(){
+	$('.shadow .alcon').hide()
+	$('.pic-share').show();
+});
+$('.pic-share').tap(function(){
+	$('.shadow,.shadow .pic-share').hide()
+})
+$('.btn-go').tap(function(){
+	checkTel();
+	if(checkTel()){
+		var tel = $.trim($('#mobile').val());
+		var mobile = tel.substr(0,3)+"****"+ tel.substr(7,4);
+
+		$('.shadow,.shadow .alcon').show();
+		$('#userTel').html(mobile);
+	}
+});
+
+function checkTel(){
+	var tel = $.trim($('#mobile').val());
+	if(null === tel || '' === tel || tel.length === 0){
+		ucar.uitls.show("手机号填写错误<span class='face face-3'></span>");
+		return false;
+	}
+	if(!mobileValidate(tel)){
+		ucar.uitls.show("手机号填写错误<span class='face face-3'></span>");
+		return false;
+	}else{
+		return true;
+	}
+}
