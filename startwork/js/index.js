@@ -5,14 +5,8 @@ var now = { row:1, col:1 }, last = { row:0, col:0};
 var towards = { up:1, right:2, down:3, left:4};
 var isAnimating = false;
 
-//s=window.innerHeight/500;
-//ss=250*(1-s);
-
-//$('.wrap').css('-webkit-transform','scale('+s+','+s+') translate(0px,-'+ss+'px)');
-
 document.addEventListener('touchmove',function(event){
 	event.preventDefault(); },false);
-
 $('.car').tap(function(){
 	if (isAnimating) return;
 	last.row = now.row;
@@ -33,22 +27,6 @@ $(document).swipeUp(function(){
 		$('#music').css('display','none');
 	}
 });
-$('.car').tap(function(){
-	if (isAnimating) return;
-	last.row = now.row;
-	last.col = now.col;
-	if (last.row!=1) { now.row = last.row-1; now.col = 1; pageMove(towards.down);}	
-	if (last.row==1) { now.row = 7; now.col = 1; pageMove(towards.down);}
-});
-$(document).swipeUp(function(){
-	if (isAnimating) return;
-	last.row = now.row;
-	last.col = now.col;
-	if (last.row!=1) { now.row = last.row-1; now.col = 1; pageMove(towards.down);}	
-	if (last.row==1) { now.row = 7; now.col = 1; pageMove(towards.down);}
-});
-
-
 
 function pageMove(tw){
 	var lastPage = ".page-"+last.row+"-"+last.col,
