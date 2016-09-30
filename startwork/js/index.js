@@ -93,7 +93,7 @@ $('.btn-share').tap(function(){
 $('.pic-share').tap(function(){
 	$('.shadow,.shadow .pic-share').hide()
 })
-$('.btn-go').tap(function(){
+$('.btn-go').click(function(){
 	checkTel();
 	if(checkTel()){
 		var tel = $.trim($('#mobile').val());
