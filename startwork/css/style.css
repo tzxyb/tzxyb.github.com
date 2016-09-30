@@ -43,7 +43,7 @@ body{background:#fff;overflow:hidden;font-size:14px;font-family: 'Microsoft Yahe
 .page-7-1 .w-t-7{width:100%;top:0}
 .page-7-1 .p-7-peo{width:100%;top:36%}
 .page-7-1 ul{list-style:none;width:70%;left:15%;top:72%;z-index:102}
-.page-7-1 li{width:100%;margin-bottom:1rem;}
+.page-7-1 li{width:100%;margin-bottom:1rem;position: relative;top:0;height:2.4rem;}
 .page-7-1 li input,
 .page-7-1 li a{
 	display:block;
@@ -51,20 +51,22 @@ body{background:#fff;overflow:hidden;font-size:14px;font-family: 'Microsoft Yahe
 	height:2.4rem;
 	line-height: 2.4rem;
 	font-size:1.2rem;
-	border-radius:1.2rem;
 	text-align: center;
 	box-sizing: border-box;
-	text-decoration: none;
 	outline: none;
 	font-family: 'Microsoft yahei';
-	border:1px solid #fff;
+	background:none;
+	border:none;
 	-webkit-tap-hightlight-color:transparent;
 }
-.page-7-1 li input{background:rgba(255,255,255,.6);color:#000;}
+//.page-7-1 li input{background:rgba(255,255,255,.6);color:#000;}
 .page-7-1 li input::-webkit-input-placeholder {
 	color:#000
 }
-.page-7-1 li a{background:rgba(255,255,255,1);color:#333}
+.page-7-1 li input{position: absolute;top:0;left:0;
+	z-index:99;}
+//.page-7-1 li a{background:rgba(255,255,255,1);color:#333}
+.page-7-1 li img{width:100%;}
 .shadow{display:none;position: fixed;width:100%;height:100%;background:rgba(0,0,0,.5);left:0;top:0;z-index: 200;}
 .shadow .alcon{width:90%;padding:2rem 0;box-sizing:border-box;margin-left:5%;margin-top:40%;border-radius: 1rem;background:#fff;color:#222a32;line-height:2rem;font-size:1.3rem;}
 .shadow .alcon p{text-align:center}
