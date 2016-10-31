@@ -1,0 +1,132 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>神州专车南瓜灯</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1, maximum-scale=1, user-scalable=no">
+  <meta name="format-detection" content="telephone=no,email=no">
+  <meta name="full-screen" content="yes">
+  <link rel="stylesheet" type="text/css" href="css/m.min.css">
+  <link rel="stylesheet" href="css/style.css">
+    <script type="text/javascript">
+	  document.getElementsByTagName("html")[0].style.fontSize = 32 * parseInt(document.documentElement.clientHeight) / 1008 + "px";
+	  //alert(document.getElementsByTagName("html")[0].style.fontSize);
+    </script>   
+</head>
+<body>
+    <div id="horizontal"></div>
+    <!--loading页-->
+    <div id="newloading">  
+      <div class="loading page">
+        <img src="images/loadWitch.png" class="loadWitch">
+        <div class="pa car">
+           <img src="images/loadCar.png" class="loadCar">
+           <img src="images/wheel.png" class="wheel_L">
+           <img src="images/wheel.png" class="wheel_R">
+        </div>
+        <div class="percentN">loading</div>
+        <img src="images/kmh.png" class="kmh">
+      </div>
+    </div>
+    <!--首页-->
+    <div class="slide0" id="slide0">
+      <div class="page">
+        <img src="images/logo.png" class="logo">
+        <img src="images/bianFu1.png" class="bianFu1">
+        <img src="images/bianFu2.png" class="bianFu2">
+        <!--<img src="images/text1.png" class="text1">
+        <img src="images/text2.png" class="text2">-->
+        <div class="pa car">
+           <img src="images/sao.png" class="sao">
+           <img src="images/Car.png" class="loadCar">
+           <img src="images/carLight.png" class="carLight">
+           <img src="images/carLightBack.png" class="carLightBack">
+           <img src="images/wheel.png" class="wheel_L">
+           <img src="images/wheel.png" class="wheel_R">
+           <img src="images/fire.png" class="fire">
+        </div>
+        <img src="images/bird.png" class="bird">
+        <img src="images/menu.png" class="menu">
+        <div class="pa btn_rule"></div>
+        <div class="pa btn_start"></div>
+      </div>
+    </div>
+    <!--剧情页-->
+    <div class="slide1">
+      <img src="images/sun.png" class="sun fadeIn">
+      <div class="page">
+        <img src="images/Story1.png" class="Story1">
+        <img src="images/pkDown.png" class="pkDown">
+        <img src="images/pkUp.png" class="pkUp">
+        <img src="images/btn_find.png" class="btn_find play-btn">
+      </div>
+    </div>
+    <!--游戏页-->
+    <div class="slide2">
+     <div class="page">
+      <img src="images/topPic.png" class="topPic">
+      <img src="images/eyeBg.png" class="eyeBg">
+      <img src="images/tree.png" class="tree">
+      <img src="images/bomPic.png" class="bomPic">
+     </div>
+     <div id="container"></div>
+    </div>
+    <!--填写手机号领券页-->
+    <div class="slide3">
+      <div class="page">
+	    <img src="images/sun.png" class="sun fadeIn">
+        <img src="images/eyeBg.png" class="eyeBg">
+        <img src="images/tree.png" class="tree">
+        <div class="pa sucText"></div>
+        <img src="images/quanbg.png" class="quanbg">
+        <img src="images/succes.png" class="succes">
+        <img src="images/pkDown.png" class="pkDown">
+        <img src="images/pkUp.png" class="pkUp">
+        <input type="tel" class="telinput" maxlength="11" placeholder="输入手机号领取专车券">
+        <div class="pa btn_sub">OK</div>
+        <img src="images/btn_again.png" class="btn_again">
+        <img src="images/btn_share.png" class="btn_share">
+      </div>
+    </div>
+    
+    <!--游戏规则-->
+     <div class="rule z9">
+        <img src="images/rulepic.png" class="rulepic">
+        <img src="images/btn_close.png" class="btn_close">
+     </div>
+    <!--游戏规则--
+    >
+    <!--分享浮层-->
+    <div class="share">
+     <div class="page">
+      <img src="images/pkDown.png" class="pkDown">
+      <img src="images/pkUp.png" class="pkUp">
+      <img src="images/shareText.png" class="shareText">
+     </div>
+    </div>
+    <!--分享浮层-->
+    
+     <audio  id="audio" style="display:none;" loop autoplay="true"><source src="music/music.mp3" type="audio/mpeg"></audio>
+     <audio  id="audioTap" style="display:none;"><source src="music/tap.mp3" type="audio/mpeg"></audio>
+     <div class="music_btn"> </div>
+    
+    <script id="tpl" type="text/html">
+      <div class="grid">
+        <div class="page1 hide" id="room">
+            <header>
+			  <div class="timebg z9">剩余时间：<span></span>s</div>
+			  <div class="time"></div>
+            </header>
+            <div id="box" class="lv1"></div>
+        </div>
+      </div>
+    </script>
+    <!-- Swiper JS -->
+    <script src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/PxLoader.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script src="js/libs.min.js"></script>
+    <script src="js/main.min3.js"></script>
+    
+</body>
+</html>
