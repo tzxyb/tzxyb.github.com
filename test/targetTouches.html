@@ -57,6 +57,9 @@ document.addEventListener('DOMContentLoaded',function(){
 			function fnEnd(ev){
 				document.removeEventListener('touchmove',fnMove,false);
 				document.removeEventListener('touchend',fnEnd,false);
+
+				oBox.style.width = '200px';
+				oBox.style.height = '200px';
 			}
 			
 			document.addEventListener('touchmove',fnMove,false);
