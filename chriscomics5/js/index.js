@@ -41,18 +41,18 @@ function pageMove(tw){
 	$(lastPage).addClass(outClass);
 	$(nowPage).addClass(inClass);
 	
-	setTimeout(function(){
-		$(lastPage).removeClass('slide-current');
-		$(lastPage).removeClass(outClass);
-		$(lastPage).addClass("hide");
-		$(lastPage).find("img").addClass("hide");
-		
-		$(nowPage).addClass('slide-current');
-		$(nowPage).removeClass(inClass);
-		$(nowPage).find("img").removeClass("hide");
-		
-		isAnimating = false;
-	},600);
+	
+	$(lastPage).removeClass('slide-current');
+	$(lastPage).removeClass(outClass);
+	$(lastPage).addClass("hide");
+	$(lastPage).find("img").addClass("hide");
+	
+	$(nowPage).addClass('slide-current');
+	$(nowPage).removeClass(inClass);
+	$(nowPage).find("img").removeClass("hide");
+	
+	isAnimating = false;
+	
 }
 
 })();
