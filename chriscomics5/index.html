@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="pragma" content="no-cache">
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="format-detection" content="telephone=no">
+	<meta http-equiv="X-UA-Compatible" content="edge">
+	<meta http-equiv="expires" content="0">
+	<title>神圣的故事</title>
+	<link type="text/css" rel="stylesheet" href="css/dialog_1215.css"/>
+	<link rel="stylesheet" type="text/css" href="css/style.css"/>
+	<!-- <link rel="stylesheet" type="text/css" href="${ucarmktwap.mktcss.url}/wap/2016/chriscomics5/animate.css"/> -->
+	<script type="text/javascript" src="js/zepto.min.js"></script>
+	<script type="text/javascript" src="js/touch.js"></script>
+	<script type="text/javascript" src="js/core.js"></script>
+	<script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+
+	<script type="text/javascript">
+		document.getElementsByTagName("html")[0].style.fontSize = 32 * document.documentElement.clientWidth / 640 + "px";
+	</script>
+
+</head>
+<body>
+    <div id="horizontal"></div>
+    <div id="newloading">
+      <div class="loading">
+       	<div class="loading-s"></div>
+        <img src="images/loading.png" class="loading-w"/>
+      </div>
+    </div>
+
+	<div class="slide slide-1 current-slide">
+		<div class="wrap">
+			<img src="images/start_1_1.gif" class="fadeIn"/>
+			<img src="images/start_1_2.gif" class="fadeIn delay300"/>
+			<img src="images/start_1_3.gif" class="fadeIn delay1000"/>
+			<img src="images/start_1_4.gif" class="slideLeft"/>
+			<img src="images/start_1_5.gif" class="slideRight"/>
+			<img src="images/start_cap.gif" class="upDown"/>
+		</div>
+	</div>
+	<div class="slide slide-2 hide">
+		<div class="wrap">
+			<img src="images/st.png" class="st fl"/>
+			<img src="images/str.png" class="str fr" />
+			<img src="images/stw.png" class="stw"/>
+			<img src="images/strw.png" class="strw"/>
+			<img src="images/stb.png" class="stb"/>
+		</div>
+	</div>
+	<div class="slide slide-3 hide title">
+		<div class="wrap">
+			<img src="images/special_1_1.gif" class="fadeIn"/>
+			<img src="images/special_1_2.gif" class="fadeIn delay800"/>
+			<img src="images/special_1_3.gif" class="slideLeft"/>
+			<img src="images/special_1_4.gif" class="slideRight"/>
+			<img src="images/special_1_5.gif" class="bling"/>
+		</div>
+	</div>
+	<div class="slide slide-4 hide">
+		<div class="wrap">
+			<ul class="steps">
+				<li>
+					<div class="s1 fl">
+						<img src="images/s2_sled.gif" class="s1-luzui"/>
+						<img src="images/s1_arm.png" class="s1-arm"/>
+						<img src="images/bg_s1.png" class="bg-s1"/>
+						<img src="images/s1w.png" class="s1w"/>
+					</div>
+					<div class="s1r fr">
+						<img src="images/s1r_arm.png" class="s1r-arm"/>
+						<img src="images/bg_s1r.png" class="bg-s1r"/>
+						<img src="images/s1r_car.png" class="s1r-car"/>
+						<img src="images/s1rw.png" class="s1rw"/>
+					</div>
+				</li>
+				<li>
+					<img src="images/s2_sled.gif" class="s2-sled fl"/>
+					<div class="s2r fr">
+						<img src="images/s2_dot.png" class="s2r-dot"/>
+						<img src="images/s2r_arm.png" class="s2r-arm"/>
+					</div>
+				</li>
+				<li>
+					<img src="images/s3_lu_angry.gif" class="s3-lu-angry"/>
+					<div class="s3 fl">
+						<img src="images/bg_s3.gif" class="bg-s3"/>
+						<img src="images/s3_arm.png" class="s3-arm"/>
+						<img src="images/s3w.png" class="s3w"/>
+					</div>
+					<div class="s3r fr">
+						<img src="images/s1r_car.png" class="s3r-car"/>
+						<img src="images/s3r_ren.gif" class="s3r-ren"/>
+						<img src="images/s3rw.png" class="s3rw"/>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class="slide slide-5 hide title">
+		<div class="wrap">
+			<img src="images/uniform_1_1.gif" class="fadeIn"/>
+			<img src="images/uniform_1_2.gif" class="fadeIn delay800"/>
+			<img src="images/uniform_1_3.gif" class="slideLeft"/>
+			<img src="images/uniform_1_4.gif" class="slideRight"/>
+			<img src="images/uniform_1_5.gif" class="bling"/>
+		</div>
+	</div>
+	<div class="slide slide-6 hide">
+		<div class="wrap">
+			<ul class="steps">
+				<li>
+					<div class="u1r fr">
+						<img src="images/bg_u1r.png" class="bg-u1r"/>
+						<img src="images/s1r_car.png" class="u1r-car"/>
+					</div>
+					<div class="u1 fl">
+						<img src="images/u1_sled.png" class="u1-sled"/>
+						<img src="images/s1_arm.png" class="s1-arm"/>
+						<img src="images/bg_s1.png" class="bg-u1"/>
+						<img src="images/u1w.png" class="u1w"/>
+					</div>
+				</li>
+				<li>
+					<div class="u2 fl">
+						<img src="images/u1_sled.png" class="u2-sled"/>
+						<img src="images/u2.png" class="bg-u2"/>
+						<img src="images/u2_line.png" class="u2-line"/>
+					</div>
+					<div class="u2r fr">
+						<img src="images/bg_u2r.png" class="bg-u2r"/>
+						<img src="images/s1r_car.png" class="u2r-car"/>
+						<img src="images/u2rw.png" class="u2rw"/>
+					</div>
+
+				</li>
+				<li>
+					<div class="u3 fl">
+						<img src="images/u1_sled.png" class="u3-sled"/>
+						<img src="images/bg_u3.gif" class="bg-u3"/>
+						<img src="images/u3_line.png" alt="" class="u3-line">
+						<img src="images/u3w.png" alt="" class="u3w">
+					</div>
+					<div class="u3r fr">
+						<img src="images/bg_u3r.png" class="bg-u3r"/>
+						<img src="images/s1r_car.png" class="u3r-car"/>
+						<img src="images/u3rw.png" class="u3rw"/>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class="slide slide-7 hide title">
+		<div class="wrap">
+			<img src="images/elk_1_1.gif" class="fadeIn"/>
+			<img src="images/elk_1_2.gif" class="fadeIn delay800"/>
+			<img src="images/elk_1_3.gif" class="slideLeft"/>
+			<img src="images/elk_1_4.gif" class="slideRight"/>
+			<img src="images/elk_1_5.gif" class="bling"/>
+		</div>
+	</div>
+	<div class="slide slide-8 hide">
+		<div class="wrap">
+			<ul class="steps">
+				<li>
+					<div class="e1 fl">
+						<img src="images/e1.gif" alt=""class="bg-e1">
+						<img src="images/e1_lu.png" alt="" class="e1-lu">
+						<img src="images/e1_fire.png" alt="" class="e1-fire">
+						<img src="images/e1w.png" alt="" class="e1w">
+					</div>
+					<div class="e1r fr">
+						<img src="images/e1r.gif" alt=""class="bg-e1r">
+						<img src="images/s1r_car.png" alt="" class="e1r-car">
+						<img src="images/e1r_line.png" alt="" class="e1r-line">
+					</div>
+				</li>
+				<li>
+					<div class="e2 fl">
+						<img src="images/e2.gif" alt=""class="bg-e2">
+						<img src="images/e1_lu.png" alt="" class="e2-lu">
+						<img src="images/e2_arm.png" alt="" class="e2-arm">
+						
+					</div>
+					<div class="e2r fr">
+						<img src="images/e2r.png" alt=""class="bg-e2r">
+						<img src="images/e2r_arm1.png" alt=""class="e2r-arm1">
+						<img src="images/e2r_arm2.png" alt=""class="e2r-arm2">
+						<img src="images/e2r_arm3.png" alt=""class="e2r-arm3">
+						<img src="images/e2r_arm4.png" alt=""class="e2r-arm4">
+						<img src="images/s1r_car.png" alt="" class="e2r-car">
+						<img src="images/e2rw.png" alt="" class="e2rw">
+					</div>
+				</li>
+				<li>
+					<div class="e3 fl">
+						<img src="images/e3.gif" alt=""class="bg-e3">
+						<img src="images/e3_lu.png" alt="" class="e3-lu">
+						<img src="images/e3_why.png" alt="" class="e3-why">
+					</div>
+					<div class="e3r fr">
+						<img src="images/e3r.png" alt=""class="bg-e3r">
+						<img src="images/s1r_car.png" alt="" class="e3r-car">
+						<img src="images/e3rw.png" alt="" class="e3rw">
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class="slide slide-9 hide title">
+		<div class="wrap">
+			<img src="images/christmas_1_1.gif" class="fadeIn"/>
+			<img src="images/christmas_1_2.gif" class="fadeIn delay800"/>
+			<img src="images/christmas_1_3.gif" class="slideLeft"/>
+			<img src="images/christmas_1_4.gif" class="slideRight"/>
+			<img src="images/christmas_1_5.gif" class="bling"/>
+		</div>
+	</div>
+	<div class="slide slide-10 hide">
+		<div class="wrap">
+			<ul class="steps">
+				<li>
+					<div class="c1 fl">
+						<img src="images/u1_sled.png" alt="" class="c1-sled">
+						<img src="images/c1.png" alt="" class="bg-c1">
+						<img src="images/c1_arm.png" alt="" class="c1-arm">
+						<img src="images/c1w.png" alt="" class="c1w">
+					</div>
+					<div class="c1r fr">
+						<img src="images/s1r_car.png" alt="" class="c1r-car">
+						<img src="images/c1r_arm.png" alt="" class="c1r-arm">
+						<img src="images/c1r.png" alt="" class="bg-c1r">
+						<img src="images/c1rw.png" alt="" class="c1rw">
+					</div>
+				</li>
+				<li>
+					<div class="c2 fl">
+						<img src="images/u1_sled.png" alt="" class="c2-sled">
+						<img src="images/c2_line1.png" alt="" class="c2-line1">
+						<img src="images/c2_line2.png" alt="" class="c2-line2">
+						<img src="images/c2_star1.png" alt="" class="c2-star1">
+						<img src="images/c2_star2.png" alt="" class="c2-star2">
+						<img src="images/c2_tuan.png" alt="" class="c2-tuan">
+					</div>
+					<div class="c2r fr">
+						<img src="images/s1r_car.png" alt="" class="c2r-car">
+					</div>
+				</li>
+				<li>
+					<div class="c3 fl">
+						<img src="images/u1_sled.png" alt="" class="c3-sled">
+						<img src="images/c3_lu.png" alt="" class="c3-lu">
+						<img src="images/c3.gif" alt="" class="bg-c3">
+						<img src="images/c3_line.png" alt="" class="c3-line">
+						<img src="images/c3w.png" alt="" class="c3w">
+					</div>
+					<div class="c3r fr">
+						<img src="images/s1r_car.png" alt="" class="c3r-car">
+						<img src="images/c3r.gif" alt="" class="bg-c3r">
+						<img src="images/c3r_line.png" alt="" class="c3r-line">
+						<img src="images/c3rw.png" alt="" class="c3rw">
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class="slide slide-11 hide title">
+		<div class="wrap">
+			<img src="images/old_1_1.gif" class="fadeIn"/>
+			<img src="images/old_1_2.gif" class="fadeIn delay800"/>
+			<img src="images/old_1_3.gif" class="slideLeft"/>
+			<img src="images/old_1_4.gif" class="slideRight"/>
+			<img src="images/old_1_5.gif" class="bling"/>
+		</div>
+	</div>
+	<div class="slide slide-12 hide">
+		<div class="wrap">
+			12
+		</div>
+	</div>
+	<div class="slide slide-13 hide title">
+		<div class="wrap">
+			<img src="images/sleep_1_1.gif" class="fadeIn"/>
+			<img src="images/sleep_1_2.gif" class="fadeIn delay800"/>
+			<img src="images/sleep_1_3.gif" class="slideLeft"/>
+			<img src="images/sleep_1_4.gif" class="slideRight"/>
+			<img src="images/sleep_1_5.gif" class="bling"/>
+		</div>
+	</div>
+	<div class="slide slide-14 hide">
+		<div class="wrap">
+			14
+		</div>
+	</div>
+	<div class="slide slide-15 hide">
+		<div class="wrap">
+			15
+		</div>
+	</div>
+	<img src="images/arrow.png" class="arrow"/>
+    <div class="alcon" style="display:none;">
+    	<div class="sharecon">
+    		<img src="images/sh_snow3.png" class="sh-snow1"/>
+    		<img src="images/sh_snow3.png" class="sh-snow2"/>
+    		<img src="images/sh_lu.png" class="sh-lu"/>
+    	</div>
+    	
+    	<div class="rescon">
+    	
+    	</div>
+    	
+    </div>
+   <!--  <hr class="hr"/> -->
+    <audio  id="audio"  loop>
+      	<source src="images/bg.mp3" type="audio/mpeg">
+     </audio>
+     
+    <div class="music-btn" id="music-btn"> </div>
+
+    <script type="text/javascript" src="js/PxLoader.js"></script>	
+    <script type="text/javascript" src="js/get.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script src="js/mobile_validate.js"></script>
+</body>
+</html>
