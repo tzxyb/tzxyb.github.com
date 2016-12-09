@@ -71,7 +71,7 @@
 				"images/bg_s2r.gif",
 				"images/music_on.png",
 				"images/music_off.png",
-				"images/bg_u1r.png"
+				"images/bg_u1r.png",
 				"images/s1r_car.png",
 				"images/u1_sled.png",
 				"images/s1_arm.png",
