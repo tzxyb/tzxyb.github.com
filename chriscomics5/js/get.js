@@ -187,16 +187,7 @@ function orientationchange() {
 	function bipinit() {
 		var audioAuto = document.getElementById('audio');
 		$("#newloading").css({"display":"none"});
-
-		$(".xin, .btn_hand").click(function(e){
-			console.log(e.target, $('.xin.btn_lq')[0]);
-			if (e.target !== $('.xin.btn_lq')[0]) {
-				$(this).parent().parent().children(".sTop1").addClass("fadeOut");
-				$(this).removeClass("scaleXin");
-				$(".btn_hand").removeClass("arr");
-				setTimeout(function(){$(".arrow_b").show();},100);
-			}
-		});
+		$('.slide-1').removeClass("hide").addClass('current-slide');
 	};
 function checkTel(){
 	var tel =  $.trim($("#telephone").val());
