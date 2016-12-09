@@ -34,7 +34,10 @@ img{position:absolute;}
     animation: loading-s 4s infinite 0s step-start;
 
 }
-.loading-w{display:block;width:120px;position:absolute;top:400px;left:138px}
+.loading-w{display:block;width:120px;position:absolute;top:400px;left:138px
+	animation:fadeIn .5s linear 0s backwards infinite;
+	-webkit-animation:fadeIn .5s linear 0s backwards infinite; 
+}
 
 /* 以上为预加载部分 */
 
