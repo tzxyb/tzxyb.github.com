@@ -35,8 +35,8 @@ img{position:absolute;}
 
 }
 .loading-w{display:block;width:120px;position:absolute;top:400px;left:138px;
-	animation:fadeIn 3s linear 0s backwards infinite;
-	-webkit-animation:fadeIn 3s linear 0s backwards infinite; 
+	animation:fadeInSlow 3s linear 0s backwards infinite;
+	-webkit-animation:fadeInSlow 3s linear 0s backwards infinite; 
 }
 
 /* 以上为预加载部分 */
@@ -1246,6 +1246,40 @@ hr{
   }
   100%{
 	  opacity:1;
+  }
+}
+@-webkit-keyframes fadeInSlow{
+  0% {
+	  opacity:0;
+  }
+  25%{
+	  opacity:.5;
+  }
+  50%{
+	  opacity:1;
+  }
+  75%{
+	  opacity:.5;
+  }
+  100%{
+	  opacity:0;
+  }
+}
+@keyframes fadeInSlow{
+  0% {
+	  opacity:0;
+  }
+  25%{
+	  opacity:.5;
+  }
+  50%{
+	  opacity:1;
+  }
+  75%{
+	  opacity:.5;
+  }
+  100%{
+	  opacity:0;
   }
 }
 @-webkit-keyframes fadeInLeft{
