@@ -52,7 +52,7 @@ function pageMove(tw){
 		$(nowPage).find("img").removeClass("hide");
 		
 		isAnimating = false;
-	},200);
+	},600);
 }
 
 })();
