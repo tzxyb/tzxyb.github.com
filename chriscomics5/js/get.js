@@ -134,7 +134,8 @@
 				"images/s1r_car.png",
 				"images/c3r.gif",
 				"images/c3r_line.png",
-				"images/c3rw.png"
+				"images/c3rw.png",
+				"images/bg.mp3"
 			);
 
 /*设备的翻转状态*/
