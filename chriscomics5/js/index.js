@@ -12,12 +12,22 @@ $(document).swipeUp(function(){
 	if (isAnimating) return;
 	last.row = now.row;
 	if (last.row != 15) { now.row = last.row+1; pageMove(towards.up);}
+	if(now.row!=15){
+		$('.arrow').show();
+	}else{
+		$('.arrow').hide();
+	}
 });
 
 $(document).swipeDown(function(){
 	if (isAnimating) return;
 	last.row = now.row;
-	if (last.row!=1) { now.row = last.row-1;  pageMove(towards.down);}	
+	if (last.row!=1) { now.row = last.row-1;  pageMove(towards.down);}
+	if(now.row!=15){
+		$('.arrow').show();
+	}else{
+		$('.arrow').hide();
+	}
 });
 
 

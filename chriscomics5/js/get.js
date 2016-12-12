@@ -1,5 +1,6 @@
-﻿var LoadArr = [];
+var LoadArr = [];
 	LoadArr.push(
+				"images/loading_s.gif",
 				"images/loading.png",
 	            "images/sh_snow3.png",
 	            "images/sh_lu.png",
@@ -67,7 +68,6 @@
 				"images/sh_snow3.png",
 				"images/sh_lu.png",
 				"images/phone.png",
-				"images/loading_s.gif",
 				"images/bg_s2r.gif",
 				"images/music_on.png",
 				"images/music_off.png",
@@ -150,29 +150,28 @@ function orientationchange() {
     }
 
 };
+$(function(){
+	var _w = $(window).width();
+	var _h = $(window).height();
+	var bili = 640 / 1029;
+	$(".slide").css({
+		"height": _h + "px"
+	});
+	$(".slide .wrap").css({
+		"-webkit-transform" :"scale("+_h/1029+")",
+		"transform" :"scale("+_h/1029+")",
+		"left": (_w - _h*bili)/2+"px"
+	});
 
+	setTimeout(scrollTo,0,0,0);  //去除iOS和Android中的输入URL的控件条,必须放在window.onload里才能够正常的工作
+	  window.onorientationchange = function() {
+	  orientationchange();
+	};
 
-		var _w = $(window).width();
-		var _h = $(window).height();
-		var bili = 640 / 1029;
-		$(".slide").css({
-			"height": _h + "px"
-		});
-		$(".slide .wrap").css({
-			"-webkit-transform" :"scale("+_h/1029+")",
-			"transform" :"scale("+_h/1029+")",
-			"left": (_w - _h*bili)/2+"px"
-		});
-
-		setTimeout(scrollTo,0,0,0);  //去除iOS和Android中的输入URL的控件条,必须放在window.onload里才能够正常的工作
-	      window.onorientationchange = function() {
-		  orientationchange();
-	    };
-
-		document.body.addEventListener('touchmove', function(e) {
-    		  //e.stopPropagation();
-    		 // e.preventDefault();
-		});
+	document.body.addEventListener('touchmove', function(e) {
+		  //e.stopPropagation();
+		 // e.preventDefault();
+	});
 
 	var loader = new PxLoader();
 	for(var i=0; i <LoadArr.length;i++ ) {
@@ -184,13 +183,96 @@ function orientationchange() {
 		    bipinit();
 	});
 
-	function bipinit() {
-		var audioAuto = document.getElementById('audio');
-		$("#newloading").css({"display":"none"});
-		$('.slide-1').removeClass("hide").addClass('current-slide');
-	};
+	$('.input-tel').focus(function(){
+		$('.v-tel').css('opacity','0');
+	}).blur(function(){
+		if(!$(this).val()){
+			$('.v-tel').css('opacity','1');
+		}
+	});
+	$(".btn_sub").click(function(){
+			var mobile = $(".input-tel").val();
+			if(checkTel()){
+				$.ajax({
+						url : "/quan/chriscomics5.do",
+						type : "post",
+						data : {
+								mobile : mobile,
+						    },
+						dataType:"json",
+						cache : false,
+						success:function(data, textStatus){
+							var result = data;
+			                if(result){
+			                	result=data.status;
+			                    if(mobile){
+			                        mobile = mobile.substr(0,3)+"****"+mobile.substr(7,4);
+			                    }
+			                    if(result == 1){//成功
+			    					getMoney(mobile);
+			                    }else if(result == 2){//已领取
+			                    	getMoney(mobile);
+			                    }else if(result == 3){//生成代金券失败
+			                    	ucar.uitls.show("纳尼，领券人太多，<br>系统出错了。<br>您可以稍等或过会再来！<br><br>");
+			                    }else if(result == 4){//领光了
+			                    	ucar.uitls.show("券已经领完了！");
+			                    }else if(result == 5) {
+			                    	ucar.uitls.show("不要心急，活动马上开始。一起期待吧！");
+			                    }else if(result == 6){
+			                    	ucar.uitls.show("券已经领完了！");
+			                    }else if(result == 7){
+			                    	ucar.uitls.show("未找到配置信息！");
+			                    }else if(result == 8){
+			                    	ucar.uitls.show("不符合领取条件！");
+			                    }else if(result == 9){
+			                    	ucar.uitls.show("纳尼，领券人太多，<br>系统出错了。<br>您可以稍等或过会再来！<br><br>");
+			                    }else if(result == 10){
+			                    	ucar.uitls.show("手机号码错误！");
+			                    }else if(result == 11){
+			                    	ucar.uitls.show("您来晚啦，活动已结束！");
+			                    }else if(result == 12){
+			                    	ucar.uitls.show("您已经是老用户咯，<br>此活动只适新用户哦！<br><br>");
+			                    }else if(result == 13){
+			                    	ucar.uitls.show("串码错误或已失效");
+			                    }
+			                }
+						}
+				});
+		 }
+
+	  });
+});
+function bipinit() {
+	var audioAuto = document.getElementById('audio');
+	$("#newloading").css({"display":"none"});
+	$('.slide-1').removeClass("hide").addClass('current-slide');
+};
+function getMoney (mobile) {
+	$(".alcon .rescon,.alcon").fadeIn();
+	$('.alcon .res-mobile').html(mobile);
+	$(".alcon .rescon .g-title,.alcon .rescon .g-quan,.alcon .rescon .res-w,.alcon .rescon .btn-dld,.alcon .rescon .g-close").fadeIn();
+};
+$('.g-close').click(function(){
+	$('.alcon .rescon,.alcon').hide();
+});
+$('.btn-share').click(function(){
+	$('.alcon,.alcon .sharecon').show();
+});
+$('.alcon .sharecon').click(function(){
+	$('.alcon,.alcon .sharecon').hide();
+});
+$(".btn-dld").on('click',function(){
+	var tdpg = ucar.uitls.getUrlParam("tdpg");
+	var tdaz = ucar.uitls.getUrlParam("tdaz");
+	var m = window.location.search;
+	if(tdaz || tdpg){
+		window.location.href="http://mktm.10101111.com/html5/2015/app/mobileapp.html"+m;
+	}else{
+		window.location.href="http://mktm.10101111.com/html5/2015/app/mobileapp.html";
+	}
+});
 function checkTel(){
-	var tel =  $.trim($("#telephone").val());
+	var tel =  $.trim($(".input-tel").val());
 	if (null === tel || "" === tel || tel.length === 0 || tel==='请输入11位手机号') {
 		 ucar.uitls.show("手机号填写错误<span class='face face-3'></span>");
 		return false;
@@ -202,3 +284,4 @@ function checkTel(){
 		return true;
 	}
 };
+
