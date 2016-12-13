@@ -775,7 +775,7 @@ img{position:absolute;}
 	-webkit-animation:nao .5s linear 1.3s backwards;
 }
 .o2rw{
-	right:20px;
+	right:30px;
 	top:5px;
 	animation:fadeIn .3s linear 1.6s backwards;
 	-webkit-animation:fadeIn .3s linear 1.6s backwards;
@@ -803,7 +803,7 @@ img{position:absolute;}
 	-webkit-animation:fadeIn .3s linear 2.5s backwards;
 }
 .o3w{
-	left:10px;
+	left:30px;
 	top:10px;
 	animation:fadeIn .3s linear 2.8s backwards;
 	-webkit-animation:fadeIn .3s linear 2.8s backwards;
@@ -903,7 +903,7 @@ img{position:absolute;}
 	-webkit-animation:fadeIn .3s linear 1.5s backwards;
 }
 .sl2w{
-	left:0px;
+	left:30px;
     top: 30px;
     animation:fadeIn .3s linear 2s backwards;
 	-webkit-animation:fadeIn .3s linear 2s backwards;
