@@ -259,7 +259,7 @@ img{position:absolute;}
 
 .u1-sled{
 	top:122px;
-	left:40px;
+	left:0px;
 	animation:fadeIn .2s linear 0s backwards;
 	-webkit-animation:fadeIn .2s linear 0s backwards;
 }
@@ -299,7 +299,7 @@ img{position:absolute;}
 }
 .u2-sled{
 	top:132px;
-	left:40px;
+	left:0px;
 	animation:fadeIn .2s linear 1.7s backwards;
 	-webkit-animation:fadeIn .2s linear 1.7s backwards;
 }
@@ -339,7 +339,7 @@ img{position:absolute;}
 /* 3.5s开始 */
 .u3-sled{
 	top:112px;
-	left:40px;
+	left:0px;
 	animation:fadeIn .2s linear 3.5s backwards;
 	-webkit-animation:fadeIn .2s linear 3.5s backwards;
 }
@@ -532,7 +532,7 @@ img{position:absolute;}
 
 /*圣诞结篇 漫画*/
 .c1-sled{
-	left:40px;
+	left:0px;
 	top:112px;
 	animation:fadeIn 0.2s linear 0s backwards;
 	-webkit-animation:fadeIn .2s linear 0s backwards;
@@ -593,7 +593,7 @@ img{position:absolute;}
 }
 /* 1.8s 开始*/
 .c2-sled{
-	left:40px;
+	left:0px;
 	top:112px;
 	animation:fadeIn .2s linear 1.8s backwards;
 	-webkit-animation:fadeIn .2s linear 1.8s backwards;
@@ -641,7 +641,7 @@ img{position:absolute;}
 
 /* 3.5s 开始*/
 .c3-sled{
-	left:40px;
+	left:0px;
 	top:132px;
 	animation:fadeIn .2s linear 3.5s backwards;
 	-webkit-animation:fadeIn .2s linear 3.5s backwards;
@@ -893,7 +893,7 @@ img{position:absolute;}
 	-webkit-animation:fadeIn .3s linear 1.5s backwards;
 }
 .sl2-sudor{
-	left: 129px;
+	left: 149px;
     top: 71px;
      animation:fd 1s linear 1.8s backwards infinite;
 	-webkit-animation:fd 1s linear 1.8s backwards infinite;
@@ -958,7 +958,7 @@ img{position:absolute;}
 	-webkit-animation:fadeIn .3s linear 3.1s backwards;
 }
 .sl3-star{
-    left: 261px;
+    left: 301px;
     top: 81px;
 	animation:fd .6s linear 3.5s backwards infinite;
 	-webkit-animation:fd .6s linear 3.5s backwards infinite;
