@@ -24,11 +24,12 @@ img{position:absolute;}
 .loading .loading-s{
 	position:absolute;
 	top:20%;
-	left:140px;
+	left:50%;
+	margin-left:-63px;
 	width:125px;
 	height:160px;
 }
-.loading-w{display:block;width:120px;position:absolute;top:400px;left:138px;
+.loading-w{display:block;width:120px;position:absolute;top:400px;left:50%;margin-left:-60px;
 	animation:fadeInSlow 3s linear 0s backwards infinite;
 	-webkit-animation:fadeInSlow 3s linear 0s backwards infinite; 
 }
