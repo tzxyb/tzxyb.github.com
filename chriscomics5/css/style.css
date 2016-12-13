@@ -131,6 +131,7 @@ img{position:absolute;}
 	width:354px;
 	height:278px;
 	top:0px;
+	left:10px;
 	animation:fadeIn .2s linear 0s backwards;
 	-webkit-animation:fadeIn .2s linear 0s backwards;
 	/* background: url('../images/bg_s1.gif') no-repeat; */
@@ -158,17 +159,17 @@ img{position:absolute;}
 	-webkit-animation:hdong0 .6s linear 1.2s both;
 }
 .s1r-car{
-	width:168px;height:162px;right:0;top:115px;
+	width:168px;height:162px;right:30px;top:115px;
 	animation:fadeIn .2s linear .6s backwards;
 	-webkit-animation:fadeIn .2s linear .6s backwards;
 }
 .s1w{
-	left:194px;top:35px;
+	left:214px;top:35px;
 	animation:fadeIn .2s linear 1s backwards;
 	-webkit-animation:fadeIn .2s linear 1s backwards;
 }
 .s1rw{
-	left:27px;top:0px;
+	left:47px;top:0px;
 	animation:fadeIn .2s linear 1.2s backwards;
 	-webkit-animation:fadeIn .2s linear 1.2s backwards;
 }
@@ -199,7 +200,7 @@ img{position:absolute;}
 }
 .s2r-dot{
 	top:120px;
-	left:40px;
+	left:0px;
 	animation:fadeIn .2s linear 2s backwards;
 	-webkit-animation:fadeIn .2s linear 2s backwards;
 }
@@ -210,7 +211,7 @@ img{position:absolute;}
 /* 2.5秒开始 */
 .s3-lu-angry{
 	top:53px;
-	left:0;
+	left:40px;
 	animation:fadeIn .2s linear 2.5s backwards;
 	-webkit-animation:fadeIn .2s linear 2.5s backwards;
 }
@@ -218,18 +219,19 @@ img{position:absolute;}
 	width:376px;
 	height:248px;
 	top:26px;
+	left:20px;
 	animation:fadeIn .2s linear 2.7s backwards;
 	-webkit-animation:fadeIn .2s linear 2.7s backwards;
 }
 .s3-arm{
 	top:58px;
-	left:133px;
+	left:153px;
 	animation:nao0 .7s linear 3.4s backwards;
 	-webkit-animation:nao0 .7s linear 3.4s backwards;
 }
 .s3w{
 	top:61px;
-	left:241px;
+	left:253px;
 	animation:fadeIn .2s linear 3.4s backwards;
 	-webkit-animation:fadeIn .2s linear 3.4s backwards;
 }
@@ -257,7 +259,7 @@ img{position:absolute;}
 
 .u1-sled{
 	top:122px;
-	left:0px;
+	left:40px;
 	animation:fadeIn .2s linear 0s backwards;
 	-webkit-animation:fadeIn .2s linear 0s backwards;
 }
@@ -265,12 +267,12 @@ img{position:absolute;}
 	width:354px;
 	height:278px;
 	top:0px;
-	left:20px;
+	left:60px;
 	animation:fadeIn .2s linear .2s backwards;
 	-webkit-animation:fadeIn .2s linear .2s backwards;
 }
 .u1w{
-	left:217px;
+	left:244px;
 	top:10px;
 	animation:fadeIn .2s linear .8s backwards;
 	-webkit-animation:fadeIn .2s linear .8s backwards;
@@ -281,7 +283,7 @@ img{position:absolute;}
 	-webkit-animation:fadeIn .2s linear .6s backwards;
 }
 .bg-u1r{
-	right:15px;
+	right:45px;
 	top:29px;
 	animation:fadeIn .2s linear .4s backwards;
 	-webkit-animation:fadeIn .2s linear .4s backwards;
@@ -297,12 +299,12 @@ img{position:absolute;}
 }
 .u2-sled{
 	top:132px;
-	left:0px;
+	left:40px;
 	animation:fadeIn .2s linear 1.7s backwards;
 	-webkit-animation:fadeIn .2s linear 1.7s backwards;
 }
 .bg-u2{
-	left:53px;
+	left:73px;
 	top:46px;
 	animation:jump .7s  linear 2.5s backwards;
 	-webkit-animation:jump .7s  linear 2.5s backwards;
@@ -326,7 +328,7 @@ img{position:absolute;}
 }
 .u2-line{
 	top:42px;
-	left:52px;
+	left:89px;
 	animation:fd .5s linear 2.7s backwards;
 	-webkit-animation:fd .25s linear 2.7s backwards;
 }
@@ -337,7 +339,7 @@ img{position:absolute;}
 /* 3.5s开始 */
 .u3-sled{
 	top:112px;
-	left:0px;
+	left:40px;
 	animation:fadeIn .2s linear 3.5s backwards;
 	-webkit-animation:fadeIn .2s linear 3.5s backwards;
 }
@@ -347,14 +349,14 @@ img{position:absolute;}
 }
 .bg-u3{
 	top:60px;
-	left:50px;
+	left:90px;
 	animation:fadeIn .2s linear 3.7s backwards;
 	-webkit-animation:fadeIn .2s linear 3.7s backwards;
 }
 
 .u3w{
 	top:31px;
-	left:172px;
+	left:222px;
 	animation:fadeIn .2s linear 4.5s backwards;
 	-webkit-animation:fadeIn .2s linear 4.5s backwards;
 }
@@ -376,32 +378,32 @@ img{position:absolute;}
 	-webkit-animation:fadeIn .2s linear 4.3s backwards;
 }
 .u3-line{
-	left:129px;
+	left:169px;
 	top:116px;
 	animation:fadeIn .5s linear 3.8s backwards infinite;
 	-webkit-animation:fadeIn .5s linear 3.8s backwards infinite;
 }
 /*麋鹿篇 动画*/
 .bg-e1{
-	left:0px;
+	left:40px;
 	top:60px;
 	animation:fadeIn .2s linear 0s backwards;
 	-webkit-animation:fadeIn .2s linear 0s backwards;
 }
 .e1-fire{
-	left:35px;
+	left:75px;
 	top:40px;
 	animation:cap .7s linear .2s backwards infinite;
 	-webkit-animation:cap .7s linear .2s backwards infinite;
 }
 .e1-lu{
-	left:161px;
+	left:201px;
 	top:155px;
 	animation:fadeIn .2s linear .4s backwards;
 	-webkit-animation:fadeIn .2s linear .4s backwards;
 }
 .e1w{
-	left:160px;
+	left:200px;
 	top:40px;
 	animation:fadeIn .2s linear 1s backwards;
 	-webkit-animation:fadeIn .2s linear 1s backwards;
@@ -434,19 +436,19 @@ img{position:absolute;}
 	-webkit-animation:fadeIn .2s linear 1.8s backwards;
 }
 .bg-e2{
-	left:0px;
+	left:40px;
 	top:41px;
 	animation:fadeIn .2s linear 1.8s backwards;
 	-webkit-animation:fadeIn .2s linear 1.8s backwards;
 }
 .e2-arm{
-	left:37px;
+	left:77px;
 	top:83px;
 	animation:nao .8s linear 2s both infinite;
 	-webkit-animation:nao .8s linear 2s both infinite;
 }
 .e2-lu{
-	left:161px;
+	left:201px;
 	top:155px;
 	animation:fadeIn .2s linear 2.2s backwards;
 	-webkit-animation:fadeIn .2s linear 2.2s backwards;
@@ -491,13 +493,13 @@ img{position:absolute;}
 }
 /*3.6s 开始*/
 .bg-e3{
-	left:0;
+	left:40px;
 	top:61px;
 	animation:fadeIn .2s linear 3.6s backwards;
 	-webkit-animation:fadeIn .2s linear 3.6s backwards;
 }
 .e3-lu{
-	left:120px;
+	left:160px;
 	top:82px;
 	animation:fadeIn .2s linear 3.8s backwards;
 	-webkit-animation:fadeIn .2s linear 3.8s backwards;
@@ -521,7 +523,7 @@ img{position:absolute;}
 	-webkit-animation:fadeIn .5s linear 4.4s backwards;
 }
 .e3-why{
-	left: 153px;
+	left: 193px;
     top: 9px;
 	animation:fadeIn .5s linear 8.5s backwards infinite;
 	-webkit-animation:fadeIn .5s linear 8.5s backwards infinite;
@@ -530,7 +532,7 @@ img{position:absolute;}
 
 /*圣诞结篇 漫画*/
 .c1-sled{
-	left:0;
+	left:40px;
 	top:112px;
 	animation:fadeIn 0.2s linear 0s backwards;
 	-webkit-animation:fadeIn .2s linear 0s backwards;
@@ -540,13 +542,13 @@ img{position:absolute;}
 	-webkit-animation:fadeIn .2s linear .2s backwards;
 }
 .bg-c1{
-	left: 85px;
+	left: 125px;
     top: 78px;
 	animation:fadeIn .2s linear .2s backwards;
 	-webkit-animation:fadeIn .2s linear .2s backwards;
 }
 .c1-arm{
-	left: 195px;
+	left: 235px;
     top: 133px;
 	animation:naoR 1s linear 1s backwards;
 	-webkit-animation:naoR 1s linear 1s backwards;
@@ -575,7 +577,7 @@ img{position:absolute;}
 }
 .c1w{
 	top: 0px;
-    left: 98px;
+    left:138px;
 	animation:fadeIn .2s linear .8s backwards;
 	-webkit-animation:fadeIn .2s linear .8s backwards;
 }
@@ -591,7 +593,7 @@ img{position:absolute;}
 }
 /* 1.8s 开始*/
 .c2-sled{
-	left:0;
+	left:40px;
 	top:112px;
 	animation:fadeIn .2s linear 1.8s backwards;
 	-webkit-animation:fadeIn .2s linear 1.8s backwards;
@@ -603,31 +605,31 @@ img{position:absolute;}
 	-webkit-animation:fadeIn .2s linear 2s backwards;
 }
 .c2-line1{
-    left: 219px;
+    left: 259px;
     top: 30px;
     animation:fadeIn .2s linear 2.4s backwards;
 	-webkit-animation:fadeIn .2s linear 2.4s backwards;
 }
 .c2-line2{
-    left: 219px;
+    left: 259px;
     top: 30px;
     animation:fadeIn .2s linear 2.8s backwards;
 	-webkit-animation:fadeIn .2s linear 2.8s backwards;
 }
 .c2-star1{
 	top:50px;
-	left:181px;
+	left:221px;
 	animation:fd .5s linear 2.6s backwards;
 	-webkit-animation:fd .5s linear 2.6s backwards;
 }
 .c2-star2{
-    left: 137px;
+    left: 177px;
     top: 24px;
    	animation:fd .5s linear 2.8s backwards;
 	-webkit-animation:fd .5s linear 2.8s backwards;
 }
 .c2-tuan{
-	left:154px;
+	left:194px;
 	top:35px;
 	animation:fd .8s linear 2.2s backwards;
 	-webkit-animation:fd .8s linear 2.2s backwards;
@@ -639,25 +641,25 @@ img{position:absolute;}
 
 /* 3.5s 开始*/
 .c3-sled{
-	left:0;
+	left:40px;
 	top:132px;
 	animation:fadeIn .2s linear 3.5s backwards;
 	-webkit-animation:fadeIn .2s linear 3.5s backwards;
 }
 .c3-lu{
-	left:13px;
+	left:53px;
 	top:41px;
 	animation:fadeIn .2s linear 3.7s backwards;
 	-webkit-animation:fadeIn .2s linear 3.7s backwards;
 }
 .bg-c3{
-	left:58px;
+	left:98px;
 	top:78px;
 	animation:fadeIn .2s linear 3.9s backwards;
 	-webkit-animation:fadeIn .2s linear 3.9s backwards;
 }
 .c3-line{
-	left: 163px;
+	left: 203px;
     top: 123px;
     animation:fd .5s linear 4.6s backwards infinite;
 	-webkit-animation:fd .5s linear 4.6s backwards infinite;
@@ -681,7 +683,7 @@ img{position:absolute;}
 	-webkit-animation:fadeIn .2s linear 4s backwards;
 }
 .c3w{
-	left:114px;
+	left:154px;
 	top:12px;
 	animation:fadeIn .2s linear 4.3s backwards;
 	-webkit-animation:fadeIn .2s linear 4.3s backwards;
@@ -700,12 +702,12 @@ img{position:absolute;}
 	bottom:15px;
 }
 .o1-r{
-	left:100px;
-	top:69px;
+	left: 137px;
+    top: 60px;
 }
 .o1-lu{
-	left:248px;
-	top:56px;
+    left: 287px;
+    top: 45px;
 }
 .o1-music{
 	left: 67px;
@@ -714,11 +716,11 @@ img{position:absolute;}
 	-webkit-animation:fd 1.4s linear 0.6s backwards infinite;
 }
 .bg-o1r{
-	right: 126px;
-    top: 31px;
+    right: 164px;
+    top: 41px;
 }
 .o1rw{
-	right: 52px;
+	right: 72px;
     top: 1px;
     animation:fadeIn .3s linear .3s backwards;
 	-webkit-animation:fadeIn .3s linear .3s backwards;
@@ -735,14 +737,14 @@ img{position:absolute;}
 	-webkit-animation:fadeIn .2s linear 1s backwards;
 }
 .o2-r{
-	left:100px;
-	top:75px;
+	left: 140px;
+    top: 64px;
 	animation:fadeIn .2s linear 1s backwards;
 	-webkit-animation:fadeIn .2s linear 1s backwards;
 }
 .o2-lu{
-	left:247px;
-	top:65px;
+    left: 287px;
+    top: 54px;
 	animation:fadeIn .3s linear 1s backwards;
 	-webkit-animation:fadeIn .3s linear 1s backwards;
 }
@@ -753,8 +755,8 @@ img{position:absolute;}
 	-webkit-animation:fadeIn .3s linear 1.4s backwards;
 }
 .o2w{
-	left:30px;
-	top:15px;
+	left: 82px;
+    top: 15px;
 	animation:fadeIn .3s linear 1.5s backwards;
 	-webkit-animation:fadeIn .3s linear 1.5s backwards;
 }
@@ -763,20 +765,20 @@ img{position:absolute;}
 	-webkit-animation:fadeIn .3s linear 1s backwards;
 }
 .bg-o2r{
-	right: 115px;
-    top: 65px;
+    right: 160px;
+    top: 55px;
 	animation:fadeIn .3s linear 1s backwards;
 	-webkit-animation:fadeIn .3s linear 1s backwards;
 }
 .o2r-arm{
-	right: 124px;
-    top: 127px;
+    right: 168px;
+    top: 119px;
     animation:nao .5s linear 1.3s backwards;
 	-webkit-animation:nao .5s linear 1.3s backwards;
 }
 .o2rw{
-	right:30px;
-	top:5px;
+	right: 63px;
+    top: 5px;
 	animation:fadeIn .3s linear 1.6s backwards;
 	-webkit-animation:fadeIn .3s linear 1.6s backwards;
 }
@@ -791,26 +793,26 @@ img{position:absolute;}
 	-webkit-animation:fadeIn .3s linear 2.5s backwards;
 }
 .o3-r{
-    left: 39px;
+    left: 81px;
     top: 101px;
 	animation:fadeIn .3s linear 2.5s backwards;
 	-webkit-animation:fadeIn .3s linear 2.5s backwards;
 }
 .o3-lu{
-	left: 230px;
+    left: 270px;
     top: 76px;
 	animation:fadeIn .3s linear 2.5s backwards;
 	-webkit-animation:fadeIn .3s linear 2.5s backwards;
 }
 .o3w{
-	left:30px;
+	left:50px;
 	top:10px;
 	animation:fadeIn .3s linear 2.8s backwards;
 	-webkit-animation:fadeIn .3s linear 2.8s backwards;
 }
 .bg-o3r{
-	right:135px;
-	top:80px;
+    right: 176px;
+    top: 80px;
 	animation:fadeIn .3s linear 2.5s backwards;
 	-webkit-animation:fadeIn .3s linear 2.5s backwards;
 }
@@ -822,14 +824,14 @@ img{position:absolute;}
 	-webkit-animation:fadeIn .3s linear 0s backwards;
 }
 .sl1-r{
-	left:100px;
-	top:64px;
+	left: 138px;
+    top: 55px;
 	animation:fadeIn .3s linear 0s backwards;
 	-webkit-animation:fadeIn .3s linear 0s backwards;
 }
 .sl1-lu{
-    left: 259px;
-    top: 60px;
+    left: 300px;
+    top: 51px;
 	animation:fadeIn .3s linear 0s backwards;
 	-webkit-animation:fadeIn .3s linear 0s backwards;
 }
@@ -838,31 +840,31 @@ img{position:absolute;}
 	-webkit-animation:fadeIn .3s linear 0s backwards;
 }
 .sl1-arm{
-    left: 111px;
-    top: 123px;
+    left: 147px;
+    top: 115px;
      animation:moveR 1s linear .8s backwards infinite;
 	-webkit-animation:moveR 1s linear .8s backwards infinite;
 }
 .bg-sl1r{
-	right: 149px;
-    top: 70px;
+    right: 189px;
+    top: 60px;
 	animation:fadeIn .3s linear 0s backwards;
 	-webkit-animation:fadeIn .3s linear 0s backwards;
 }
 .sl1w{
-	left: 52px;
+    left: 69px;
     top: 1px;
     animation:fadeIn .3s linear .4s backwards;
 	-webkit-animation:fadeIn .3s linear .4s backwards;
 }
 .sl1rw{
-	right: 52px;
+	right: 72px;
     top: 0px;
     animation:fadeIn .3s linear .7s backwards;
 	-webkit-animation:fadeIn .3s linear 0.7s backwards;
 }
 .sl1-zzz{
-    left: 250px;
+    left: 290px;
     top: 46px;
 	animation:fd .3s linear 1s backwards;
 	-webkit-animation:fd .3s linear 1s backwards;
@@ -879,14 +881,14 @@ img{position:absolute;}
 	-webkit-animation:fadeIn .3s linear 1.5s backwards;
 }
 .sl2-r{
-    left: 90px;
-    top: 77px;
+    left: 125px;
+    top: 66px;
 	animation:fadeIn .3s linear 1.5s backwards;
 	-webkit-animation:fadeIn .3s linear 1.5s backwards;
 }
 .sl2-lu{
-    left: 259px;
-    top: 60px;
+	left: 299px;
+    top: 50px;
 	animation:fadeIn .3s linear 1.5s backwards;
 	-webkit-animation:fadeIn .3s linear 1.5s backwards;
 }
@@ -897,20 +899,20 @@ img{position:absolute;}
 	-webkit-animation:fd 1s linear 1.8s backwards infinite;
 }
 .bg-sl2r{
-    right: 161px;
-    top: 82px;
+	right: 200px;
+    top: 71px;
 	animation:fadeIn .3s linear 1.5s backwards;
 	-webkit-animation:fadeIn .3s linear 1.5s backwards;
 }
 .sl2w{
-	left:30px;
-    top: 30px;
+	left: 72px;
+    top: 4px;
     animation:fadeIn .3s linear 2s backwards;
 	-webkit-animation:fadeIn .3s linear 2s backwards;
 }
 .sl2-zzz{
-    left: 250px;
-    top: 46px;
+    left: 285px;
+    top: 42px;
 	animation:fd .3s linear 2.3s backwards;
 	-webkit-animation:fd .3s linear 2.3s backwards;
 }
@@ -925,32 +927,32 @@ img{position:absolute;}
 	-webkit-animation:fadeIn .3s linear 2.8s backwards;
 }
 .sl3-r{
-	left:100px;
+	left:140px;
 	top:102px;
 	animation:fadeIn .3s linear 2.8s backwards;
 	-webkit-animation:fadeIn .3s linear 2.8s backwards;
 }
 .sl3-lu{
-    left: 259px;
+    left: 299px;
     top: 72px;
 	animation:fadeIn .3s linear 2.8s backwards;
 	-webkit-animation:fadeIn .3s linear 2.8s backwards;
 }
 
 .bg-sl3r{
-    right: 158px;
+    right: 198px;
     top: 83px;
 	animation:fadeIn .3s linear 2.8s backwards;
 	-webkit-animation:fadeIn .3s linear 2.8s backwards;
 }
 .sl3w{
-	left: 67px;
+	left: 107px;
     top: 83px;
     animation:fadeIn .3s linear 3.4s backwards;
 	-webkit-animation:fadeIn .3s linear 3.4s backwards;
 }
 .sl3rw{
-	right: 52px;
+	right: 92px;
     top: 35px;
     animation:fadeIn .3s linear 3.1s backwards;
 	-webkit-animation:fadeIn .3s linear 3.1s backwards;
