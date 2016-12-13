@@ -56,8 +56,8 @@ img{position:absolute;}
     top: 0;
 }
 .arrow{position:fixed;-webkit-animation:passdown ease .8s infinite;bottom:4%;left:47.5%;z-index:99;width:5%}
-.fr{position:absolute;right:-50px;}
-.fl{position:absolute;left:-50px;}
+.fr{position:absolute;right:-40px;}
+.fl{position:absolute;left:-40px;}
 
 .slide.title img{
 	width:68%;
@@ -199,7 +199,7 @@ img{position:absolute;}
 }
 .s2r-dot{
 	top:120px;
-	left:24px;
+	left:40px;
 	animation:fadeIn .2s linear 2s backwards;
 	-webkit-animation:fadeIn .2s linear 2s backwards;
 }
