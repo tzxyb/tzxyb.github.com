@@ -710,7 +710,7 @@ img{position:absolute;}
     top: 45px;
 }
 .o1-music{
-	left: 67px;
+	left: 97px;
     top: 28px;
      animation:fd 1.4s linear 0.6s backwards infinite;
 	-webkit-animation:fd 1.4s linear 0.6s backwards infinite;
@@ -749,7 +749,7 @@ img{position:absolute;}
 	-webkit-animation:fadeIn .3s linear 1s backwards;
 }
 .o2-why{
-	left:210px;
+	left:250px;
 	top:65px;
 	animation:fadeIn .3s linear 1.4s backwards;
 	-webkit-animation:fadeIn .3s linear 1.4s backwards;
@@ -893,8 +893,8 @@ img{position:absolute;}
 	-webkit-animation:fadeIn .3s linear 1.5s backwards;
 }
 .sl2-sudor{
-	left: 149px;
-    top: 71px;
+	left: 162px;
+    top: 70px;
      animation:fd 1s linear 1.8s backwards infinite;
 	-webkit-animation:fd 1s linear 1.8s backwards infinite;
 }
@@ -906,7 +906,7 @@ img{position:absolute;}
 }
 .sl2w{
 	left: 72px;
-    top: 4px;
+    top: 0px;
     animation:fadeIn .3s linear 2s backwards;
 	-webkit-animation:fadeIn .3s linear 2s backwards;
 }
@@ -1020,10 +1020,10 @@ li .input-tel{
 	left:10%;
 	background:none;
 	border:none;
-	line-height: 126px;
+	line-height: 116px;
 	box-sizing:border-box;
 	padding-left:70px;
-	padding-top:30px;
+	padding-top:10px;
 	font-size:1.8rem;
 	outline: none;
 	-webkit-tap-highlight-color:transparent;
