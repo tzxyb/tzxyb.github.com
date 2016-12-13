@@ -158,7 +158,7 @@ var LoadArr = [];
 				"images/o3w.png",
 				"images/o3r.png",
 				"images/sl1_r.png",
-				"images5/sl1_arm.png",
+				"images/sl1_arm.png",
 				"images/sl1_lu.png",
 				"images/sl1_zzz.png",
 				"images/sl1w.png",
