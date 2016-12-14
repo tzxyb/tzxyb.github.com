@@ -19,7 +19,7 @@ body {
 .getcon{
 	position:relative;
 }
-.getcon img{display:block;position: absolute;}
+img{display:block;position: absolute;}
 .getcon .g-peo{
 	height:26%;top:25%;
 	z-index:99;
