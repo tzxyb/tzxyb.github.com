@@ -12,17 +12,12 @@ function orientationchange() {
 
 };
 $(function(){
-	var _w = $(window).width();
 	var _h = $(window).height();
-	$(".getcon").css({
-		"height": _h + "px",
-		"width":_w +"px"
-	});
-	$(".getcon .inner").css({
-		"-webkit-transform" :"scale("+_h/1029+")",
-		"transform" :"scale("+_h/1029+")",
-		"left": (_w - _h*bili)/2+"px"
-	});
+	$('.getcon').height(_h);
+	var gw=$('.g-peo').width()/$(window).width();
+	$('.g-peo').css({
+		"left":(1-gw)/2*100+"%"
+	})
 
 })
 $(function(){
@@ -30,7 +25,7 @@ $(function(){
 			var mobile = $(".input-tel").val(); 
 			if(checkTel()){
 				$.ajax({
-						url : "/quan/chriscomics5.do",
+						url : "/quan/chriscomics6.do",
 						type : "post",
 						data : {
 								mobile : mobile,
