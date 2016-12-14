@@ -966,7 +966,13 @@ img{position:absolute;}
 
 
 /* 领券部分 */
-.slide-15 .g-peo{
+.getcon{
+	position:relative;
+}
+.getcon .inner{
+	position:absolute;
+}
+.getcon .g-peo{
 	width:640px;
 	left:0;
 	top:200px;
@@ -974,25 +980,25 @@ img{position:absolute;}
 	animation:fadeIn linear .3s .6s both;
 	-webkit-animation:fadeIn linear .3s .6s both;
 }
-.slide-15 .glw{
+.getcon .glw{
 	left:64px;
 	top:90px;
 	animation:fadeIn linear .3s .9s both;
 	-webkit-animation:fadeIn linear .3s .9s both;
 }
-.slide-15 .grw{
-	right:64px;
-	top:90px;
+.getcon .grw{
+    left: 292px;
+    top: 90px;
 	animation:fadeIn .3s linear 1.3s backwards;
 	-webkit-animation:fadeIn .3s linear 1.3s backwards;
 }
-.slide-15 .inputcon{
+.getcon .inputcon{
 	position:absolute;
 	top:465px;
 	width:640px;
 	left:0;
 }
-.slide-15 .inputcon li{
+.getcon .inputcon li{
 	position:relative;
 	box-sizing:border-box;
 	height:126px;
