@@ -19,11 +19,9 @@ body {
 .getcon{
 	position:relative;
 }
-.getcon img{position: absolute;}
+.getcon img{display:block;position: absolute;}
 .getcon .g-peo{
-	width:100%;
-	top:21.5%;
-	left:0;
+	height:26%;top:25%;
 	z-index:99;
 	animation:fadeIn linear .3s .6s both;
 	-webkit-animation:fadeIn linear .3s .6s both;
@@ -31,27 +29,27 @@ body {
 .getcon .glw{
 	width:30%;
 	left:10%;
-	top:10%;
+	top:13%;
 	animation:fadeIn linear .3s .9s both;
 	-webkit-animation:fadeIn linear .3s .9s both;
 }
 .getcon .grw{
     right:10%;
-    top:10%;
+    top:13%;
     width:43%;
 	animation:fadeIn .3s linear 1.3s backwards;
 	-webkit-animation:fadeIn .3s linear 1.3s backwards;
 }
 .getcon .inputcon{
 	position:absolute;
-	top:45%;
+	top:49.5%;
 	width:100%;
 	left:0;
 }
 .getcon .inputcon li{
 	position:relative;
 	box-sizing:border-box;
-	height:73px;
+	height:4.5rem;
 }
 
 li .btn-go{
