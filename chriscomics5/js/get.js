@@ -239,13 +239,7 @@ $(function(){
 		    bipinit();
 	});
 
-	$('.input-tel').focus(function(){
-		$('.v-tel').css('opacity','0');
-	}).blur(function(){
-		if(!$(this).val()){
-			$('.v-tel').css('opacity','1');
-		}
-	});
+
 	$(".btn_sub").click(function(){
 			var mobile = $(".input-tel").val();
 			if(checkTel()){

@@ -1043,8 +1043,22 @@ img.btn-share{
 }
 
 
-
-
+.input-tel::-webkit-input-placeholder {
+　	color:##1f394a !important;
+	font-weight: bold;
+}
+.input-tel:-moz-placeholder {
+　	color:##1f394a !important;
+	font-weight: bold;
+}
+.input-tel::-moz-placeholder {
+　	color:##1f394a !important;
+	font-weight: bold;
+}
+.input-tel:-ms-input-placeholder {
+　	color:##1f394a !important;
+	font-weight: bold;
+}
 
 /* 弹窗部分 */
 .alcon{
