@@ -967,29 +967,29 @@ img{position:absolute;}
 
 /* 领券部分 */
 .slide-15 .g-peo{
-	width:100%;
+	width:640px;
 	left:0;
-	top:20%;
+	top:200px;
 	z-index:9;
 	animation:fadeIn linear .3s .6s both;
 	-webkit-animation:fadeIn linear .3s .6s both;
 }
 .slide-15 .glw{
-	left:10%;
-	top:9%;
+	left:64px;
+	top:90px;
 	animation:fadeIn linear .3s .9s both;
 	-webkit-animation:fadeIn linear .3s .9s both;
 }
 .slide-15 .grw{
-	right:10%;
-	top:9%;
+	right:64px;
+	top:90px;
 	animation:fadeIn .3s linear 1.3s backwards;
 	-webkit-animation:fadeIn .3s linear 1.3s backwards;
 }
 .slide-15 .inputcon{
 	position:absolute;
-	top:46%;
-	width:100%;
+	top:465px;
+	width:640px;
 	left:0;
 }
 .slide-15 .inputcon li{
@@ -1002,22 +1002,22 @@ li .btn-go{
 	display:block;
 	position: absolute;
 	z-index:99;
-	width:20%;
-	right:10%;
+	width:132px;
+	right:64px;
 	height: 80px;
     top: 27px;
 }
 li .bg-tel,li .v-tel{
-	width:80%;
-	left:10%;
+	width:508px;
+	left:64px;
 	top:0;
 }
 li .input-tel{
 	position:absolute;
 	display:block;
-	width:80%;
+	width:508px;
 	height:116px;
-	left:10%;
+	left:64px;
 	background:none;
 	border:none;
 	line-height: 116px;
@@ -1026,9 +1026,26 @@ li .input-tel{
 	padding-top:10px;
 	font-size:1.8rem;
 	outline: none;
+	color:#1f394a;
+	font-family: "Microsoft Yahei";
 	-webkit-tap-highlight-color:transparent;
 }
-
+li .input-tel::-webkit-input-placeholder {
+　	color:#1f394a !important;
+	font-weight: bold;
+}
+li .input-tel:-moz-placeholder {
+　	color:#1f394a !important;
+	font-weight: bold;
+}
+li .input-tel::-moz-placeholder {
+　	color:#1f394a !important;
+	font-weight: bold;
+}
+li .input-tel:-ms-input-placeholder {
+　	color:#1f394a !important;
+	font-weight: bold;
+}
 img.btn-again{
 	width:35%;
 	left:10%;
@@ -1042,21 +1059,20 @@ img.btn-share{
 	-webkit-animation:fadeIn .2s linear 1.5s backwards;
 }
 
-
-.input-tel::-webkit-input-placeholder {
-　	color:##1f394a !important;
+li .input-tel::-webkit-input-placeholder {
+　	color:#1f394a !important;
 	font-weight: bold;
 }
-.input-tel:-moz-placeholder {
-　	color:##1f394a !important;
+li .input-tel:-moz-placeholder {
+　	color:#1f394a !important;
 	font-weight: bold;
 }
-.input-tel::-moz-placeholder {
-　	color:##1f394a !important;
+li .input-tel::-moz-placeholder {
+　	color:#1f394a !important;
 	font-weight: bold;
 }
-.input-tel:-ms-input-placeholder {
-　	color:##1f394a !important;
+li .input-tel:-ms-input-placeholder {
+　	color:#1f394a !important;
 	font-weight: bold;
 }
 
