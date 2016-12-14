@@ -11,29 +11,33 @@
 	<meta http-equiv="expires" content="0">
 	<title>神圣的故事</title>
 	<link type="text/css" rel="stylesheet" href="css/dialog_1215.css"/>
-	<link rel="stylesheet" type="text/css" href="css/style.css"/>
+	<link rel="stylesheet" type="text/css" href="css/get.css"/>
 	<script type="text/javascript" src="js/zepto.min.js"></script>
-	<script type="text/javascript" src="js/touch.js"></script>
+	<!-- <script type="text/javascript" src="js/touch.js"></script> -->
 	<script type="text/javascript" src="js/core.js"></script>
+	
+	<script type="text/javascript">
+		document.getElementsByTagName("html")[0].style.fontSize = 32 * document.documentElement.clientWidth / 640 + "px";
+	</script>
+
 </head>
 <body>
 	<div class="getcon">
-		<div class="inner">
-			<img src="images/g_peo.png" alt="" class="g-peo">
-			<img src="images/glw.png" alt="" class="glw">
-			<img src="images/grw.png" alt="" class="grw">
-			<ul class="inputcon">
-				<li>
-					<img src="images/bg_tel.png" alt="" class="bg-tel">
-					<input type="tel" class="input-tel"  maxlength="12" placeholder="输入手机号领取专车券"/>
-					<a href="javascript:;" class="btn-go"></a>
-				</li>
-				<li>
-					<img src="images/btn_again.png" alt="" class="btn-again fl">
-					<img src="images/btn_share.png" alt="" class="btn-share fr">
-				</li>
-			</ul>
-		</div>
+		
+		<img src="images/g_peo.png" alt="" class="g-peo">
+		<img src="images/glw.png" alt="" class="glw">
+		<img src="images/grw.png" alt="" class="grw">
+		<ul class="inputcon">
+			<li>
+				<img src="images/bg_tel.png" alt="" class="bg-tel">
+				<input type="tel" class="input-tel"  maxlength="12" placeholder="输入手机号领取专车券"/>
+				<a href="javascript:;" class="btn-go"></a>
+			</li>
+			<li>
+				<img src="images/btn_again.png" alt="" class="btn-again fl">
+				<img src="images/btn_share.png" alt="" class="btn-share fr">
+			</li>
+		</ul>
 	</div>
 
     <div class="alcon" style="display:none;">
@@ -52,9 +56,9 @@
     		<img src="images/g_close.png" alt="" class="g-close">
     	</div>
     </div>
-    <script type="text/javascript" src="js/PxLoader.js"></script>	
+   <!--  <script type="text/javascript" src="js/PxLoader.js"></script>	 -->
     <script type="text/javascript" src="js/get.js"></script>
-    <script type="text/javascript" src="js/index.js"></script>
+   <!--  <script type="text/javascript" src="js/index.js"></script> -->
     <script src="js/mobile_validate.js"></script>
 </body>
 </html>
