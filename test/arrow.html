@@ -1,0 +1,93 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Demo </title>
+	<style>
+		*{margin:0;padding:0;}
+		.arrow{
+			position:absolute;
+			width:0;
+			height:20px;
+			margin:0;
+			left:50%;
+			bottom:5px;
+			-webkit-animation:rubberBand 1.1s linear 0s infinite;
+			animation:rubberBand 1.1s linear 0s infinite;
+		}
+		.arrow:before,
+		.arrow:after{
+			content:'';
+			border:1px solid #e8952d;
+			position:absolute;
+			width:3px;
+			height:20px;
+			background-color:#e8952d;
+			border-radius:999px;
+			-webkit-transform-origin:50% 0;
+			transform-origin:50% 0;
+		}
+		.arrow:before{
+			-webkit-transform:rotateZ(60deg) translateX(2px);
+			transform:rotateZ(60deg) translateX(2px);
+		}
+		.arrow:after{
+			-webkit-transform:rotateZ(-60deg) translateX(-2px);
+			transform:rotateZ(-60deg) translateX(-2px);
+		}
+		@-webkit-keyframes rubberBand {
+			0% {
+				opacity: 1;
+				-webkit-transform: scale3d(1, 1, 1);
+			}
+			30% {
+				-webkit-transform: scale3d(1.25, 0.75, 1);
+			}
+			40% {
+				-webkit-transform: scale3d(0.75, 1.25, 1);
+			}
+			50% {
+				-webkit-transform: scale3d(1.15, 0.85, 1);
+			}
+			65% {
+				-webkit-transform: scale3d(.95, 1.05, 1);
+			}
+			75% {
+				-webkit-transform: scale3d(1.05, .95, 1);
+			}
+			100% {
+				opacity: 1;
+				-webkit-transform: scale3d(1, 1, 1);
+			}
+		}
+		@keyframes rubberBand {
+			0% {
+				opacity: 1;
+				transform: scale3d(1, 1, 1);
+			}
+			30% {
+				transform: scale3d(1.25, 0.75, 1);
+			}
+			40% {
+				transform: scale3d(0.75, 1.25, 1);
+			}
+			50% {
+				transform: scale3d(1.15, 0.85, 1);
+			}
+			65% {
+				transform: scale3d(.95, 1.05, 1);
+			}
+			75% {
+				transform: scale3d(1.05, .95, 1);
+			}
+			100% {
+				opacity: 1;
+				transform: scale3d(1, 1, 1);
+			}
+		}
+	</style>
+</head>
+<body>
+	<div class="arrow"></div>
+</body>
+</html>

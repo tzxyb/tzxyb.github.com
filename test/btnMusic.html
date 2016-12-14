@@ -1,0 +1,97 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Demo </title>
+	<style>
+		*{margin:0;padding:0;}
+		.musicBtn{
+			position: absolute;
+			right:10px;
+			top:5px;
+			width:35px;
+			height:20px;
+			border-bottom:1px solid rgba(0,0,0,.9);
+			z-index:9;
+			padding-left:1px;
+			-webkit-user-select:none;
+		}
+		.musicBtn span{
+			position:absolute;
+			bottom:0;
+			width:3px;
+			height:10px;
+			margin:0 1px;
+			background-color: rgba(0,0,0,.9);
+			-webkit-transform-origin:bottom;
+			transform-origin:bottom;
+		}
+		.musicBtn span{
+			-webkit-transform:scaleY(1);
+			transform:scaleY(1);
+		}
+		.musicBtn span:nth-child(2) {
+			left: 7px;
+		}
+
+		.musicBtn span:nth-child(3) {
+			left: 14px;
+		}
+
+		.musicBtn span:nth-child(4) {
+			left: 21px;
+		}
+
+		.musicBtn span:nth-child(5) {
+			left: 28px;
+		}
+		.musicBtn2 span:nth-child(1){
+			-webkit-animation:musicB 1s linear 0 infinite;
+			animation:musicB 1s linear 0 infinite;
+		}
+		.musicBtn2 span:nth-child(2) {
+			-webkit-animation: musicB 1.5s linear 0s infinite;
+			animation: musicB 1.5s linear 0s infinite;
+		}
+
+		.musicBtn2 span:nth-child(3) {
+			-webkit-animation: musicB .5s linear 0s infinite;
+			animation: musicB .5s linear 0s infinite;
+		}
+
+		.musicBtn2 span:nth-child(4) {
+			-webkit-animation: musicB .7s linear 0s infinite;
+			animation: musicB .7s linear 0s infinite;
+		}
+
+		.musicBtn2 span:nth-child(5) {
+			-webkit-animation: musicB 1.2s linear 0s infinite;
+			animation: musicB 1.2s linear 0s infinite;
+		}
+		@-webkit-keyframes musicB{
+			0%,100%{
+				-webkit-transform:scaleY(0);
+			}50%{
+				-webkit-transform:scaleY(1);
+			}
+		}
+		@keyframes musicB{
+			0%,100%{
+				transform:scaleY(0);
+			}50%{
+				transform:scaleY(1);
+			}
+		}
+
+	</style>
+</head>
+<body>
+	<div class="musicBtn musicBtn2">
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+	</div>
+</body>
+</html>
