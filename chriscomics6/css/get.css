@@ -86,19 +86,15 @@ li .input-tel{
 }
 li .input-tel::-webkit-input-placeholder {
 　	color:#1f394a !important;
-	font-weight: bold;
 }
 li .input-tel:-moz-placeholder {
 　	color:#1f394a !important;
-	font-weight: bold;
 }
 li .input-tel::-moz-placeholder {
 　	color:#1f394a !important;
-	font-weight: bold;
 }
 li .input-tel:-ms-input-placeholder {
 　	color:#1f394a !important;
-	font-weight: bold;
 }
 img.btn-again{
 	width:35%;
@@ -115,19 +111,15 @@ img.btn-share{
 
 li .input-tel::-webkit-input-placeholder {
 　	color:#1f394a !important;
-	font-weight: bold;
 }
 li .input-tel:-moz-placeholder {
 　	color:#1f394a !important;
-	font-weight: bold;
 }
 li .input-tel::-moz-placeholder {
 　	color:#1f394a !important;
-	font-weight: bold;
 }
 li .input-tel:-ms-input-placeholder {
 　	color:#1f394a !important;
-	font-weight: bold;
 }
 
 /* 弹窗部分 */
