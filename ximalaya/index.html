@@ -13,6 +13,7 @@
 	<script type="text/javascript" src="js/zepto.min.js"></script>
 </head>
 <body>
+	<audio src="images/bg.mp3" autoplay loop></audio>
 	<section class="index">
 		<img src="images/x_logo.png" alt="" class="x-logo img"/>
 		<img src="images/x_title.png" alt="" class="x-title img"/>
@@ -26,6 +27,7 @@
 		</div>
 		<img src="images/body.png" alt="" class="x-b">
 	</section>
+
 	<section class="rule" style="display:none;">
 		<img src="images/r_t.png" alt="" class="img">
 		<img src="images/w_t.png" alt="" class="w80">
@@ -61,8 +63,13 @@
 	</footer>
 	<script>
 		$(function(){
+			document.addEventListener('touchstart',function(){
+				$('audio').get(0).play();
+			});
+			/*重置屏幕高度*/
 			var _height=$(window).height();
 			$('.index,.prize').height(_height);
+			/* 底部导航切换效果 */
 			$('.navi a').click(function(){
 				$('.navi a').removeClass('cur');
 				$(this).addClass('cur');
@@ -75,6 +82,7 @@
 				$('section').hide();
 				$('section.rule').show();
 			});
+			/* 唱片旋转 ，明星头像轮播 */
 			var linkStr="url(images/star_";
 			function changePic(i){
 				var s=linkStr+i+'.png)';
@@ -85,12 +93,13 @@
 				n++;
 				changePic(n%8);
 			},2000);
+			/* 奖品页面 分享按钮效果 */
 			$('.btn-share').click(function() {
 				$('.alcon').fadeIn();
 			});
 			$('.alcon').click(function(){
 				$(this).fadeOut()
-			})
+			});
 		})
 	</script>
 </body>
