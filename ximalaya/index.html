@@ -1,0 +1,97 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">    
+	<meta name="viewport" content="width=device-width,maximum-scale=1,minimum-scale=1,initial-scale=1,user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="full-screen" content="yes" />
+    <meta name="screen-orientation" content="portrait" />
+    <meta name="x5-fullscreen" content="true" />
+    <meta name="360-fullscreen" content="true" />
+	<title></title>
+	<link rel="stylesheet" href="css/style.css"/>
+	<script type="text/javascript" src="js/zepto.min.js"></script>
+</head>
+<body>
+	<section class="index">
+		<img src="images/x_logo.png" alt="" class="x-logo img"/>
+		<img src="images/x_title.png" alt="" class="x-title img"/>
+		<div class="base">
+			<span class="bed"></span>
+			<img src="images/stylus.png" alt="" class="stylus">
+		</div>
+		<div class="music">
+			<div class="stars"></div>
+			<img src="images/disk.png" alt="" class="disk">
+		</div>
+		<img src="images/body.png" alt="" class="x-b">
+	</section>
+	<section class="rule" style="display:none;">
+		<img src="images/r_t.png" alt="" class="img">
+		<img src="images/w_t.png" alt="" class="w80">
+		<a href="http://activity.ximalaya.com/activity-web/activity/577?openid=oNPzUv4G93-76iiPBabWe05102aE " class="btn-cj"><img src="images/btn_cj.png" alt="" class="w80"/></a>
+		<img src="images/w_b.png" alt="" class="w80">
+		<a href="http://activity.ximalaya.com/activity-web/activity/577?openid=oNPzUv4G93-76iiPBabWe05102aE " class="btn-cj"><img src="images/btn_cj.png" alt="" class="w60"/></a>
+	</section>
+
+	<section class="prize"style="display:none">
+		<img src="images/p_t.png" alt="" class="p-t">
+		<div class="pcon">
+			<a href="https://mobile.rcclchina.com.cn/campaign/shenzhou/index.html " class="btn-hjia"></a>
+			<a href="http://mktm.10101111.com/temred/nget.do?sharefrom=SsouTovo7tIM8IrNmaR0yQ==&szhdbm=BD.ximalaya15" class="btn-quan"></a>
+			<a href="http://m.ximalaya.com/carnival/2016-12-conc/index" class="btn-lbao"></a>
+			<a href="http://www.hotemall.com/m/szzc/index.html " class="btn-hmao"></a>
+			<img src="images/p_p.png" alt="" class="p-p">
+		</div>
+		<img src="images/p_r.png" alt="" class="p-r img"/>		
+		<a href="javascript:;" class="btn-share">
+			<img src="images/btn_share.png" alt="" class="w60">
+		</a>
+	</section>
+	<div class="alcon" style="display:none">
+		<img src="images/p_s.png" alt="" class="p-s">
+	</div>
+	<footer>
+		<ul class="navi">
+			<li><a href="javascript:;"class="btn-rule">看规则</a></li>
+			<li><a href="http://activity.ximalaya.com/activity-web/activity/577?openid=oNPzUv4G93-76iiPBabWe05102aE" class="btn-bm">要报名</a></li>
+			<li><a href="http://activity.ximalaya.com/activity-web/activity/577?openid=oNPzUv4G93-76iiPBabWe05102aE" class="btn-bang">美声榜</a></li>
+			<li><a href="javascript:;" class="btn-hl">领豪礼</a></li>
+		</ul>
+	</footer>
+	<script>
+		$(function(){
+			var _height=$(window).height();
+			$('.index,.prize').height(_height);
+			$('.navi a').click(function(){
+				$('.navi a').removeClass('cur');
+				$(this).addClass('cur');
+			});
+			$('.btn-hl').click(function(){
+				$('section').hide();
+				$('section.prize').show();
+			});
+			$('.btn-rule').click(function(){
+				$('section').hide();
+				$('section.rule').show();
+			});
+			var linkStr="url(images/star_";
+			function changePic(i){
+				var s=linkStr+i+'.png)';
+				$('.music .stars').css('backgroundImage',s)
+			};
+			var n=0;
+			setInterval(function(){
+				n++;
+				changePic(n%8);
+			},2000);
+			$('.btn-share').click(function() {
+				$('.alcon').fadeIn();
+			});
+			$('.alcon').click(function(){
+				$(this).fadeOut()
+			})
+		})
+	</script>
+</body>
+</html>

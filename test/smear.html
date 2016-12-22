@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Demo </title>
+	<style>
+		*{margin:0;padding:0;}
+		.slideunlock-slider{
+			width:440px;
+			height:76px;
+			background:url(images/ts1.png) no-repeat;
+			position:relative;
+		}
+		.slideunlock-label{
+			width:120px;
+			position:absolute;
+			left:0;
+			top:0;
+			height:100%;
+			background:#E67e22;
+			z-index:999;
+			border-radius:2px;
+			cursor:pointer;
+		}
+	</style>
+	<script src="js/zepto.min.js"></script>
+	<script src="js/touch.js"></script>
+</head>
+<body>
+	<div class="slideunlock-slider">
+		<span class="slideunlock-label"></span>
+		<span class="slideunlock-lable-tip"></span>
+	</div>
+	<script>
+		$('.slideunlock-lable-tip').swipeRight(function(){
+			var moveL=0;
+			moveL++;
+			$('.slideunlock-label').css({"left":moveL});
+			var opl=1;
+			opl-0.001;
+			$('.slideunlock-lable-tip').css({'opacity':opl});
+		})
+	</script>
+</body>
+</html>

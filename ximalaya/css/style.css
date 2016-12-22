@@ -1,0 +1,342 @@
+@charset:"utf-8";
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html,body {
+	background: #f1e291;
+	text-align: center;
+	background: url(../images/bg.jpg);
+	background-size: 100%;
+}
+
+section {
+	width: 100%;
+	max-width: 414px;
+	position: relative;
+	top: 0;
+	left: 0;
+	overflow: hidden;
+}
+
+a {
+	-webkit-tap-highlight-color: transparent;
+}
+
+.index {
+	height: 100%;
+	text-align: center;
+	padding-bottom: 40px
+}
+
+.rule {
+	text-align: center;
+	padding-bottom: 60px;
+}
+
+.alcon {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,.7);
+	top: 0;
+	left: 0;
+	z-index: 106;
+}
+
+.p-s {
+	position: absolute;
+	width: 26%;
+	right: 3%;
+	top: 3%;
+}
+
+.img {
+	width: 100%;
+	vertical-align: top;
+}
+
+.w80 {
+	width: 82%;
+	margin: 3% auto;
+}
+
+.base {
+	width: 20%;
+	position: absolute;
+	top: 26%;
+	left: 80%;
+	z-index: 99;
+}
+
+.base span {
+	position: absolute;
+	top: 2rem;
+	right: .6rem;
+	display: block;
+	width: 3rem;
+	height: 3rem;
+	border-radius: 2rem;
+	background: #212121;
+	border: .5rem solid #363636;
+	box-sizing: border-box;
+	box-shadow: 2px 0px 0 #595853,2px 0 0 #595853 ,2px 0 0 #595853,2px 0 0 #595853;
+}
+
+.base .stylus {
+	width: 56%;
+	position: absolute;
+	z-index: 100;
+	right: .2rem;
+	top: -5%;
+	-webkit-animation: turn 1.9s ease-out forwards;
+	-moz-animation: turn 1.9s ease-out forwards;
+	animation: turn 1.9s ease-out forwards;
+}
+
+.w60 {
+	width: 64%;
+	margin: 0 auto
+}
+
+.btn-share {
+	display: block;
+	position: absolute;
+	top: 83%;
+	z-index: 9;
+}
+
+.prize .p-t {
+	position: absolute;
+	width: 70%;
+	left: 15%;
+	top: 5%;
+}
+
+.prize .pcon {
+	position: absolute;
+	width: 90%;
+	top: 29%;
+	overflow: hidden;
+	left: 5%;
+	z-index: 9;
+}
+
+.prize .pcon a {
+	position: absolute;
+	display: block;
+	width: 40%;
+	height: 30%;
+}
+
+.btn-hjia {
+	top: 0;
+	left: 30%;
+}
+
+.btn-quan {
+	top: 36%;
+	left: 10%;
+}
+
+.btn-lbao {
+	top: 36%;
+	right: 10%;
+}
+
+.btn-hmao {
+	top: 69%;
+	left: 30%;
+}
+
+.prize .p-p {
+	width: 80%;
+}
+
+.prize .p-r {
+	width: 76%;
+	position: absolute;
+	bottom: 0;
+	left: 12%;
+}
+
+.music {
+	height: 44%;
+	width: 100%;
+	position: absolute;
+	top: 30%;
+	z-index: 3;
+}
+
+.music .disk {
+	height: 100%;
+	-webkit-animation: play 6s linear 1.9s infinite;
+	-moz-animation: play 6s linear 1.9s infinite;
+	animation: play 6s linear 1.9s infinite;
+}
+
+.music .stars {
+	position: absolute;
+	left: 32%;
+	width: 36%;
+	top: 29%;
+	height: 51%;
+	background-color: #000;
+	background-image: url(../images/star_0.png);
+	background-size: 100%;
+}
+
+.x-b {
+	width: 80%;
+	left: 10%;
+	position: absolute;
+	bottom: 0;
+	z-index: 1
+}
+
+footer {
+	position: fixed;
+	width: 100%;
+	bottom: 0;
+	left: 0;
+	box-sizing: border-box;
+	height: 40px;
+	line-height: 40px;
+	background: #313131;
+	z-index: 10
+}
+
+ul {
+	list-style: none;
+	margin: 0 auto;
+	height: 100%;
+	overflow: hidden;
+}
+
+footer li {
+	display: block;
+	float: left;
+	box-sizing: border-box;
+	width: 25%;
+	height: 38px;
+	padding: 1px;
+	margin: 1px 0;
+}
+
+footer li a {
+	display: block;
+	width: 99%;
+	height: 99%;
+	box-sizing: border-box;
+	margin: 0 auto;
+	border: 1px solid #f1e291;
+	text-decoration: none;
+	color: #fff;
+	background: #313131;
+	font-family: "Microsoft Yahei";
+	line-height: 34px;
+}
+
+footer li a.cur,
+footer li a:hover {
+	background: #ff4301;
+	color: #000;
+}
+
+@-webkit-keyframes play {
+	0% {
+		-webkit-transform: rotate(0deg);
+	}
+
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+@-moz-keyframes play {
+	0% {
+		-moz-transform: rotate(0deg);
+	}
+
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+@keyframes play {
+	0% {
+		transform: rotate(0deg);
+	}
+
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+@keyframes turn {
+	0% {
+		transform: rotate(0deg);
+	}
+
+	100% {
+		transform: rotate(10deg) translate(-10px);
+	}
+}
+
+@-moz-keyframes turn {
+	0% {
+		-moz-transform: rotate(0deg);
+	}
+
+	100% {
+		transform: rotate(10deg) translate(-10px);
+	}
+}
+
+@-webkit-keyframes turn {
+	0% {
+		-webkit-transform: rotate(0deg);
+	}
+
+	100% {
+		transform: rotate(10deg) translate(-10px);
+	}
+}
+
+@media (max-device-height: 530px) {
+	html {
+		font-size: 90%;
+	}
+
+	.x-title,.x-logo {
+		width: 86%;
+	}
+
+	.index .music {
+		width: 100%;
+		height: 46%;
+	}
+
+	.index .base {
+		left: 76%;
+	}
+
+	.prize .p-t {
+		width: 60%;
+		left: 20%;
+	}
+
+	.prize .pcon {
+		width: 82%;
+		left: 9%;
+	}
+
+	.prize .p-r {
+		width: 60%;
+		left: 20%;
+	}
+}
+
