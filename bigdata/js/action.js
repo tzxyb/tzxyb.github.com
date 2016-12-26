@@ -9,7 +9,7 @@
 	$(document).swipeUp(function(){
 		if (isAnimating) return;
 		last.row = now.row;
-		if (last.row != 7) { 
+		if (last.row != 6) { 
 			now.row = last.row+1; pageMove(towards.up);
 			if(now.row == 6){
 				$('.arrow').hide();

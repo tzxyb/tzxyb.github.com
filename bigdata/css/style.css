@@ -1,4 +1,10 @@
 @charset:'utf-8';
+@font-face{
+	font-family: 'DINCondensedC';
+	src:url(../DINCondensedC.otf);
+	font-weight: normal;
+	font-style:normal;
+}
 *{margin:0;padding:0;box-sizing: border-box;}
 html,body{
     margin: 0;
@@ -46,6 +52,7 @@ html,body{
 	width:640px;
 	height:1029px;
     position: absolute;
+    overflow: hidden;
     -webkit-transform-origin: 0 0;
     transform-origin: 0 0;
     top: 0;
@@ -110,7 +117,7 @@ html,body{
 }
 .getcon li .bg-code{display:inline-block;height:73px;float:left}
 .getcon li .bg-reset{display:inline-block;height:73px;float: right}
-.getcon li input.input-tel{width:100%;}
+.getcon li input.input-tel{width:100%;left:0;}
 .getcon li input.input-code{left:0;width:54%}
 .getcon li input.input-reset{
 	right:0;
@@ -146,7 +153,7 @@ html,body{
 	display: inline-block;
 	font-weight: bold;
 	color:#c0914e;
-	font-family: "";
+	font-family: "DINCondensedC";
 }
 .slide-1 .datecon{
 	width:100%;
@@ -197,6 +204,7 @@ html,body{
 }
 
 /* 3 */
+
 .slide-3 .p3-w{
 	width:100%;
 	box-sizing: border-box;
@@ -207,45 +215,77 @@ html,body{
 	text-align: center;
 	line-height: 60px;
 }
-.p3-w b{font-size:30px;color:#c0914e;}
+.p3-w b{font-size:30px;color:#c0914e;font-family: "DINCondensedC";}
 .p3-w .city{
 	width:80%;
+	font-family: "Microsoft Yahei";
 }
 .slide-3 .p-3{
 	top:300px;
 }
 /*  4  */
-.fr{position:absolute;right:0px}
-.fl{position:absolute;left:0px}
 .slide-4 span{font-size:36px;}
-.slide-4 .p4-1{
-	top:110px;
+.slide-4 .p4-1,
+.slide-4 .p4-2,
+.slide-4 .p4-3{
 	width:100%;
+	left:0;
+}
+.slide-4 .p4-1{
+	top:60px;
 }
 .slide-4 .p4-2{
-	top:395px;
-	width:100%;
+	top:350px;
 }
 .slide-4 .p4-3{
-	top:600px;
-	width:100%;
+	top:630px;
 }
-.p4-1 .fl,
-.p4-1 .fr{width:50%;}
-.p4-1 .low{display:none;}
-.p4-1 .jcw-low,
-.p4-1 .jcw-high{
+.slide-4 .low{display:none;}
+.p4-1 .jcw{
 	left:0;
-	top:130px;
+	top:80px;
 }
-.p4-2 .high{display: none}
-.p4-3 .low{display: none}
+.jcw .p4-jc{
+    left: 153px;
+    top: 3px;
+}
+.jc-pic{left:320px;}
+.jc-high,.jc-low{top:0;left:0;width:300px;}
 
-.jcw{width:298px;left:0;top:70px;}
-.jcw .p4-jc{top:0;left:153px;}
-
-
-
+.ok-pic{
+	left:0;
+	top:0;
+}
+.ok-high,.ok-low{width:300px;}
+.p4-2 .okw{
+	left:320px;
+	top:80px;
+}
+.okw .p4-ok{
+    left: 106px;
+	top:0px;
+}
+.okw-high .okw-s{
+    top: 10px;
+    left: 104px;
+}
+.p4-3 .qqw{
+	left:0;
+	top:80px;
+}
+.qqw .p4-qq{
+    left: 96px;
+    top: 2px;
+}
+.qqw-high,.qqw-low{
+	top:40px;
+}
+.qqw-high .qqw-s{
+    top: 5px;
+    left: 204px;
+}
+.qq-pic{left:320px;}
+.qq-high,.qq-low{top:0;left:0;width:300px;}
 
 /*   5  */
 .slide-5 .p5-w{
@@ -300,7 +340,7 @@ html,body{
 /*  结果页面 */
 .old .res-t{
 	top:30px;
-	font-size:40px;
+	font-size:36px;
 }
 .res-t .res-date{
 	top: 21px;
@@ -324,9 +364,10 @@ html,body{
     left: 285px;
 }
 .res-t span.res-label{
-    top: 216px;
-    left: 287px;
+    top: 213px;
+    left: 292px;
     color:#fff;
+    font-family: "Microsoft Yahei";
 }
 .old .res-peo{
 	top:290px;
